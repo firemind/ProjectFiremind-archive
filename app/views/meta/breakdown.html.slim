@@ -1,0 +1,22 @@
+h1= @meta.name
+
+p Win percentages of archetypes in this meta.
+
+p= link_to "Run some samples", run_meta_path(@meta), class: "button", method: :post
+
+p
+  i Win percentage of the archetype in the left column against the archetype in the top column
+
+table
+  thead
+    tr
+      td
+      - @archetypes.each do |o_archetype|
+        th= link_to o_archetype.to_s.truncate(15), o_archetype
+  tbody
+    - @archetypes.each do |s_archetype|
+      tr
+        th= link_to s_archetype.to_s.truncate(15), s_archetype
+        - @archetypes.each do |o_archetype|
+          td.centered
+            = format_win_percentage(s_archetype, o_archetype)

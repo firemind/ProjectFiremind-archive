@@ -1,0 +1,75 @@
+- title "#{@duel.deck1_tag} vs #{@duel.deck2_tag}"
+.row
+  .small-8.small-centered.columns
+    .row
+      .large-12.columns
+        - if @duel.waiting?
+          .callout.secondary
+            => pluralize(@waiting_in_queue, "duel")
+            |in the queue. Please be patient.
+        - elsif @duel.started?
+          .callout.primary
+            |Your duel is being run. Refresh this page to see results.
+        - elsif @duel.finished?
+          .callout.success
+            |The duel is completed.
+        - elsif @duel.failed?
+          .callout.alert
+            |We failed to run this duel. Please try rerunning the duel. If the error persists we'll be notified and try to fix whatever is causing it.
+        - else
+          .callout.secondary
+            |Unknown state
+            = @duel.state
+
+.row
+  .large-8.small-12.large-offset-2.columns
+    - if @duel.waiting? || @duel.started?
+      = render partial: 'duel_queues/live_list', locals: {duel_queue: @duel.duel_queue, duels: [@duel], add_new: false}
+    - else
+      = render @duel
+.row
+  .small-6.columns
+    span.radius.alert.label
+      => @duel.wins_deck1.to_i
+      |Wins
+    .callout.primary
+      h3= link_to @duel.deck1_tag, @duel.deck_list1
+      = render partial: 'deck_lists/card_list', locals: {deck_list: @duel.deck_list1}
+  .small-6.columns
+    span.radius.alert.label
+      => @duel.games_played.to_i - @duel.wins_deck1.to_i
+      |Wins
+    .callout.secondary
+      h3= link_to @duel.deck2_tag, @duel.deck_list2
+      = render partial: 'deck_lists/card_list', locals: {deck_list: @duel.deck_list2}
+
+- if @duel.failure_message && ! @duel.failure_message.empty?
+  .panel
+    h3 Failure Message
+    pre= @duel.failure_message
+.row
+  .large-6.small-12.columns
+    h3 Games
+    table
+      tr
+        th Nr
+        td Winner
+        td Time
+      - @duel.games.each do |g|
+        tr
+          td= g.game_number
+          td= link_to g.winning_deck_list, deck_list_path(g.winning_deck_list)
+          td= g.play_time.strftime("%H:%M:%S")
+          td= link_to "Show", g, class: 'button radius small'
+    - if @duel.card_script_submission
+      p
+        |This duel is a test duel being run for the card script submission
+        =< link_to @duel.card_script_submission.card, @duel.card_script_submission
+    - if @duel.starting_seed
+      span.label.secondary
+        |Seed:
+        =< @duel.starting_seed
+  .large-6.small-12.columns
+    - if @duel.public
+      h3 Discussion
+      = render 'shared/disqus'

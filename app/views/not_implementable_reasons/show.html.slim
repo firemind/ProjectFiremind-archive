@@ -1,0 +1,27 @@
+p#notice= notice
+
+h1= @not_implementable_reason.name
+
+- unless @not_implementable_reason.description.blank? 
+  .panel.radius
+    = @not_implementable_reason.description 
+
+p
+  | Added by
+  =< @not_implementable_reason.user
+
+h3 
+  | Cards tagged with
+  =< @not_implementable_reason.name
+table
+  - @not_implementable_reason.cards.each do |c|
+    tr
+      td width=150
+        =card_link( c )
+      td=c.ability
+      td width= 100
+        = link_to "request it!", request_card_path(c), method: :post, target: '_blank', class: 'button small secondary'
+
+.button-group.radius
+  = link_to 'Edit', edit_not_implementable_reason_path(@not_implementable_reason), class: 'button'
+  = link_to 'Back', not_implementable_reasons_path, class: 'button' 

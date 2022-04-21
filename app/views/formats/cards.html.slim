@@ -1,0 +1,9 @@
+hr
+= render partial: 'shared/breadcrumbs', locals: {links: [[@format.to_s, @format]], current: "Cards"}
+.infinite-table
+  .row.cards
+    =render partial: 'cards_by_format'
+  .row
+    .large-12.columns
+      p.pagination
+        = pagination_link 

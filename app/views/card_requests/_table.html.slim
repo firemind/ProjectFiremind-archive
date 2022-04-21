@@ -1,0 +1,13 @@
+table
+  thead
+    tr
+      th Card
+      th Votes
+      th Requested At
+  tbody
+    - card_requests.each do |card_request|
+      tr
+        td= card_request.card
+        td= card_request.cached_votes_total
+        td= l card_request.created_at
+        td= link_to 'Show', card_request

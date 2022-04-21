@@ -1,0 +1,6 @@
+- if @archetype.mulligan_decisions.any?
+  .callout.panel
+    | Mulligans
+    b=<>(@archetype.mulligan_percentage*100).round
+    |percent of the time
+

@@ -1,0 +1,11 @@
+h1= @edition
+
+table
+.row
+  - @edition.card_prints.joins(:card).order("nr_in_set").each do |cp|
+    .large-4.columns.show-card-col
+      p
+        = cp.name
+        =< cp.id
+      a href= card_path(cp.card)
+        = image_tag card_image_url(cp)

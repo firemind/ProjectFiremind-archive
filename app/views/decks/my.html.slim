@@ -1,0 +1,28 @@
+.row
+  .small-6.large-9.columns
+    h1 My Decks
+  .small-6.large-3.columns.right-align style= 'padding-top: 10px'
+    a.button.success href= new_deck_path(formatname: @formatname)
+      | New Deck
+
+= form_tag my_decks_path(deck_format: @formatname.downcase), method: :get do
+  .row
+    .large-10.columns
+      .input-group
+        = text_field_tag :search, params[:search], class: "input-group-field"
+        .input-group-button
+          = submit_tag "Search", :name => nil, class: "button postfix"
+    .large-2.columns
+      = select_tag :sort_by, options_for_select(@deck_sorting_options, @sorting_selection), onchange: "this.form.submit()"
+
+
+.button-group.expanded
+  - @formats_with_count.each do |f,count|
+    = link_to "#{f} (#{count})", my_decks_path(deck_format: f.downcase), class: "button small #{ 'secondary' unless @formatname == f}"
+.row.infinite-table
+  .large-12.columns
+    .row.deck-list
+      = render partial: 'decks_by_formats', locals: {decks: @decks}
+  .large-12.columns
+    p.pagination
+      = link_to_next_page(@decks, 'Next Page', :remote => true, params: {deck_format: @formatname.downcase, search: @search})

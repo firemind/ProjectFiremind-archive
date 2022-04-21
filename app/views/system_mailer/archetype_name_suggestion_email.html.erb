@@ -1,0 +1,6 @@
+<p>Suggested Name <b><%= @deck_list.suggested_archetype_name %></b></p>
+
+<p>Suggested for <%= link_to @deck_list.id, @deck_list %></p>
+<p>Suggested by <%= link_to @user, @user%></p>
+
+<pre><%= @deck_list.as_text %></pre>

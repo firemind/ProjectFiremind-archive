@@ -1,0 +1,86 @@
+
+@mixin magic-symobol($xpos, $ypos) {
+  background: image-url('manasymbols.png') no-repeat -#{$xpos*25}px $ypos;
+  background-size: 250px 150px;
+  width:25px;
+  height:23px;
+  display: inline-block; 
+}
+
+@mixin mana-symobol($xpos) {
+  @include magic-symobol($xpos, -42px);
+}
+
+@mixin dual-mana-symobol($xpos) {
+  @include magic-symobol($xpos, -63px);
+}
+
+@mixin mana-cost($xpos) {
+  @include magic-symobol($xpos, 1px);
+}
+
+.mana-white {
+  @include mana-symobol(4);
+}
+.mana-blue {
+  @include mana-symobol(5);
+}
+.mana-black {
+  @include mana-symobol(6);
+}
+.mana-red {
+  @include mana-symobol(7);
+}
+.mana-green {
+  @include mana-symobol(8);
+}
+
+.mana-white-blue {
+  @include dual-mana-symobol(0);
+}
+
+.mana-white-black {
+  @include dual-mana-symobol(1);
+}
+
+.mana-blue-black {
+  @include dual-mana-symobol(2);
+}
+
+.mana-blue-red {
+  @include dual-mana-symobol(3);
+}
+
+.mana-black-red {
+  @include dual-mana-symobol(4);
+}
+
+.mana-black-green {
+  @include dual-mana-symobol(5);
+}
+
+.mana-red-white {
+  @include dual-mana-symobol(6);
+}
+
+.mana-red-green {
+  @include dual-mana-symobol(7);
+}
+
+.mana-green-white {
+  @include dual-mana-symobol(8);
+}
+
+.mana-green-blue {
+  @include dual-mana-symobol(9);
+}
+
+.mana-x {
+  @include mana-symobol(1);
+}
+
+@for $i from 0 through 20 {
+  .colorless-#{$i} {
+    @include mana-cost($i);
+  }
+}

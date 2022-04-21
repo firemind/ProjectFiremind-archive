@@ -1,0 +1,48 @@
+= form_for(@duel) do |f|
+  = f.hidden_field :duel_queue_id
+  .row
+    .small-6.columns
+      .row.collapse
+        .small-3.columns
+          = f.label :format_id
+        .small-9.columns
+          = f.select :format_id, options_for_select(@formats.map { |format| [format.name, format.id] }, @duel.format_id)
+    .small-6.columns
+      .row.collapse
+        .small-4.columns
+          = f.label :games_to_play
+        .small-8.columns
+          = f.number_field :games_to_play
+
+  .row
+    .small-6.columns
+      .row.collapse
+        .small-12.columns
+          = f.label "Deck List 1", for: :deck_list1_id
+          = f.select :deck_list1_id, @duel.deck_list1_id ? [[@duel.deck_list1.to_s, @duel.deck_list1.id] ] : [] , {}, {class: "deck_list_select"}
+
+
+    .small-6.columns
+      .row.collapse
+        .small-12.columns
+          = f.label "Deck List 2", for: :deck_list2_id
+          = f.select :deck_list2_id, @duel.deck_list2_id ? [[@duel.deck_list2.to_s, @duel.deck_list2.id] ] : [] , {}, {class: "deck_list_select"}
+
+  .row
+    .small-6.columns
+      #deck_list1_box
+        - if @duel.deck_list1
+          = render partial: 'deck_lists/decklist', locals: {deck: @duel.deck_list1}
+    .small-6.columns
+      #deck_list2_box
+        - if @duel.deck_list2
+          = render partial: 'deck_lists/decklist', locals: {deck: @duel.deck_list2}
+  .row
+    .small-4.small-offset-3.columns
+      br
+      = f.submit 'Run Duel', class: 'button'
+    .small-4.columns
+      label for= :public
+    .small-4.columns
+      => f.check_box :public, checked: true
+      |public

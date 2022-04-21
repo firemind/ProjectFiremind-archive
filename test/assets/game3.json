@@ -1,0 +1,689 @@
+{
+  "turns": [
+    {
+      "active_player": "P",
+      "number": 1,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/263/2361 at 10] (pass)",
+              "* [1/217/2361 at 9] (Mistveil Plains)",
+              "  [1/284/2253 at 9] (Plains)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play Mistveil Plains. Mistveil Plains enters the battlefield tapped."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 2,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [1/635/4813 at 9] (pass)",
+              "* [1/497/5499 at 9] (Swamp)",
+              "  [1/369/4894 at 8] (Woodland Cemetery)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play Swamp."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 3,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "* [1/188/2542 at 9] (pass)",
+              "  [1/215/2542 at 9] (Plains)",
+              "  [1/318/2542 at 10] (Student of Warfare)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/70/1740 at 7] (pass)",
+              "* [1/168/2542 at 9] (Plains)",
+              "  [1/183/2541 at 9] (Student of Warfare)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play Plains."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "* [1/145/2537 at 9] (pass)",
+              "  [1/141/2534 at 11] (Student of Warfare)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 4,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/543/10034 at 9] (pass)",
+              "  [1/254/8299 at 8] (Swamp)",
+              "  [1/337/4900 at 6] (Woodland Cemetery)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [1/431/3614 at 8] (pass)",
+              "  [1/280/4890 at 6] (Swamp)",
+              "* [1/410/8299 at 8] (Woodland Cemetery)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play Woodland Cemetery."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 5,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "* [1/156/3465 at 7] (pass)",
+              "  [1/99/2739 at 10] (Honor of the Pure)",
+              "  [1/278/3465 at 7] (Student of Warfare)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/168/2351 at 8] (pass)",
+              "  [1/101/2751 at 8] (Honor of the Pure)",
+              "* [1/218/3465 at 7] (Student of Warfare)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {W}. Tap Mistveil Plains. Play Student of Warfare."
+              },
+              {
+                "active_player": "P",
+                "text": "Put Student of Warfare onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 6,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [1/352/2310 at 8] (pass)",
+              "* [1/416/2900 at 7] (Swamp)",
+              "  [1/178/1080 at 8] (Ichorclaw Myr)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play Swamp."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/294/2598 at 7] (pass)",
+              "  [1/347/2598 at 7] (Phyrexian Crusader)",
+              "  [1/295/1017 at 8] (Ichor Rats)",
+              "  [1/242/778 at 6] (Ichorclaw Myr)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [1/136/970 at 8] (pass)",
+              "* [1/232/3980 at 7] (Phyrexian Crusader)",
+              "  [1/243/1017 at 8] (Ichor Rats)",
+              "  [1/254/960 at 8] (Ichorclaw Myr)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {1}{B}{B}. Tap Swamp. Tap Swamp. Tap Woodland Cemetery. Play Phyrexian Crusader."
+              },
+              {
+                "active_player": "C",
+                "text": "Put Phyrexian Crusader onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 7,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/218/1116 at 9] (pass)",
+              "  [1/191/1092 at 12] (Honor of the Pure)",
+              "* [1/147/1116 at 7] (Mistveil Plains)",
+              "  [1/291/1116 at 8] (Student of Warfare)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play Mistveil Plains. Mistveil Plains enters the battlefield tapped."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "* [1/251/814 at 8] (pass)",
+              "  [1/256/792 at 10] (Honor of the Pure)",
+              "  [1/124/679 at 8] (Student of Warfare)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/47/-1605 at 7] ([Student of Warfare])",
+              "* [1/261/814 at 7] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/218/591 at 8] (pass)",
+              "  [1/266/790 at 10] (Honor of the Pure)",
+              "* [1/329/814 at 6] (Student of Warfare)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {W}. Tap Mistveil Plains. Play activated ability of Student of Warfare."
+              },
+              {
+                "active_player": "P",
+                "text": "Put a level counter on Student of Warfare."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/345/821 at 9] (pass)",
+              "* [1/412/821 at 7] (Student of Warfare)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {W}. Tap Plains. Play activated ability of Student of Warfare."
+              },
+              {
+                "active_player": "P",
+                "text": "Put a level counter on Student of Warfare."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 8,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/114/2849 at 6] (pass)",
+              "  [1/173/2849 at 6] (Swamp)",
+              "  [1/264/2232 at 9] (Ichor Rats)",
+              "  [1/315/2765 at 9] (Ichorclaw Myr)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/334/2849 at 7] ([Phyrexian Crusader])",
+              "  [1/230/2258 at 8] ([])"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Computer attacks with Phyrexian Crusader."
+              },
+              {
+                "active_player": "P",
+                "text": "{c}Player gets 2 poison counters."
+              }
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [1/102/527 at 8] (pass)",
+              "* [1/310/2800 at 8] (Swamp)",
+              "  [1/75/659 at 8] (Ichor Rats)",
+              "  [1/176/2774 at 8] (Ichorclaw Myr)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play Swamp."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [1/90/-905 at 4] (pass)",
+              "  [1/134/1941 at 7] (Ichor Rats)",
+              "* [1/227/5383 at 7] (Phyrexian Vatmother)",
+              "  [1/96/762 at 7] (Hand of the Praetors)",
+              "  [1/120/202 at 7] (Ichorclaw Myr)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {2}{B}{B}. Tap Swamp. Tap Swamp. Tap Swamp. Tap Woodland Cemetery. Play Phyrexian Vatmother."
+              },
+              {
+                "active_player": "C",
+                "text": "Put Phyrexian Vatmother onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 9,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/301/1469 at 5] (pass)",
+              "  [1/128/1977 at 6] (Honor of the Pure)",
+              "  [1/129/1397 at 6] (Student of Warfare)",
+              "* [1/237/6470 at 7] (Plains)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play Plains."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/138/1653 at 7] (pass)",
+              "  [1/72/209 at 4] (Honor of the Pure)",
+              "* [1/256/9012 at 7] (Kinsbaile Cavalier)",
+              "  [1/78/150 at 6] (Student of Warfare)",
+              "  [1/116/6169 at 6] (Hero of Bladehold)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {3}{W}. Tap Mistveil Plains. Tap Mistveil Plains. Tap Plains. Tap Plains. Play Kinsbaile Cavalier."
+              },
+              {
+                "active_player": "P",
+                "text": "Put Kinsbaile Cavalier onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "* [1/330/9096 at 6] ([Student of Warfare])",
+              "  [1/228/2115 at 5] ([])"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Player attacks with Student of Warfare."
+              }
+            ]
+          }
+        ],
+        "DeclareBlockers": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/310/5194 at 7] ( Student of Warfare=Phyrexian Vatmother)",
+              "  [1/87/1767 at 4] ()"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Computer blocks with Phyrexian Vatmother."
+              },
+              {
+                "active_player": "P",
+                "text": "Student of Warfare is put into its owner's graveyard."
+              },
+              {
+                "active_player": "C",
+                "text": "Phyrexian Vatmother is destroyed."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 10,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [1/294/4065 at 5] (pass)",
+              "  [1/220/8677 at 6] (Swamp)",
+              "* [1/228/99900000 at 5] (Phyrexian Crusader)",
+              "  [1/178/8677 at 6] (Ichor Rats)",
+              "  [1/132/4051 at 7] (Hand of the Praetors)",
+              "  [1/196/5891 at 6] (Ichorclaw Myr)"
+            ],
+            "actions": [
+
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/337/99900000 at 5] ()",
+              "  [1/341/99900000 at 5] ()"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {1}{B}{B}. Tap Swamp. Tap Swamp. Tap Woodland Cemetery. Play Phyrexian Crusader."
+              },
+              {
+                "active_player": "C",
+                "text": "Put Phyrexian Crusader onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/339/99900000 at 4] ([Phyrexian Crusader])",
+              "  [1/276/5156 at 5] ([])"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Computer attacks with Phyrexian Crusader."
+              },
+              {
+                "active_player": "P",
+                "text": "{c}Player gets 2 poison counters."
+              }
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/587/99900000 at 3] (pass)",
+              "  [1/278/99900000 at 4] (Swamp)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 11,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/280/2490 at 6] (pass)",
+              "  [1/57/-285 at 4] (Honor of the Pure)",
+              "  [1/354/3519 at 5] (Kinsbaile Cavalier)",
+              "  [1/358/3786 at 5] (Kabira Crossroads)",
+              "* [1/352/6880 at 6] (Hero of Bladehold)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {2}{W}{W}. Tap Mistveil Plains. Tap Mistveil Plains. Tap Plains. Tap Plains. Play Hero of Bladehold."
+              },
+              {
+                "active_player": "P",
+                "text": "Put Hero of Bladehold onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/269/3267 at 5] ([Kinsbaile Cavalier])",
+              "* [1/470/5499 at 5] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [1/400/4995 at 4] (pass)",
+              "* [1/233/5499 at 4] (Kabira Crossroads)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play Kabira Crossroads. Kabira Crossroads enters the battlefield tapped."
+              },
+              {
+                "active_player": "P",
+                "text": "Player gains 2 life."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 12,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [1/75/4561 at 3] (pass)",
+              "  [1/56/99900000 at 2] (Swamp)",
+              "  [1/54/-274 at 5] (Ichor Rats)",
+              "  [1/152/549 at 6] (Phyrexian Vatmother)",
+              "* [1/27/99900000 at 1] (Hand of the Praetors)",
+              "  [1/71/-274 at 5] (Ichorclaw Myr)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {3}{B}. Tap Swamp. Tap Swamp. Tap Swamp. Tap Woodland Cemetery. Play Hand of the Praetors."
+              },
+              {
+                "active_player": "C",
+                "text": "Put Hand of the Praetors onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [1/1/99900000 at 0] ([Phyrexian Crusader, Phyrexian Crusader])",
+              "  [1/67/-3745 at 7] ([Phyrexian Crusader])",
+              "  [1/70/-3745 at 7] ([Phyrexian Crusader])",
+              "  [1/69/-4435 at 7] ([])"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Computer attacks with Phyrexian Crusader."
+              },
+              {
+                "active_player": "P",
+                "text": "{c}Player gets 6 poison counters."
+              },
+              {
+                "active_player": "P",
+                "text": "{L} Player lost the game because of poisoning."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "players": {
+    "P": {
+      "num_mull": 2,
+      "full": "Player"
+    },
+    "C": {
+      "num_mull": 1,
+      "full": "Computer"
+    }
+  }
+}

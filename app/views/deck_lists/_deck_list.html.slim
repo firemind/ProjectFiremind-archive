@@ -1,0 +1,32 @@
+- cache [deck_list, current_user, "deck_list_partial"] do
+  - user_deck ||= user_deck_for(deck_list)
+  .deck-box
+    .top-content
+      .avatar
+        = deck_list_avatar_tag deck_list, grayscale: !deck_list.enabled
+        = render 'deck_lists/stats', deck_list: deck_list, format: user_deck&.format || deck_list.decks.first.format
+      .fluid
+        = link_to "#{user_deck&.title || deck_list}".truncate(60), deck_list, class: "button title-link small"
+        div
+          .float-left
+            - if deck_list.archetype
+              = link_to deck_list.archetype, deck_list.archetype, class: "button minor small secondary"
+            - else
+              span.label.secondary No Archetype
+          .float-right= color_tag deck_list.colors
+        .row.small-up-1.medium-up-3.stats
+          - entries = deck_list.deck_entries.includes(:card).first(12)
+          - 3.times do |i|
+            .column.column-block class=(i > 0 ? 'hide-for-small-only' : '')
+              ul.deck_entry_list
+                - entries.pop(4).each do |de|
+                  li=card_link(de.card, de.to_s.truncate(18))
+    hr
+    div
+      .button-group.expanded.clear
+        = link_to 'Duel!', new_duel_path(deck_list1_id: deck_list), class: 'button small'
+        -if user_deck
+          = link_to 'Edit', edit_deck_path(user_deck), class: 'button small'
+        - else
+          = link_to 'Fork', fork_deck_list_path(deck_list), class: 'button small', method: :post
+        = link_to '.dec', deck_list_path(deck_list, format: 'dec'), class: 'button small'

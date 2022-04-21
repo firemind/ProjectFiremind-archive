@@ -1,0 +1,88 @@
+html lang= "en"
+  head
+    metac harset="utf-8"}
+    title Project Firemind weekly report
+    css:
+      td, th {
+        padding: 5px 10px;
+      }
+      th {
+        background: #ccc;
+      }
+      .label.success {
+        background-color: #5da423;
+        color: white;
+      }
+      .label.alert {
+        background-color: #c60f13;
+        color: white;
+      }
+      .label.secondary {
+        background-color: #e9e9e9;
+        color: #333333;
+      }
+      .label {
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1;
+        white-space: nowrap;
+        padding: 0.1875em 0.625em 0.25em;
+        font-size: 0.875em;
+        background-color: #2ba6cb;
+        color: white;
+      }
+      th.deck-column {
+        text-align: left;
+      }
+      th.deck-column a {
+        text-decoration: none;
+      }
+  body
+    p
+      | Hello
+      =< @user.name
+    p
+      This is your weekly report on the performance of your decks at Project Firemind.
+
+    h2 Deck Rankings
+    - if @decks.size > 0
+      table
+        tr
+          th Deck
+          th Format
+          th Games played
+          th Games won
+          th Rating
+        - @decks.each do |deck|
+          tr
+            th.deck-column= link_to deck.title, deck_url(deck)
+            td= deck.format
+            td= deck.games.where("games.created_at > ?", 7.days.ago).count
+            td= deck.won_games.where("games.created_at > ?", 7.days.ago).count
+            - r = deck.current_rating
+            td.label{class: r ? cell_class_for_rating(r.whr_rating) : 'secondary'}
+              - if r
+                = r.whr_rating
+                - old_rating = r.paper_trail.version_at(1.week.ago)
+                - if old_rating && !old_rating.live?
+                  - diff = r.whr_rating - old_rating.whr_rating
+                  = "(#{"+" if diff > 0}#{diff})"
+              - else
+                = '-'
+    - else
+      p None of your decks seem to be enabled and/or legal in their chosen format.
+
+    - if @forks.size > 0
+      p Some of your decks have been forked by other users. See how their modified versions perform.
+      ul
+        - @forks.each do |f|
+          li
+            = f.author
+            forked your deck
+            = f.forked_from.title
+            into
+            = link_to f.title, deck_url(f)
+  p This report e-mail is very much a prototype. If you have any ideas on how to improve it please let me know through the issue tracker or the forum.
+
+  p To unsubscribe from this report just uncheck "Send me weekly report emails" in your profile settings.

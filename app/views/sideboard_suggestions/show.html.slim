@@ -1,0 +1,27 @@
+h1
+  | Sideboard Suggestion for
+  =< @sideboard_suggestion.deck
+
+table.sideboarding-table
+  thead
+    tr
+      th
+      th Out
+      th In
+  tbody
+    - @archetypes.each do |archetype|
+      tr
+        th.avatar style= "background-image: url(#{image_url(archetype_avatar_path(archetype))})"
+          = link_to archetype, archetype
+        td
+          ul
+            - take_out(@sideboard_suggestion.deck, archetype, @sideboard_suggestion).each do |amount, card|
+              li
+                => amount
+                = card_link card
+        td
+          ul
+            - bring_in(@sideboard_suggestion.deck, archetype, @sideboard_suggestion).each do |amount, card|
+              li
+                => amount
+                = card_link card

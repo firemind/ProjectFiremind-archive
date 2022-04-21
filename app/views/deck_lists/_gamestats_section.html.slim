@@ -1,0 +1,16 @@
+ul.pricing-table
+  li.title 
+    => deck_list.games_count
+    | Games
+  li#game_table.bullet-item
+    Loading ...
+- content_for :custom_js do
+  javascript:
+    $(function(){
+      $.ajax({url: '#{ url_for controller: 'deck_lists', action: 'fetch_games', :id => deck_list.id }',
+        dataType: 'html',
+        success: function(data, textStatus, xhr){
+          $('#game_table').html(data);
+        }
+      })
+    });

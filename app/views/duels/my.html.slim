@@ -1,0 +1,12 @@
+.row
+  .large-12.columns
+    h1 My Duels
+
+.row
+  .large-8.small-12.columns
+    .infinite-table
+      = render 'duels/list', duels: @duels
+      p.pagination
+        = link_to_next_page(@duels, 'Next Page', :remote => true)
+  .large-3.columns
+    = link_to 'Run a Duel', new_duel_path, class: 'button'

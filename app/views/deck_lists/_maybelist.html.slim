@@ -1,0 +1,13 @@
+.callout
+  h5 Maybe entries
+  - if deck.maybe_entries.any?
+    .row
+      - @deck.maybe_entries.group_by(&:deck_entry_cluster).each do |clu, mes|
+        .large-6.columns
+          b= clu
+          ul.no-bullet
+            - mes.each do |me|
+              li= link_to me, edit_deck_maybe_entry_path(@deck, me), data: { 'reveal-ajax' => "true"}
+  - if deck.author == current_user
+    button.button.radius.small data= { 'reveal-ajax' => new_deck_maybe_entry_path(@deck)}
+      |Add Maybe Cards

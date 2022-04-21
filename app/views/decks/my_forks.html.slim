@@ -1,0 +1,9 @@
+.row
+  .large-7.columns
+    h1 My Forked Decks
+  .large-5.columns.right style= 'padding-top: 20px'
+    a.button.success href= new_deck_path New Deck
+    a.button href= my_decks_path Show Originals
+.row
+  .large-12.columns
+    = render partial: 'decks_by_formats', locals: {decks: @decks}

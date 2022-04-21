@@ -1,0 +1,26 @@
+.row
+  .large-8.small-12.columns
+    h3 Recent Duels
+    = render partial: 'duel_queues/live_list', locals: {duel_queue: @duel_queue, duels: @duel_queue.ordered_duels.first(6)}
+  .large-4.small-12.columns
+    ul.pricing-table#deck-stats
+      li.bullet-item
+        => pluralize(@duel_queue.count, "duel")
+        |in the queue
+      li.bullet-item
+        | Magarena Version
+        =< CURRENT_MAGARENA_VERSION
+    - if @featured_challenge
+      ul.pricing-table#deck-stats
+        li.bullet-item
+          b Featured Challenge
+        li.bullet-item
+          = link_to deck_list_avatar_tag(@featured_challenge.deck_list), deck_challenge_path(@featured_challenge), class: 'card-with-tooltip', data: {url: tooltip_deck_list_path(@featured_challenge.deck_list)}
+      -content_for :custom_js do
+        javascript:
+          populateTooltips();
+
+    .row
+      .large-12.small-12.columns
+      .large-12.small-12.columns
+        = render 'twitter_widet'

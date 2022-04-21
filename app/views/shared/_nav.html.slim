@@ -1,0 +1,46 @@
+.title-bar(data-responsive-toggle="main-menu" data-hide-for="medium")
+  button.menu-icon(type='button' data-toggle=true)
+  .title-bar-title Menu
+#main-menu.top-bar data= {topbar: true, options: "is_hover:false"}
+  .top-bar-left
+    ul.vertical.medium-horizontal.menu(data-responsive-menu="drilldown medium-dropdown")
+      li
+        = link_to "ProjectFiremind", root_path
+      li
+        a href= '#' Formats
+        ul
+          li= link_to "Standard", "/formats/standard"
+          li= link_to "Modern", "/formats/modern"
+          li= link_to "Legacy", "/formats/legacy"
+          li= link_to "Vintage", "/formats/vintage"
+          li= link_to "Pauper", "/formats/pauper"
+      - if current_user
+        li= link_to "Workspace", workspace_index_path
+      li
+        a href= '#' AI
+        ul
+          li= link_to "Teach AI to Mulligan", sample_dealt_hands_path
+          li= link_to "Classify Deck Archetype", classify_archetypes_path
+          - if current_user && current_user.airm_admin
+            li= link_to "AI Rating Matches", ai_rating_matches_path
+      li
+        a href= '#' Search
+        ul
+          li= link_to "Cards", search_cards_path
+          li= link_to "Decks", search_decks_path
+  .top-bar-right
+    ul.vertical.medium-horizontal.menu(data-responsive-menu="drilldown medium-dropdown")
+      li= link_to "My Duels", my_duels_path
+      li= link_to "My Decks", my_decks_path
+      li= link_to "My Queues", duel_queues_path
+      - if current_user
+        li
+          a href= '#' Logged in as #{current_user}
+          ul
+            li= link_to "Profile", current_user
+            - if current_user.meta.any?
+              - current_user.meta.each do |m|
+                li= link_to "Meta #{m.format}", my_meta_index_path(format_id: m.format_id)
+            li= link_to "Sign Out", destroy_user_session_path, method: :delete
+      - else
+        li= link_to "Sign In", new_user_session_path

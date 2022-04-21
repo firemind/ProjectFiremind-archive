@@ -1,0 +1,42 @@
+div style= "width: 700px"
+  ul.tabs.vertical data= {tab: true}
+    li.active.tab-title
+      a href= '#embedded-decklist' Decklist
+    - if @deck.deck_list.duels.count > 0
+      li.tab-title
+        a href= '#recent_duels' Recent Duels
+    - unless @deck.description.blank?
+      li.tab-title
+        a href= '#description'  Description
+    - if @deck.forks.any?
+      li.tab-title
+        a href= '#forks' Forks
+  .tabs-content
+    #embedded-decklist.content.active
+      h3= link_to (title @deck.title), @deck
+      = render 'deck_lists/decklist', deck: @deck.deck_list
+    #recent_duels.content
+      table
+        = render partial: 'duels/table', locals: {duels: @deck.deck_list.duels.last(5)}
+    - unless @deck.description.blank?
+      #description.content data= {section: {content: true}}
+        h3= link_to (title @deck.title), @deck
+        p= @deck.description
+    - if @deck.forks.any?
+      #forks.content
+        table
+          tr
+            th Deck
+            th By
+            th Format
+            th Rating
+          - @deck.forks.each do |f|
+            tr
+              td= link_to f, f
+              td= link_to f.author, f.author
+              td= f.format
+              td
+                - if rating = f.current_rating
+                  span.label class= alert_class_for_rating(rating.whr_rating)
+                    b
+                      = rating.whr_rating

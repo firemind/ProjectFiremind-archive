@@ -1,0 +1,44 @@
+.row
+  .large-12.columns
+    - @archetype = @deck_list.archetype
+    - if @archetype&.has_banner
+      = image_tag banner_url(@deck_list.archetype)
+    hr
+    = render partial: 'shared/breadcrumbs', locals: {links: [[@archetype.format.to_s, @archetype.format], [@archetype.to_s,@archetype, {title: "#{(@deck_list.archetype_score.to_f).round}% confidence"}]], current: @title} if @archetype
+  .large-8.columns
+    - if @deck
+      - if !@deck.enabled
+        = render 'disabled_box', deck: @deck
+      - elsif @deck.deck_list.duels.count == 0
+        = render 'first_duel_box', deck: @deck
+    = render 'decklist', deck: @deck_list
+    = render 'maybelist', deck: @deck if @deck
+    = render 'duels/list', duels: @running_duels
+    = render 'shared/disqus'
+  .large-4.columns
+    = render 'deck_menu'
+    ul.pricing-table#deck-stats
+      li.title= title(@title)
+      li.bullet-item
+        a.th
+          - if @deck
+            a data-toggle="avatar-select-dropdown"
+              = deck_avatar_tag(@deck)
+            #avatar-select-dropdown.dropdown-pane.left data-dropdown=true data-auto-focus="true"
+              - @deck.thumb_print_options.includes(:edition).each do |thumb|
+                a href=update_thumb_deck_path(@deck, thumb_id: thumb.id) data-method= :patch
+                  = image_tag thumb_print_url(thumb)
+          -else
+            = deck_list_avatar_tag(@deck_list)
+
+      = render 'deck_info', deck: @deck if @deck
+      = render 'deck_list_info', deck_list: @deck_list
+      - if @deck
+        = render 'clusters'
+        ul.pricing-table
+          li.title Embed
+          li.bullet-item
+            textarea.deck-embed-textarea
+              = %Q(<iframe width="800" height="550" src="#{embed_deck_url(@deck)}" frameborder="0" ></iframe>)
+
+    = render 'gamestats_section', deck_list: @deck_list, title: 'With this Version'

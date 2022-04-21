@@ -1,0 +1,7 @@
+h1
+  | Compare
+  =<> @left
+  | to
+= form_tag compare_archetypes_path, method: :get do
+  = hidden_field_tag :left_id, @left.id
+  = select_tag :right_id, options_from_collection_for_select(@archetypes, "id", "name"), onchange: "this.form.submit()"

@@ -1,0 +1,7 @@
+h1 
+  | Deck Lists in
+  =< @archetype
+.row
+  - @decks.each do |deck|
+    .large-6.columns
+      = render deck

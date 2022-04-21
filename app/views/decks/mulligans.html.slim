@@ -1,0 +1,25 @@
+h1 
+  |Mulligans on 
+  = @deck
+
+- if @hands.empty?
+  No mulligan decisions recorded.
+- else
+  table
+    tr
+      th Hand
+      th Avg Mull All (Play)
+      th Avg Mull All (Draw)
+      - if current_user
+        th Avg Mull Me (Play)
+        th Avg Mull Me (Draw)
+    - @hands.each do |md|
+      tr
+        td=link_to md[:name], "#",
+            class: 'mulligan-hand-with-tooltip',
+            data: {url: tooltip_dealt_hand_path(id: md[:id])}
+        td=mulligan_avg_label(md[:avg_play], nil)
+        td=mulligan_avg_label(md[:avg_draw], nil)
+        - if current_user
+          td=mulligan_avg_label(md[:avg_play_me], md[:avg_play])
+          td=mulligan_avg_label(md[:avg_draw_me], md[:avg_draw])

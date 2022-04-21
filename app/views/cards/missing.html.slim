@@ -1,0 +1,26 @@
+h1 Cards not yet implemented in magarena
+= form_tag missing_cards_path, method: :get do
+  .row.collapse
+    .large-8.columns
+      = text_field_tag :query, @query
+      ul.no-bullet
+        li
+          => check_box_tag :show_claimed_cards, "1", @show_claimed_cards
+          | Show cards other people are working on
+        li
+          => check_box_tag :show_unimplementable_cards, "1", @show_unimplementable_cards
+          | Show cards that have been flagged as not implementable
+        li
+          => check_box_tag :show_upcoming_cards, "1", @show_upcoming_cards
+          | Show cards that will be added in the next release
+    .large-4.columns
+      = submit_tag "Search", name: nil, class: 'button postfix'
+table
+  - @cards.each do |c|
+    tr
+      td=card_link( c )
+      td=c.card_type
+      td
+        - c.not_implementable_reasons.each do |res|
+          = link_to res.name, res, class: 'button tiny alert',title:"Reason it can't be implemented"
+      td= link_to "work on it!", add_workspace_path(c), method: :post, class: 'button small'

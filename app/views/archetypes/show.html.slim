@@ -1,0 +1,65 @@
+.row
+  .large-12.columns
+    - if @archetype.has_banner
+      = image_tag banner_url(@archetype)
+  .large-8.columns
+    h1= "Archetype: #{@archetype}"
+    - if @archetype.archetype_aliases.any?
+      p= "a.k.a: #{@archetype.archetype_aliases.pluck(:name).join(",")}"
+
+
+    table
+      thead
+        tr
+          th Card
+          th Total #
+          th # Per Deck
+          th % of Decks
+      - @cards.each do |card, stats|
+        tr
+          td= link_to card, card, class: "card-with-tooltip button tiny expand #{card.enabled ? 'info': 'secondary' }", data: {url: tooltip_card_path(card)}
+          td.right-align= stats[:number_of_copies]
+          td.right-align= stats[:number_of_copies_per_deck].round(2)
+          td.right-align= link_to stats[:percent_of_decks].round, deck_lists_by_card_archetype_path(@archetype, card.id)
+    h3 Discussion
+    = render 'shared/disqus'
+  .large-4.columns
+    = render partial: 'card_type_pie_chart'
+    = render partial: 'mulligan_statistics'
+    = link_to "Generate Magarena Deck", generate_from_archetype_decks_path(@archetype), class: "button", title: "Generates a Deck from cards enabled in magarena for this archetype"
+    h4 = "#{@archetype.format} by AI"
+    table
+      thead
+        tr
+          th Deck List
+          th Wins
+          th Losses
+          th Rating
+      tbody
+        - scope = @archetype.deck_lists.highest_ranked(@archetype.format).group("deck_lists.id, ratings.id")
+        - loss_counts = scope.select("deck_lists.id, lost_games_count").map{|r| [r.id, r.lost_games_count]}.to_h
+        - scope.select("deck_lists.*, ratings.whr_rating as rating").each do |dl|
+          tr
+            td= link_to dl, dl
+            td.right-align= dl.won_games_count
+            td.right-align= loss_counts[dl.id] 
+            td.right-align
+              span.label class= alert_class_for_rating(dl.rating)
+                = dl.rating
+
+    h4
+      => @archetype.format
+      |MTGO League Results
+    table
+      thead
+        tr
+          th Competitive 5-0
+          th Challenge 7-0
+      tbody
+        tr
+          td
+            = @archetype.league_result_count(5, 0)
+          td
+            = @archetype.challenge_result_count(7, 0)
+    - if admin_user?
+      = link_to "Admin", admin_archetype_path(@archetype), class: "button success", data: { no_turbolink: true }

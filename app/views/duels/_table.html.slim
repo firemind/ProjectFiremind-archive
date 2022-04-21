@@ -1,0 +1,11 @@
+- duels.each do |duel|
+  tr
+    td= link_to "#{duel.deck_list1} (#{duel.wins_deck1.to_i})", duel.deck_list1
+    td vs
+    td= link_to "#{duel.deck_list2} (#{duel.games_played.to_i - duel.wins_deck1.to_i})", duel.deck_list2
+    td= format_state(duel.state)
+    td= duel.format
+    td= "#{time_ago_in_words(duel.created_at)} ago"
+    td
+      .button-group.radius
+        = link_to 'Show', duel, class: 'button tiny'

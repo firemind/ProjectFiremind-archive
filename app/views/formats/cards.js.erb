@@ -1,0 +1,10 @@
+$("<%=j render(:partial => 'cards_by_format', locals: {decks: @cards}) %>")
+.appendTo($(".infinite-table .cards"));
+
+// Update pagination link
+<% if @cards.last_page? %>
+  $('.pagination').html("No more cards to load!");
+<% else %>
+  $('.pagination')
+  .html("<%=j pagination_link %>");
+<% end %>

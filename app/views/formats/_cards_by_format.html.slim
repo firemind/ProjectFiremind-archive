@@ -1,0 +1,6 @@
+- @cards.each do |card|
+  .large-4.columns.show-card-col style="height:480px"
+    a href= card_path(card)
+      = render 'cards/card_image', card: card, grayscale: !card.enabled, height: 450
+      p= card.name
+

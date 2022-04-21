@@ -1,0 +1,21 @@
+h1 Listing Games
+table
+  thead
+    tr
+      td #
+      th Winner
+      th
+      th Losing
+      th Play Time
+  tbody
+    - @games.each do |game|
+      tr
+        td= game.game_number
+        td= link_to "#{game.winning_deck_list}", game.winning_deck_list
+        td vs
+        td= link_to "#{game.losing_deck_list}", game.losing_deck_list
+        td
+          = game.play_time.strftime("%H:%M:%S")
+        td
+          .button-group.radius
+            = link_to 'Show', game, class: 'button small'

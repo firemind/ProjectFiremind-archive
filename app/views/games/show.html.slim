@@ -1,0 +1,34 @@
+.row.collapse
+  .large-12.columns
+    .button-group.game-heading data= {grouptype: 'VS'}
+      = link_to @game.winning_deck_list, @game.winning_deck_list, class: "large button success radius"
+      = link_to @game.losing_deck_list, @game.losing_deck_list, class: "large button radius"
+
+.gamelog  data= {url: @game.json_log_url, winner: @game.winning_deck_list_id == @game.duel.deck_list1_id ? 'P' : 'C'} 
+
+center
+  = link_to "See full duel", @game.duel, class: 'button'
+
+script type="text/template" id="gamePhaseTemplate"
+  ul.accordion data= {accordion: true} data-multi-expand="true"
+script type="text/template" id="gameActionTemplate"
+  li.accordion-item data= {accordion_item: true}
+    a.accordion-title href="#panel{0}" role="tab"
+      b 
+        | {1}
+      = " "
+      span.label.right class= '{5}'
+        | {3}
+      span.label.right class= '{2}'
+        b 
+          | {4} 
+        | Life
+    .accordion-content role="tabpanel" data-tab-content=true id= "panel{0}"
+script type="text/javascript"
+  | cardNameMappings=#{@card_name_mappings.to_json.html_safe} 
+
+script type="text/template" id="gameOptionTemplate"
+  a data= {toggle: "contentDrop{0}"} Decided on {1}
+  .dropdown-pane id= "contentDrop{0}" data= {dropdown: true, hover_pane: "true", hover: "true"}
+    h4 Options were
+    ul.options

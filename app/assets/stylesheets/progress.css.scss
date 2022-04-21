@@ -1,0 +1,82 @@
+
+@import 'settings';
+
+@mixin striped {
+  span {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                        transparent 75%, transparent);
+
+  }
+}
+@mixin animated-stripes {
+  span {
+    animation: animate-stripes 3s linear infinite;
+  }
+}
+.tprogress {
+  width: 100%;
+  height: 22px;
+  background: #999;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1px;
+  @include striped;
+  div {
+    color: white;
+    height: 22px;
+    float: left;
+    top: 0px;
+    background: get-color(primary);
+  }
+  div.upcoming {
+    background: get-color(secondary);
+  }
+  &.failed {
+    span {
+      color: black;
+    }
+    div {
+      background: get-color(alert);
+    }
+  }
+  &.finished {
+    span {
+      color: black;
+    }
+    div {
+      background: get-color(success);
+    }
+  }
+  &.waiting {
+    @include striped;
+    @include animated-stripes;
+    span {
+      color: black;
+    }
+  }
+  &.started {
+    @include striped;
+    @include animated-stripes;
+    span {
+      color: black;
+    }
+  }
+  span {
+    padding: 2px 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    z-index:2;
+    color:white;  
+  }
+
+}
+
+@keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}

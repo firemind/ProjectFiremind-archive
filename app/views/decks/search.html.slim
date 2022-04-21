@@ -1,0 +1,93 @@
+h1 Deck Search
+= form_tag search_decks_path, method: :get, id: "deck-search-form" do
+  .input-group
+    = text_field_tag :query, @searcher.terms_as_string, class: "input-group-field", placeholder: "card:Geist_of_Saint_Traft Flash format:Modern archetype:Nahiri_Jeskai rating_lt:100 rating_gt:10", id: "deck-search-input", data: {autocomplete_source: search_suggestions_decks_path}
+    .input-group-button
+      = submit_tag "Search", name: nil, class: 'button postfix'
+- if (cards = @searcher.cards).any?
+  .callout.success
+    | Filtering by cards:
+    - cards.each do |c|
+      = ' '
+      span.label.secondary.tiny
+        => c
+        a.with_icon href=search_decks_path(query: @searcher.terms_without(cards: [c]))
+          = fa_icon 'close'
+
+.row
+  - if at= @searcher.archetype
+    .large-6.columns
+      .callout.success
+        form action=search_decks_path method=:get
+          = hidden_field_tag :query, @searcher.terms_without(archetype: true)
+          button class="close-button" aria-label="Close alert" type="submit"
+            span aria-hidden="true" &times;
+        p
+          |Filtering by archetype:
+          =< at
+  - if f= @searcher.format
+    .large-6.columns
+      .callout.success
+        form action=search_decks_path method=:get
+          = hidden_field_tag :query, @searcher.terms_without(format: true)
+          button class="close-button" aria-label="Close alert" type="submit"
+            span aria-hidden="true" &times;
+        p
+          |Filtering by format:
+          =< f
+
+- if (ats =@searcher.ambig_archetypes).any?
+  .callout.warning
+    p Matched multiple archetypes in different formats
+    .button-group.tiny
+      - ats.each do |a|
+        = link_to "#{a} #{a.format}", search_decks_path(query: @searcher.terms_with(format: a.format, archetype: a, general: [])), class: "button"
+
+- if (cards=@searcher.ambig_cards).any?
+  .callout.warning
+    p Matched multiple cards
+    .button-group.tiny
+      - cards.each do |c|
+        = link_to c, search_decks_path(query: @searcher.terms_with(cards: [c])), class: "button"
+
+table
+  tr
+    th Rating
+    th Deck
+    th # of Games
+    th Colors
+    th Archetype
+    th Author
+    th Format
+    th width=160 
+  - @decks.each do |d|
+    tr
+      td
+        - if rating = d.current_rating
+          span.label class= alert_class_for_rating(rating.whr_rating)
+            b= rating.whr_rating
+        - else
+          |-
+      td= link_to d, d
+      td= d.deck_list.games.count
+      td= d.colors
+      td= link_to d.archetype, d.archetype
+      td= link_to d.author, d.author
+      td= link_to d.format, format_path(d.format.name)
+      td
+        .button-group.tiny.expanded
+          = link_to '.dec', deck_list_path(d.deck_list, format: 'dec'), class: 'button'
+          = link_to "Card View", '#', class: 'card_view_link button', data: {decklist_id: d.deck_list.id}
+
+coffee:
+  jQuery ->
+    f = $('#deck-search-input')
+    f.focus()
+    strLength = f.val().length;
+    f[0].setSelectionRange(strLength, strLength);
+    f.autocomplete
+      source: $('#deck-search-input').data('autocomplete-source'),
+      minLength: 3,
+      select: ( event, ui )->
+        $('#deck-search-input').val(ui.item.label);
+        $("#deck-search-form").submit()

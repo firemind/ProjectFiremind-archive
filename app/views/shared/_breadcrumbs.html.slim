@@ -1,0 +1,12 @@
+nav aria-label="You are here:" role="navigation"
+  ul class="breadcrumbs"
+    - links.each do |link|
+      - if link.is_a? String
+        li class="disabled"= link
+      - else
+        li
+          = link_to link[0], link[1], link[2]||{}
+    - if current
+      li
+        span class="show-for-sr" Current:
+        = current

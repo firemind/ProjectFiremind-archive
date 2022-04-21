@@ -1,0 +1,20 @@
+hr
+= render partial: 'shared/breadcrumbs', locals: {links: [[@format.to_s, @format]], current: "Archetypes"}
+
+= form_tag format_archetypes_path(format_id: @format.name.downcase), method: :get do
+  .row.collapse
+    .large-10.columns
+      = text_field_tag :search, params[:search]
+    .large-2.columns
+      = submit_tag "Search", :name => nil, class: "button postfix"
+
+
+
+.row.infinite-table
+  .large-12.columns
+    .row.archetypes
+      = render partial: 'archetype_grid', locals: {archetypes: @archetypes}
+  .large-12.columns
+    p.pagination
+      = link_to_next_page(@archetypes, 'Next Page', :remote => true, params: {search: @search})
+

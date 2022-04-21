@@ -1,0 +1,13 @@
+.row
+  - editions.each do |edition|
+    .large-6.small-12.columns
+      .panel
+        h4= link_to edition.to_s.truncate(45), edition_path(id: edition.short)
+        .tprogress class= "primary"
+          - ratio = edition.card_prints.count > 0 ? edition.card_prints.implemented.count.to_f / edition.card_prints.count : 0
+          div style="width: #{(ratio * 100).round}%"
+          span
+            b=> edition.card_prints.implemented.count
+            | of
+            b=<> edition.card_prints.count
+            | implemented

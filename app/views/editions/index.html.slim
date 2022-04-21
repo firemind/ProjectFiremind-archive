@@ -1,0 +1,17 @@
+.row
+  .large-8.columns
+    h1 Sets
+  .large-4.columns
+    button-group.expanded
+      =link_to "By Release Date", editions_path, class: "button #{'secondary' unless params[:by_implemented]}"
+      =link_to "By % Implemented", editions_path(by_implemented: true), class: "button #{'secondary' if params[:by_implemented]}"
+    .panel.callout
+      b
+        - total = Card.count
+        => n = Card.where(enabled: true).count
+        => "(#{(n.to_f / total.to_f * 100).round}%)"
+        | of
+        =<> total
+        | cards implemented
+
+= render partial: 'editions', locals: {editions: @editions}

@@ -1,0 +1,11 @@
+.callout.warning
+  h3 This deck is currently disabled
+  p
+    |The following
+    =<> deck.disabled_deck_entries.size
+    |cards are not yet available.
+  ul.no-bullet
+    - deck.disabled_deck_entries.includes(:card).each do |de|
+      li
+        b=> de.card
+        small= link_to "request it!", request_card_path(de.card), method: :post, target: '_blank'

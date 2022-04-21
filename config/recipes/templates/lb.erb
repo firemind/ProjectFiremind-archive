@@ -1,0 +1,42 @@
+upstream firemind_appserver {
+    ip_hash;
+    <% fetch(:appservers, []).each do |app| %>
+    server <%= app %>;
+    <% end %>
+}
+
+
+# ----- Logging
+log_format proxy '[$time_local] Cache: $upstream_cache_status $upstream_addr $upstream_response_time $status $bytes_sent $proxy_add_x_forwarded_for $request_uri';
+access_log /var/log/nginx/webseite.tld.access_log proxy;
+
+server {
+    listen       80;
+    server_name  firemind.ch;
+    return       301 https://www.firemind.ch$request_uri;
+}
+
+server {
+    listen       80;
+    server_name  *.firemind.ch;
+    return       301 https://www.firemind.ch$request_uri;
+}
+
+server {
+  listen   443; ## listen for ipv4; this line is default and implied
+
+  ssl on;
+  ssl_certificate /etc/nginx/ssl/firemind.ch.crt;
+  ssl_certificate_key /etc/nginx/ssl/firemind.ch.key;
+
+  # Definiert, dass dieser server {} Block gelten soll (virtual host matching)
+  server_name www.firemind.ch;
+
+  location / {
+    proxy_pass http://firemind_appserver;
+    # Original-Namen weitergeben, statt den in proxy_pass angegebenen namen oder der in server_name
+    #proxy_set_header Host $host;
+    proxy_set_header Host www.firemind.ch;
+  }
+
+}

@@ -1,0 +1,15 @@
+- cache [archetype], expires_in: 5.minutes do
+  .archetype-box
+    div
+      .avatar 
+        =image_tag image_url(asset_path(archetype_avatar_path(archetype)))
+        .rating-stats
+          .button-group.stacked
+            - if hr = archetype.highest_rating
+              = link_to "Top Rating: #{hr}", archetype_deck_lists_path(archetype), class: "button small #{alert_class_for_rating(hr)}"
+            = link_to "#{archetype.deck_lists.legal_in(archetype.format).size} Decks", archetype_deck_lists_path(archetype), class: "button small"
+      .fluid
+        = link_to archetype, [@format, archetype], title: archetype.to_s, class: "button small title-link"
+        ul.deck_entry_list
+          - archetype.top_cards(7).each do |card|
+            li=card_link card,card.name.truncate(25) 

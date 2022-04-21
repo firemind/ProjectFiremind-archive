@@ -1,0 +1,13 @@
+h3
+  |Status in
+  =< @format
+
+- if @legal
+  p
+    |This deck is legal in
+    =< @format
+- else
+  ul.no-bullet
+    - @problems.each do |p|
+      li
+        b= p

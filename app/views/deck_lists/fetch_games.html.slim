@@ -1,0 +1,12 @@
+- cache [@deck_list.cache_key, 'fetch_duels'], expires_in: 1.hour do
+  table.full
+    tr
+      th Matchup
+      th Win %
+    - calculate_matchup_percentages(@deck_list).each do |at, stats|
+      - win_percentage = stats[:win_percentage]
+      tr
+        td= link_to at, matchup_deck_list_path(@deck_list, at.id)
+        td
+          span.label class= (win_percentage > 55 ? 'success' : (win_percentage < 45 ? 'alert' : 'secondary'))  title= "#{stats[:wins]} / #{stats[:losses]}"
+            = win_percentage.round

@@ -1,0 +1,21 @@
+.row
+  .large-12.columns
+    ul#status-tabs.tabs data-tabs= true
+      li.tabs-title.is-active
+        a href= '#card_requests'
+          => @card_requests.size
+          |Card Requests
+      li.tabs-title
+        a href= '#card_script_submissions'
+          => @card_script_submissions.size
+          |Card Script Submissions
+      li.tabs-title
+        a data-tabs-target='failed_duels' Failed Duels
+    .tabs-content data-tabs-content="status-tabs"
+      #card_requests.tabs-panel.is-active
+        = render 'card_requests/table', card_requests: @card_requests
+      #card_script_submissions.tabs-panel
+        = render 'card_script_submissions/table', card_script_submissions: @card_script_submissions
+      #failed_duels.tabs-panel
+        table
+          = render 'duels/table', duels: @failed_duels

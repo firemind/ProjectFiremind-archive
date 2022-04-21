@@ -1,0 +1,16 @@
+hr
+.row
+  .large-8.columns
+    = render partial: 'shared/breadcrumbs', locals: {links: [[@format.to_s, @format]], current: "Sets"}
+  .large-4.columns
+    .panel.callout
+      b
+        - scope = Card.joins(:card_prints).where(card_prints: {edition_id: @editions.map(&:id)}).select("distinct(cards.id)")
+        - total = scope.count
+        => n = scope.where(enabled: true).count
+        => "(#{(n.to_f / total.to_f * 100).round}%)"
+        | of
+        =<> total
+        | cards implemented
+
+= render partial: 'editions/editions', locals: {editions: @editions}

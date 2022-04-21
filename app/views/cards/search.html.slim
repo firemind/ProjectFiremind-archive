@@ -1,0 +1,30 @@
+h1 Card Search
+= form_tag search_cards_path, method: :get do
+  .row
+    .large-8.columns
+      .input-group
+        = text_field_tag :query, @query, class: "input-group-field"
+        .input-group-button
+          = submit_tag "Search", name: nil, class: 'button postfix'
+    .large-4.columns
+      .labeled-switch
+        .switch.large
+          = check_box_tag :only_enabled, '1', @only_enabled, class: "switch-input"
+          label.switch-paddle for="only_enabled"
+            span class="show-for-sr"
+              |Only Enabled Cards
+        label Only Enabled Cards
+table
+  - @cards.each do |c|
+    tr
+      td width=150
+        =card_link( c )
+      td=c.ability
+      td
+        - if c.magarena_rating
+          span.label class= alert_class_for_rating(c.magarena_rating) title="Average Rating of decks containing this" =c.magarena_rating.round(2)
+      td width= 100
+        - if c.enabled
+          = link_to "Scripts", scripts_card_path(c), class: 'button small'
+        -else
+          = link_to "request it!", request_card_path(c), method: :post, target: '_blank', class: 'button small secondary'

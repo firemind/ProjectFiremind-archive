@@ -1,0 +1,28 @@
+h3= @deck_entry_cluster
+
+p
+  |Deck Size:
+  =< @decksize
+
+- if @cardtotal > 0
+  p
+    |Number of Cards in Cluster:
+    =< @cardtotal
+  .row
+    .small-12.columns
+      table
+        tr
+          th
+            |Cards Drawn
+          - (1..@cardtotal).first(10).each do |occ|
+            th title="#{occ} copies drawn"= occ
+        - (3..20).each do |draw|
+          tr
+            th
+              = draw
+            - (1..@cardtotal).first(10).each do |occ|
+              - val = occ <= draw ? "#{(10000 * (1.0 -hypergeo(@cardtotal, @decksize, draw, occ))).floor.to_f / 100}" : nil
+              td.centered title=(val ? "Chance of drawing #{occ} cards from this cluster when you have drawn #{draw} cards" : 'Impossible')
+                = val || '-'
+- else
+  p Add some cards to this cluster to see what the chances are of drawing X cards from it by turn Y.

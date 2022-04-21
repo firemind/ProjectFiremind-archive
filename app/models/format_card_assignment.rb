@@ -1,0 +1,2 @@
+class FormatCardAssignment < ApplicationRecord
+end

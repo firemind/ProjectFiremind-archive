@@ -1,0 +1,18 @@
+h1 Editing Duel
+= form_for(@duel, html: { class: 'custom'}) do |f|
+  - if @duel.errors.any?
+    #error_explanation
+      h2
+        => pluralize(@duel.errors.count, "error")
+        |prohibited this duel from being saved:
+      ul
+        - @duel.errors.full_messages.each do |msg|
+          li= msg
+
+  .row
+    .small-2.small-offset-3.columns
+      = f.submit class: 'button'
+    .small-7.columns
+      label for= :public
+        => f.check_box :public
+        |public

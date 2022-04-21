@@ -1,0 +1,20 @@
+h1 Diffing
+.row
+  .large-6.columns
+    h2= link_to @format_left, @format_left
+    table
+      thead
+        tr
+          th Card
+      - @left_only_cards.each do |card, stats|
+        tr
+          td= link_to card, card, class: "card-with-tooltip button tiny expand #{card.enabled ? 'info': 'secondary' }", data: {url: tooltip_card_path(card)}
+  .large-6.columns
+    h2= link_to @format_right, @format_right
+    table
+      thead
+        tr
+          th Card
+      - @right_only_cards.each do |card, stats|
+        tr
+          td= link_to card, card, class: "card-with-tooltip button tiny expand #{card.enabled ? 'info': 'secondary' }", data: {url: tooltip_card_path(card)}

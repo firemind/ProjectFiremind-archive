@@ -1,0 +1,80 @@
+
+$menu-background: #333;
+.title-bar {
+  display: none;
+  background: $menu-background;
+  padding: 0.9rem;
+}
+.top-bar {
+  display: none;
+  background: $menu-background;
+  
+  ul {
+    margin-left: 0;
+    background: $menu-background;
+  
+    li {
+      background: $menu-background;
+    
+        a {
+          color: #fff;
+      }
+    }
+  }
+}
+.menu-text {
+  color: #fff;
+  
+  @media only screen and (max-width: 40em) {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .top-bar {
+    .menu:last-child {
+      border-left: 1px solid #4e4e4e;
+    }
+    .menu:first-child {
+      border-left: none;
+    }
+    .menu {
+      li:not(:last-child) {
+        border-right: 1px solid #4e4e4e;
+      }
+    }
+  }
+}
+.dropdown.menu .submenu {
+  border: none;
+}
+.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow>a::after {
+  border-color: #fff transparent transparent;
+}
+.dropdown.menu>li.is-dropdown-submenu-parent>a {
+    padding-left: 1.5rem;
+}
+.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a {
+    padding-right: 2rem;
+}
+.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+  right: 10px;
+}
+.is-drilldown-submenu-parent>a::after {
+  border-color: transparent transparent transparent #fff;
+}
+.top-bar-right .dropdown.menu.vertical>li>a::after {
+  left: auto;
+}
+.js-drilldown-back::before {
+  border-color: transparent #fff transparent transparent;
+}
+
+.drilldown {
+  a {
+    background: $menu-background;
+  }
+  .is-drilldown-submenu {
+    background: $menu-background;
+    border: 1px solid white;
+  }
+}

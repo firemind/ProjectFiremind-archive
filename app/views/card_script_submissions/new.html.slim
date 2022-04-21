@@ -1,0 +1,15 @@
+h2
+  |Submit a Script for
+  =< @card_script_submission.card
+
+.callout.primary
+  p Thank you for considering submitting a script. This helps speed up the process of adding new card a lot.
+  p
+    | If you need instructions on how to submit a script please have a look at
+    =< link_to "the scripting guide", "https://github.com/magarena/magarena/wiki/Basic-Structure"
+.row
+  .large-8.columns
+    = render 'form'
+  .large-4.columns
+    - if @card_script_submission.card
+      = render 'cards/card_image', card: @card_script_submission.card

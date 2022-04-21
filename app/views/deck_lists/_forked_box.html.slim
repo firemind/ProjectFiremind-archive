@@ -1,0 +1,7 @@
+li
+  |Forked from
+  =<> deck.forked_from
+  - if deck.forked_from == deck.deck_list
+    | (unchanged)
+  - else
+    = link_to "Diff it!", diff_deck_path(deck, deck.forked_from), class: 'button tiny', title: "Show diff of the two decks"

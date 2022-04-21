@@ -1,0 +1,987 @@
+MAGARENA GAME LOG
+CREATED ON 2016/02/29 08:37:13
+MAGARENA VERSION 1.70, JRE 1.8.0_60, OS Linux_3.13.0-77-generic amd64
+
+
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=1 phase=Untap sims=43 time=6062
+  [16/2/?] (yes)
+* [60/41/?] (no)
+LOG (P): Player1 may (yes) take a mulligan. Player1 may (yes) take a mulligan. Player1 may (yes) take a mulligan. Player1 may (no) take a mulligan. Player1 looks at the top card of his or her library and puts it back on top.
+LOG (C): Player2 may (no) take a mulligan.
+MCTS cached=2
+MCTS cheat=false index=0 life=20 turn=1 phase=FirstMain sims=90 time=6089
+  [35/7/?] (pass)
+* [55/54/?] (Steam Vents)
+  [44/16/?] (Sulfur Falls)
+  [44/14/?] (Tectonic Edge)
+MCTS cached=54
+MCTS cheat=false index=0 life=20 turn=1 phase=FirstMain sims=109 time=6053
+  [42/16/?] (yes)
+* [58/146/?] (no)
+LOG (P): Play <Steam Vents~1000055>. Put <Steam Vents~1000055> onto the battlefield. Player1 may (no) pay 2 life. If Player1 doesn't, <Steam Vents~1000055> enters the battlefield tapped.
+MCTS cached=0
+MCTS cheat=false index=1 life=20 turn=2 phase=FirstMain sims=135 time=6125
+  [25/54/?] (pass)
+* [27/81/?] (Island)
+LOG (C): Play <Island~1000103>. Put <Island~1000103> onto the battlefield.
+MCTS cached=81
+MCTS cheat=false index=1 life=20 turn=2 phase=FirstMain sims=132 time=6114
+* [28/122/?] (pass)
+  [26/90/?] (Cloudfin Raptor)
+MCTS cached=122
+MCTS cheat=false index=1 life=20 turn=2 phase=SecondMain sims=155 time=6067
+* [28/163/?] (pass)
+  [26/113/?] (Cloudfin Raptor)
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=3 phase=FirstMain sims=114 time=6082
+  [45/17/?] (pass)
+* [53/44/?] (Lightning Bolt)
+  [45/17/?] (Sulfur Falls)
+  [51/36/?] (Tectonic Edge)
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=3 phase=FirstMain sims=119 time=6086
+  [30/13/?] (Player1)
+* [46/106/?] (Player2)
+LOG (P): Pay {R}. Tap <Steam Vents~1000055>. Play <Lightning Bolt~1000021>.
+LOG (P): <Lightning Bolt~1000021> deals 3 damage to target creature or player (Player2).
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=3 phase=SecondMain sims=130 time=6059
+  [41/30/?] (pass)
+  [46/47/?] (Sulfur Falls)
+* [47/53/?] (Tectonic Edge)
+LOG (P): Play <Tectonic Edge~1000060>. Put <Tectonic Edge~1000060> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=4 phase=FirstMain sims=138 time=6081
+* [35/63/?] (pass)
+  [35/43/?] (Cloudfin Raptor)
+  [31/32/?] (Island)
+MCTS cached=63
+MCTS cheat=false index=1 life=17 turn=4 phase=SecondMain sims=146 time=6054
+  [24/31/?] (pass)
+  [29/65/?] (Cloudfin Raptor)
+* [32/112/?] (Island)
+LOG (C): Play <Island~1000105>. Put <Island~1000105> onto the battlefield.
+MCTS cached=112
+MCTS cheat=false index=1 life=17 turn=4 phase=SecondMain sims=128 time=6136
+  [32/97/?] (pass)
+* [34/142/?] (Cloudfin Raptor)
+LOG (C): Pay {U}. Tap <Island~1000103>. Play <Cloudfin Raptor~1000071>.
+LOG (C): Put <Cloudfin Raptor~1000071> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=5 phase=FirstMain sims=136 time=6104
+  [48/37/?] (pass)
+* [51/99/?] (Sulfur Falls)
+LOG (P): Play <Sulfur Falls~1000057>. Put <Sulfur Falls~1000057> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=6 phase=FirstMain sims=131 time=6020
+  [38/50/?] (pass)
+* [41/81/?] (Island)
+LOG (C): Play <Island~1000100>. Put <Island~1000100> onto the battlefield.
+MCTS cached=81
+MCTS cheat=false index=1 life=17 turn=6 phase=FirstMain sims=124 time=6030
+* [40/108/?] (pass)
+  [39/96/?] (Thassa, God of the Sea)
+MCTS cached=108
+MCTS cheat=false index=1 life=17 turn=6 phase=SecondMain sims=114 time=6050
+  [35/91/?] (pass)
+* [37/130/?] (Thassa, God of the Sea)
+LOG (C): Pay {2}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Play <Thassa, God of the Sea~1000089>.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=6 phase=SecondMain sims=116 time=6057
+* [42/103/?] (pass)
+  [23/13/?] (Remand)
+LOG (C): Put <Thassa, God of the Sea~1000089> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=8 phase=FirstMain sims=140 time=6101
+* [49/121/?] (yes)
+  [33/19/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and moves it to the bottom.
+MCTS cached=121
+MCTS cheat=false index=1 life=17 turn=8 phase=FirstMain sims=135 time=6157
+  [36/33/?] (pass)
+* [47/222/?] (Island)
+LOG (C): Play <Island~1000108>. Put <Island~1000108> onto the battlefield.
+MCTS cached=222
+MCTS cheat=false index=1 life=17 turn=8 phase=DeclareAttackers sims=137 time=6114
+* [47/198/?] (pass)
+  [45/160/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=9 phase=FirstMain sims=120 time=6037
+  [39/15/?] (pass)
+* [54/105/?] (Delver of Secrets)
+LOG (P): Pay {U}. Tap <Steam Vents~1000055>. Play <Delver of Secrets~1000004>.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=9 phase=FirstMain sims=131 time=6096
+  [41/44/?] (pass)
+* [45/87/?] (Syncopate)
+MCTS cached=87
+MCTS cheat=false index=1 life=17 turn=9 phase=FirstMain sims=127 time=6021
+* [50/192/?] (X is 3)
+  [21/7/?] (X is 2)
+  [29/14/?] (X is 1)
+LOG (C): Pay {X}{U} (X is 3). Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Play <Syncopate~1000098>.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=9 phase=FirstMain sims=147 time=6028
+  [37/19/?] (pass)
+  [37/19/?] (Remand)
+* [50/109/?] (Mana Leak)
+LOG (P): Pay {1}{U}. Tap <Sulfur Falls~1000057>. Tap <Tectonic Edge~1000060>. Play <Mana Leak~1000025>.
+LOG (P): Counter target spell (<Syncopate~1000098>) unless its controller pays {3}.
+LOG (C): You may (no) pay {3}. If you don't, counter <Syncopate~1000098>.
+LOG (P): Put <Delver of Secrets~1000004> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=10 phase=FirstMain sims=150 time=6043
+* [41/88/?] (yes)
+  [46/62/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and moves it to the bottom.
+MCTS cached=88
+MCTS cheat=false index=1 life=17 turn=10 phase=FirstMain sims=138 time=6067
+  [28/17/?] (pass)
+* [45/208/?] (Island)
+LOG (C): Play <Island~1000107>. Put <Island~1000107> onto the battlefield.
+MCTS cached=208
+MCTS cheat=false index=1 life=17 turn=10 phase=DeclareAttackers sims=156 time=6050
+* [40/192/?] (pass)
+  [40/171/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=11 phase=FirstMain sims=131 time=6019
+* [53/124/?] (yes)
+  [24/7/?] (no)
+LOG (P): Player1 looks at the top card of his or her library. Player1 may reveal that card. If an instant or sorcery card is revealed this way, transform <Delver of Secrets~1000004>. Player1 reveals <Young Pyromancer~1000013>.
+MCTS cached=124
+MCTS cheat=false index=0 life=20 turn=11 phase=DeclareAttackers sims=133 time=6096
+  [51/67/?] ([Delver of Secrets])
+* [59/189/?] ([])
+MCTS cached=84
+MCTS cheat=false index=1 life=17 turn=11 phase=DeclareAttackers sims=141 time=6046
+  [28/104/?] (pass)
+* [30/120/?] (Thassa, God of the Sea)
+LOG (C): Pay {1}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Play activated ability of <Thassa, God of the Sea~1000089>.
+LOG (C): Target creature Player2 control (<Cloudfin Raptor~1000071>) can't be blocked this turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=11 phase=DeclareAttackers sims=166 time=6074
+  [30/78/?] (pass)
+* [31/88/?] (Thassa, God of the Sea)
+LOG (C): Pay {1}{U}. Tap <Island~1000100>. Tap <Island~1000108>. Play activated ability of <Thassa, God of the Sea~1000089>.
+LOG (C): Target creature Player2 control (<Cloudfin Raptor~1000071>) can't be blocked this turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=12 phase=FirstMain sims=163 time=6032
+* [53/89/?] (yes)
+  [52/74/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and moves it to the bottom.
+MCTS cached=74
+MCTS cheat=false index=1 life=17 turn=12 phase=FirstMain sims=163 time=6157
+  [8/3/?] (pass)
+  [54/109/?] (Glen Elendra Archmage)
+* [55/124/?] (Island)
+LOG (C): Play <Island~1000109>. Put <Island~1000109> onto the battlefield.
+MCTS cached=124
+MCTS cheat=false index=1 life=17 turn=12 phase=FirstMain sims=166 time=6127
+  [32/22/?] (pass)
+* [48/267/?] (Glen Elendra Archmage)
+LOG (C): Pay {3}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Play <Glen Elendra Archmage~1000077>.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=12 phase=FirstMain sims=172 time=6090
+  [29/53/?] (pass)
+* [33/119/?] (Remand)
+MCTS cached=119
+MCTS cheat=false index=0 life=20 turn=12 phase=FirstMain sims=169 time=6041
+* [29/240/?] ()
+  [22/47/?] ()
+LOG (P): Pay {1}{U}. Tap <Steam Vents~1000055>. Tap <Tectonic Edge~1000060>. Play <Remand~1000029>.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=12 phase=FirstMain sims=154 time=6044
+  [41/45/?] (pass)
+* [47/109/?] (Syncopate)
+LOG (C): Pay {X}{U} (X is 1). Tap <Island~1000107>. Tap <Island~1000109>. Play <Syncopate~1000099>.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=12 phase=FirstMain sims=161 time=6003
+* [33/118/?] (pass)
+  [28/43/?] (Spell Snare)
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=12 phase=FirstMain sims=157 time=6048
+* [36/143/?] (yes,)
+  [19/14/?] (no,null)
+LOG (C): Counter target spell (<Remand~1000029>) unless its controller pays {1}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.
+LOG (P): You may (yes) pay {1}. If you don't, counter <Remand~1000029>. Tap <Sulfur Falls~1000057>.
+LOG (P): Counter target spell (<Glen Elendra Archmage~1000077>). If that spell is countered this way, put it into its owner's hand instead of into that player's graveyard. Player1 draws a card.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=13 phase=FirstMain sims=168 time=6044
+  [43/49/?] (yes)
+* [47/119/?] (no)
+LOG (P): Player1 looks at the top card of his or her library. Player1 may reveal that card. If an instant or sorcery card is revealed this way, transform <Delver of Secrets~1000004>.
+MCTS cached=119
+MCTS cheat=false index=0 life=20 turn=13 phase=FirstMain sims=161 time=6058
+  [45/89/?] (pass)
+* [47/135/?] (Young Pyromancer)
+  [42/55/?] (Vapor Snag)
+MCTS cached=135
+MCTS cheat=false index=0 life=20 turn=13 phase=FirstMain sims=141 time=6040
+  [47/87/?] ()
+* [51/188/?] ()
+LOG (P): Pay {1}{R}. Tap <Steam Vents~1000055>. Tap <Sulfur Falls~1000057>. Play <Young Pyromancer~1000013>.
+LOG (P): Put <Young Pyromancer~1000013> onto the battlefield.
+MCTS cached=188
+MCTS cheat=false index=0 life=20 turn=13 phase=DeclareAttackers sims=139 time=6044
+* [54/321/?] ([Delver of Secrets])
+  [14/5/?] ([])
+LOG (P): Player1 attacks with <Delver of Secrets~1000004>.
+MCTS cached=0
+MCTS cheat=false index=1 life=17 turn=13 phase=DeclareBlockers sims=156 time=6112
+* [32/114/?] (S-199)
+  [22/42/?] (S-616 Delver of Secrets=Cloudfin Raptor)
+LOG (C): {c}Player2 loses 1 life.
+MCTS cached=0
+MCTS cheat=false index=1 life=16 turn=14 phase=FirstMain sims=175 time=6135
+* [44/159/?] (yes)
+  [27/16/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and moves it to the bottom.
+MCTS cached=16
+MCTS cheat=false index=1 life=16 turn=14 phase=FirstMain sims=159 time=6112
+  [17/7/?] (pass)
+  [36/22/?] (Glen Elendra Archmage)
+  [20/7/?] (Opportunity)
+* [46/82/?] (Archaeomancer)
+  [44/56/?] (Island)
+LOG (C): Pay {2}{U}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Play <Archaeomancer~1000061>.
+LOG (C): Put <Archaeomancer~1000061> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=16 turn=14 phase=FirstMain sims=146 time=6071
+  [34/14/?] (Syncopate)
+* [50/132/?] (Syncopate)
+LOG (C): Player2 put a +1/+1 counter on <Cloudfin Raptor~1000071>.
+LOG (C): Return target instant or sorcery card from Player2's graveyard (<Syncopate~1000099>) to Player2's hand.
+MCTS cached=132
+MCTS cheat=false index=1 life=16 turn=14 phase=DeclareAttackers sims=144 time=6002
+  [30/14/?] ([Cloudfin Raptor])
+* [51/261/?] ([])
+MCTS cached=261
+MCTS cheat=false index=1 life=16 turn=14 phase=DeclareAttackers sims=137 time=6033
+* [54/388/?] (pass)
+  [25/9/?] (Thassa, God of the Sea)
+MCTS cached=388
+MCTS cheat=false index=1 life=16 turn=14 phase=SecondMain sims=147 time=6067
+  [52/130/?] (pass)
+* [54/404/?] (Island)
+LOG (C): Play <Island~1000111>. Put <Island~1000111> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=15 phase=FirstMain sims=179 time=6039
+  [40/44/?] (yes)
+* [46/135/?] (no)
+LOG (P): Player1 looks at the top card of his or her library. Player1 may reveal that card. If an instant or sorcery card is revealed this way, transform <Delver of Secrets~1000004>.
+MCTS cached=135
+MCTS cheat=false index=0 life=20 turn=15 phase=FirstMain sims=186 time=6012
+  [40/54/?] (pass)
+* [47/245/?] (Young Pyromancer)
+  [32/21/?] (Vapor Snag)
+MCTS cached=245
+MCTS cheat=false index=0 life=20 turn=15 phase=FirstMain sims=203 time=6051
+  [46/115/?] ()
+* [52/332/?] ()
+LOG (P): Pay {1}{R}. Tap <Steam Vents~1000055>. Tap <Sulfur Falls~1000057>. Play <Young Pyromancer~1000012>.
+MCTS cached=0
+MCTS cheat=false index=1 life=16 turn=15 phase=FirstMain sims=155 time=6036
+  [55/30/?] (pass)
+* [64/125/?] (Syncopate)
+MCTS cached=125
+MCTS cheat=false index=1 life=16 turn=15 phase=FirstMain sims=151 time=6035
+* [60/250/?] (X is 2)
+  [46/25/?] (X is 1)
+LOG (C): Pay {X}{U} (X is 2). Tap <Island~1000107>. Tap <Island~1000109>. Tap <Island~1000111>. Play <Syncopate~1000099>.
+LOG (C): Counter target spell (<Young Pyromancer~1000012>) unless its controller pays {2}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.
+LOG (P): You may (no) pay {2}. If you don't, counter <Young Pyromancer~1000012>.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=15 phase=DeclareAttackers sims=168 time=6049
+  [18/9/?] ([Delver of Secrets, Young Pyromancer])
+  [28/22/?] ([Delver of Secrets])
+* [39/97/?] ([Young Pyromancer])
+  [33/40/?] ([])
+LOG (P): Player1 attacks with <Young Pyromancer~1000013>.
+MCTS cached=170
+MCTS cheat=false index=1 life=16 turn=15 phase=DeclareBlockers sims=153 time=6118
+* [59/166/?] (S186 Young Pyromancer=Archaeomancer)
+  [58/147/?] (S24 Young Pyromancer=Cloudfin Raptor)
+  [34/9/?] (S-599)
+LOG (C): Player2 blocks with <Archaeomancer~1000061>.
+LOG (P): <Young Pyromancer~1000013> is destroyed.
+LOG (C): <Archaeomancer~1000061> is destroyed.
+MCTS cached=0
+MCTS cheat=false index=1 life=16 turn=16 phase=FirstMain sims=153 time=6074
+  [5/2/?] (yes)
+* [71/151/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and puts it back on top.
+MCTS cached=151
+MCTS cheat=false index=1 life=16 turn=16 phase=FirstMain sims=136 time=6024
+  [35/6/?] (pass)
+  [10/2/?] (Glen Elendra Archmage)
+  [34/6/?] (Opportunity)
+* [72/272/?] (Island)
+LOG (C): Play <Island~1000119>. Put <Island~1000119> onto the battlefield.
+MCTS cached=272
+MCTS cheat=false index=1 life=16 turn=16 phase=FirstMain sims=139 time=6026
+  [67/127/?] (pass)
+* [70/283/?] (Glen Elendra Archmage)
+LOG (C): Pay {3}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Play <Glen Elendra Archmage~1000077>.
+LOG (C): Put <Glen Elendra Archmage~1000077> onto the battlefield.
+LOG (C): Player2 put a +1/+1 counter on <Cloudfin Raptor~1000071>.
+MCTS cached=283
+MCTS cheat=false index=1 life=16 turn=16 phase=DeclareAttackers sims=121 time=6036
+* [71/243/?] ([Cloudfin Raptor])
+  [70/160/?] ([])
+LOG (C): Player2 attacks with <Cloudfin Raptor~1000071>.
+MCTS cached=243
+MCTS cheat=false index=1 life=16 turn=16 phase=DeclareAttackers sims=151 time=6066
+  [66/84/?] (pass)
+* [71/309/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=1 life=16 turn=16 phase=DeclareAttackers sims=151 time=6092
+  [28/4/?] (Cloudfin Raptor)
+* [68/147/?] (Glen Elendra Archmage)
+LOG (C): Pay {1}{U}. Tap <Island~1000107>. Tap <Island~1000109>. Play activated ability of <Thassa, God of the Sea~1000089>.
+LOG (C): Target creature Player2 control (<Glen Elendra Archmage~1000077>) can't be blocked this turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=16 turn=16 phase=DeclareAttackers sims=150 time=6092
+  [65/57/?] (pass)
+* [66/93/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=1 life=16 turn=16 phase=DeclareAttackers sims=149 time=6050
+  [64/68/?] (Cloudfin Raptor)
+* [65/81/?] (Glen Elendra Archmage)
+LOG (C): Pay {1}{U}. Tap <Island~1000111>. Tap <Island~1000119>. Play activated ability of <Thassa, God of the Sea~1000089>.
+LOG (C): Target creature Player2 control (<Glen Elendra Archmage~1000077>) can't be blocked this turn.
+LOG (P): {c}Player1 loses 2 life.
+MCTS cached=0
+MCTS cheat=false index=0 life=18 turn=17 phase=FirstMain sims=145 time=6010
+* [27/123/?] (yes)
+  [15/22/?] (no)
+LOG (P): Player1 looks at the top card of his or her library. Player1 may reveal that card. If an instant or sorcery card is revealed this way, transform <Delver of Secrets~1000004>. Player1 reveals <Mana Leak~1000024>.
+MCTS cached=123
+MCTS cheat=false index=0 life=18 turn=17 phase=FirstMain sims=154 time=6091
+  [16/20/?] (pass)
+  [26/81/?] (Grim Lavamancer)
+* [38/175/?] (Vapor Snag)
+MCTS cached=0
+MCTS cheat=false index=0 life=18 turn=17 phase=FirstMain sims=150 time=6074
+  [20/8/?] (Insectile Aberration)
+  [40/42/?] (Cloudfin Raptor)
+* [46/100/?] (Glen Elendra Archmage)
+LOG (P): Pay {U}. Tap <Steam Vents~1000055>. Play <Vapor Snag~1000041>.
+LOG (P): Return target creature (<Glen Elendra Archmage~1000077>) to its owner's hand. Its controller loses 1 life.
+MCTS cached=0
+MCTS cheat=false index=0 life=18 turn=17 phase=FirstMain sims=153 time=6065
+* [57/143/?] (pass)
+  [35/10/?] (Grim Lavamancer)
+MCTS cached=143
+MCTS cheat=false index=0 life=18 turn=17 phase=DeclareAttackers sims=160 time=6073
+* [55/272/?] ([Insectile Aberration])
+  [42/30/?] ([])
+LOG (P): Player1 attacks with <Insectile Aberration~1000004>.
+LOG (C): {c}Player2 loses 3 life.
+MCTS cached=0
+MCTS cheat=false index=0 life=18 turn=17 phase=SecondMain sims=177 time=6149
+  [19/8/?] (pass)
+* [46/169/?] (Grim Lavamancer)
+LOG (P): Pay {R}. Tap <Sulfur Falls~1000057>. Play <Grim Lavamancer~1000007>.
+LOG (P): Put <Grim Lavamancer~1000007> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=18 phase=FirstMain sims=189 time=6097
+  [39/91/?] (yes)
+* [38/98/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and puts it back on top.
+MCTS cached=98
+MCTS cheat=false index=1 life=12 turn=18 phase=FirstMain sims=176 time=6013
+  [32/45/?] (pass)
+* [39/147/?] (Glen Elendra Archmage)
+  [32/37/?] (Opportunity)
+  [32/44/?] (Island)
+LOG (C): Pay {3}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Play <Glen Elendra Archmage~1000077>.
+LOG (C): Put <Glen Elendra Archmage~1000077> onto the battlefield.
+MCTS cached=147
+MCTS cheat=false index=1 life=12 turn=18 phase=DeclareAttackers sims=162 time=6065
+  [33/50/?] ([Cloudfin Raptor])
+* [43/258/?] ([])
+MCTS cached=258
+MCTS cheat=false index=1 life=12 turn=18 phase=DeclareAttackers sims=145 time=6035
+* [47/340/?] (pass)
+  [36/62/?] (Thassa, God of the Sea)
+MCTS cached=340
+MCTS cheat=false index=1 life=12 turn=18 phase=SecondMain sims=160 time=6077
+  [28/19/?] (pass)
+* [50/480/?] (Island)
+LOG (C): Play <Island~1000110>. Put <Island~1000110> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=18 turn=19 phase=FirstMain sims=130 time=6086
+* [43/66/?] (pass)
+  [43/64/?] (Grim Lavamancer)
+MCTS cached=66
+MCTS cheat=false index=0 life=18 turn=19 phase=DeclareAttackers sims=114 time=6088
+  [35/26/?] ([Grim Lavamancer, Insectile Aberration])
+  [35/28/?] ([Grim Lavamancer])
+* [42/74/?] ([Insectile Aberration])
+  [40/51/?] ([])
+LOG (P): Player1 attacks with <Insectile Aberration~1000004>.
+MCTS cached=217
+MCTS cheat=false index=1 life=12 turn=19 phase=DeclareAttackers sims=113 time=6055
+* [50/239/?] (pass)
+  [44/90/?] (Thassa, God of the Sea)
+MCTS cached=239
+MCTS cheat=false index=1 life=12 turn=19 phase=DeclareBlockers sims=121 time=6045
+* [52/181/?] (S179 Insectile Aberration=Glen Elendra Archmage)
+  [55/161/?] (S6 Insectile Aberration=Cloudfin Raptor)
+  [35/17/?] (S-1299)
+LOG (C): Player2 blocks with <Glen Elendra Archmage~1000077>.
+MCTS cached=0
+MCTS cheat=false index=0 life=18 turn=19 phase=DeclareBlockers sims=156 time=6106
+  [32/50/?] (pass)
+* [34/106/?] (Grim Lavamancer)
+MCTS cached=0
+MCTS cheat=false index=0 life=18 turn=19 phase=DeclareBlockers sims=103 time=6061
+  [32/21/?] (Lightning Bolt)
+  [26/14/?] (Mana Leak)
+* [37/34/?] (Remand)
+  [29/15/?] (Young Pyromancer)
+  [31/19/?] (Vapor Snag)
+MCTS cached=34
+MCTS cheat=false index=0 life=18 turn=19 phase=DeclareBlockers sims=107 time=6133
+* [47/89/?] (Lightning Bolt)
+  [17/10/?] (Mana Leak)
+  [29/30/?] (Young Pyromancer)
+  [19/11/?] (Vapor Snag)
+MCTS cached=0
+MCTS cheat=false index=0 life=18 turn=19 phase=DeclareBlockers sims=102 time=6111
+  [30/8/?] (Player1)
+  [11/4/?] (Player2)
+  [7/3/?] (Insectile Aberration)
+  [10/3/?] (Grim Lavamancer)
+  [10/3/?] (Cloudfin Raptor)
+* [51/81/?] (Glen Elendra Archmage)
+LOG (P): Tap <Grim Lavamancer~1000007>. Pay {R}. Tap <Steam Vents~1000055>. Exile a card from your graveyard (<Remand~1000029>). Exile a card from your graveyard (<Lightning Bolt~1000021>). Play activated ability of <Grim Lavamancer~1000007>.
+LOG (P): <Grim Lavamancer~1000007> deals 2 damage to target creature or player (<Glen Elendra Archmage~1000077>).
+LOG (C): <Glen Elendra Archmage~1000077> is destroyed.
+LOG (C): Return <Glen Elendra Archmage~1000077> to play under its owner's control with a -1/-1 counter on it. Put <Glen Elendra Archmage~1000077> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=20 phase=FirstMain sims=110 time=6076
+  [33/37/?] (yes)
+* [38/73/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and puts it back on top.
+MCTS cached=37
+MCTS cheat=false index=1 life=12 turn=20 phase=FirstMain sims=124 time=6045
+* [46/73/?] (pass)
+  [45/68/?] (Glen Elendra Archmage)
+  [32/19/?] (Opportunity)
+MCTS cached=73
+MCTS cheat=false index=1 life=12 turn=20 phase=DeclareAttackers sims=168 time=6032
+  [40/55/?] ([Glen Elendra Archmage, Cloudfin Raptor])
+* [44/95/?] ([Glen Elendra Archmage])
+  [41/59/?] ([Cloudfin Raptor])
+  [35/31/?] ([])
+LOG (C): Player2 attacks with <Glen Elendra Archmage~1000077>.
+MCTS cached=95
+MCTS cheat=false index=1 life=12 turn=20 phase=DeclareAttackers sims=145 time=6037
+* [47/138/?] (pass)
+  [43/101/?] (Thassa, God of the Sea)
+LOG (P): {c}Player1 loses 1 life.
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=20 phase=SecondMain sims=170 time=6043
+* [45/146/?] (pass)
+  [7/4/?] (Glen Elendra Archmage)
+  [32/20/?] (Opportunity)
+MCTS cached=0
+MCTS cheat=false index=0 life=17 turn=21 phase=FirstMain sims=144 time=6080
+  [41/38/?] (pass)
+* [46/79/?] (Sulfur Falls)
+  [38/27/?] (Grim Lavamancer)
+LOG (P): Play <Sulfur Falls~1000058>. Put <Sulfur Falls~1000058> onto the battlefield.
+MCTS cached=79
+MCTS cheat=false index=0 life=17 turn=21 phase=FirstMain sims=148 time=6042
+* [43/180/?] (pass)
+  [35/46/?] (Grim Lavamancer)
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=21 phase=FirstMain sims=132 time=6074
+* [45/76/?] (pass)
+  [41/56/?] (Opportunity)
+MCTS cached=180
+MCTS cheat=false index=0 life=17 turn=21 phase=DeclareAttackers sims=128 time=6048
+  [25/14/?] ([Grim Lavamancer, Insectile Aberration])
+  [19/9/?] ([Grim Lavamancer])
+* [45/193/?] ([Insectile Aberration])
+  [42/91/?] ([])
+LOG (P): Player1 attacks with <Insectile Aberration~1000004>.
+MCTS cached=18
+MCTS cheat=false index=1 life=12 turn=21 phase=DeclareAttackers sims=120 time=6131
+* [50/134/?] (pass)
+  [4/3/?] (Thassa, God of the Sea)
+MCTS cached=134
+MCTS cheat=false index=1 life=12 turn=21 phase=DeclareBlockers sims=141 time=6195
+* [50/270/?] (S6 Insectile Aberration=Cloudfin Raptor)
+  [5/4/?] (S-1299)
+LOG (C): Player2 blocks with <Cloudfin Raptor~1000071>.
+MCTS cached=0
+MCTS cheat=false index=0 life=17 turn=21 phase=DeclareBlockers sims=136 time=6111
+* [32/79/?] (pass)
+  [30/57/?] (Grim Lavamancer)
+LOG (P): <Insectile Aberration~1000004> is destroyed.
+LOG (C): <Cloudfin Raptor~1000071> is destroyed.
+MCTS cached=79
+MCTS cheat=false index=0 life=17 turn=21 phase=SecondMain sims=131 time=6073
+* [35/149/?] (pass)
+  [29/60/?] (Grim Lavamancer)
+MCTS cached=133
+MCTS cheat=false index=1 life=12 turn=21 phase=SecondMain sims=134 time=6017
+* [48/188/?] (pass)
+  [41/78/?] (Opportunity)
+MCTS cached=149
+MCTS cheat=false index=0 life=17 turn=22 phase=FirstMain sims=139 time=6054
+* [37/274/?] (pass)
+  [15/13/?] (Grim Lavamancer)
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=22 phase=FirstMain sims=140 time=6065
+* [56/132/?] (yes)
+  [29/8/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and moves it to the bottom.
+MCTS cached=8
+MCTS cheat=false index=1 life=12 turn=22 phase=FirstMain sims=140 time=6065
+  [52/61/?] (pass)
+* [52/71/?] (Glen Elendra Archmage)
+  [32/10/?] (Opportunity)
+  [23/5/?] (Island)
+LOG (C): Pay {3}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Play <Glen Elendra Archmage~1000075>.
+MCTS cached=0
+MCTS cheat=false index=0 life=17 turn=22 phase=FirstMain sims=140 time=6070
+  [32/44/?] (pass)
+* [36/76/?] (Mana Leak)
+  [25/20/?] (Grim Lavamancer)
+MCTS cached=76
+MCTS cheat=false index=0 life=17 turn=22 phase=FirstMain sims=113 time=6066
+* [31/154/?] ()
+  [22/34/?] ()
+LOG (P): Pay {1}{U}. Tap <Steam Vents~1000055>. Tap <Tectonic Edge~1000060>. Play <Mana Leak~1000024>.
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=22 phase=FirstMain sims=130 time=6091
+* [62/96/?] (pass)
+  [56/34/?] (Glen Elendra Archmage)
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=22 phase=FirstMain sims=136 time=6014
+* [65/128/?] (yes,)
+  [38/8/?] (no,null)
+LOG (P): Counter target spell (<Glen Elendra Archmage~1000075>) unless its controller pays {3}.
+LOG (C): You may (yes) pay {3}. If you don't, counter <Glen Elendra Archmage~1000075>. Tap <Island~1000107>. Tap <Island~1000109>. Tap <Island~1000111>.
+LOG (C): Put <Glen Elendra Archmage~1000075> onto the battlefield.
+MCTS cached=128
+MCTS cheat=false index=1 life=12 turn=22 phase=FirstMain sims=131 time=6023
+  [8/2/?] (pass)
+* [70/256/?] (Island)
+LOG (C): Play <Island~1000104>. Put <Island~1000104> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=17 turn=22 phase=FirstMain sims=133 time=6017
+* [27/101/?] (pass)
+  [20/32/?] (Grim Lavamancer)
+MCTS cached=90
+MCTS cheat=false index=1 life=12 turn=22 phase=DeclareAttackers sims=138 time=6153
+* [67/192/?] ([Glen Elendra Archmage])
+  [57/35/?] ([])
+LOG (C): Player2 attacks with <Glen Elendra Archmage~1000077>.
+MCTS cached=192
+MCTS cheat=false index=1 life=12 turn=22 phase=DeclareAttackers sims=137 time=6107
+  [52/20/?] (pass)
+* [68/308/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=22 phase=DeclareAttackers sims=118 time=6114
+* [62/73/?] (Glen Elendra Archmage)
+  [59/45/?] (Glen Elendra Archmage)
+LOG (C): Pay {1}{U}. Tap <Island~1000119>. Tap <Island~1000110>. Play activated ability of <Thassa, God of the Sea~1000089>.
+MCTS cached=0
+MCTS cheat=false index=0 life=17 turn=22 phase=DeclareAttackers sims=128 time=6112
+* [27/100/?] (pass)
+  [19/28/?] (Grim Lavamancer)
+LOG (C): Target creature Player2 control (<Glen Elendra Archmage~1000077>) can't be blocked this turn.
+MCTS cached=0
+MCTS cheat=false index=0 life=17 turn=22 phase=DeclareBlockers sims=137 time=6070
+* [26/71/?] (pass)
+  [28/66/?] (Grim Lavamancer)
+LOG (P): {c}Player1 loses 1 life.
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=22 phase=SecondMain sims=144 time=6053
+* [21/117/?] (pass)
+  [13/27/?] (Grim Lavamancer)
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=23 phase=FirstMain sims=145 time=6008
+  [9/15/?] (pass)
+* [24/71/?] (Blood Moon)
+  [20/59/?] (Grim Lavamancer)
+MCTS cached=71
+MCTS cheat=false index=0 life=16 turn=23 phase=FirstMain sims=159 time=6064
+* [17/130/?] ()
+  [17/99/?] ()
+LOG (P): Pay {2}{R}. Tap <Steam Vents~1000055>. Tap <Sulfur Falls~1000057>. Tap <Tectonic Edge~1000060>. Play <Blood Moon~1000016>.
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=23 phase=FirstMain sims=146 time=6050
+* [80/104/?] (pass)
+  [69/22/?] (Glen Elendra Archmage)
+  [67/20/?] (Glen Elendra Archmage)
+LOG (P): Put <Blood Moon~1000016> onto the battlefield.
+MCTS cached=90
+MCTS cheat=false index=0 life=16 turn=23 phase=DeclareAttackers sims=169 time=6066
+  [9/73/?] ([Grim Lavamancer])
+* [13/185/?] ([])
+MCTS cached=185
+MCTS cheat=false index=0 life=16 turn=23 phase=SecondMain sims=184 time=6064
+* [13/192/?] (pass)
+  [12/176/?] (Grim Lavamancer)
+MCTS cached=192
+MCTS cheat=false index=0 life=16 turn=24 phase=FirstMain sims=175 time=6132
+* [15/261/?] (pass)
+  [12/105/?] (Grim Lavamancer)
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=24 phase=FirstMain sims=158 time=6085
+* [79/89/?] (yes)
+  [76/69/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and moves it to the bottom.
+MCTS cached=69
+MCTS cheat=false index=1 life=12 turn=24 phase=FirstMain sims=160 time=6036
+* [82/184/?] (pass)
+  [73/44/?] (Opportunity)
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=24 phase=FirstMain sims=180 time=6073
+  [12/84/?] (pass)
+* [13/96/?] (Grim Lavamancer)
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=24 phase=FirstMain sims=181 time=6043
+* [17/56/?] (Mana Leak)
+  [13/34/?] (Young Pyromancer)
+  [14/37/?] (Vapor Snag)
+  [11/28/?] (Delver of Secrets)
+  [11/26/?] (Mana Leak)
+MCTS cached=56
+MCTS cheat=false index=0 life=16 turn=24 phase=FirstMain sims=182 time=6063
+  [13/58/?] (Young Pyromancer)
+  [14/65/?] (Vapor Snag)
+* [15/83/?] (Delver of Secrets)
+  [8/31/?] (Mana Leak)
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=24 phase=FirstMain sims=192 time=6051
+  [11/30/?] (Player1)
+* [15/59/?] (Player2)
+  [6/18/?] (Grim Lavamancer)
+  [10/30/?] (Glen Elendra Archmage)
+  [15/55/?] (Glen Elendra Archmage)
+LOG (P): Tap <Grim Lavamancer~1000007>. Pay {R}. Tap <Sulfur Falls~1000058>. Exile a card from your graveyard (<Mana Leak~1000025>). Exile a card from your graveyard (<Delver of Secrets~1000004>). Play activated ability of <Grim Lavamancer~1000007>.
+MCTS cached=0
+MCTS cheat=false index=1 life=12 turn=24 phase=FirstMain sims=170 time=6091
+* [79/167/?] (pass)
+  [33/3/?] (Opportunity)
+LOG (P): <Grim Lavamancer~1000007> deals 2 damage to target creature or player (Player2).
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=24 phase=FirstMain sims=149 time=6084
+* [79/110/?] (pass)
+  [73/39/?] (Opportunity)
+MCTS cached=110
+MCTS cheat=false index=1 life=10 turn=24 phase=DeclareAttackers sims=113 time=6145
+  [79/87/?] ([Glen Elendra Archmage, Glen Elendra Archmage])
+  [68/22/?] ([Glen Elendra Archmage])
+* [81/109/?] ([Glen Elendra Archmage])
+  [28/4/?] ([])
+LOG (C): Player2 attacks with <Glen Elendra Archmage~1000075>.
+MCTS cached=109
+MCTS cheat=false index=1 life=10 turn=24 phase=DeclareAttackers sims=109 time=6012
+  [78/56/?] (pass)
+* [84/161/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=24 phase=DeclareAttackers sims=159 time=6020
+* [81/118/?] (Glen Elendra Archmage)
+  [76/41/?] (Glen Elendra Archmage)
+LOG (C): Pay {1}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Play activated ability of <Thassa, God of the Sea~1000089>.
+LOG (C): Target creature Player2 control (<Glen Elendra Archmage~1000077>) can't be blocked this turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=24 phase=DeclareAttackers sims=164 time=6047
+  [82/73/?] (pass)
+* [82/91/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=24 phase=DeclareAttackers sims=152 time=6077
+* [80/133/?] (Glen Elendra Archmage)
+  [64/19/?] (Glen Elendra Archmage)
+LOG (C): Pay {1}{U}. Tap <Island~1000100>. Tap <Island~1000108>. Play activated ability of <Thassa, God of the Sea~1000089>.
+LOG (C): Target creature Player2 control (<Glen Elendra Archmage~1000077>) can't be blocked this turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=24 phase=DeclareAttackers sims=109 time=6052
+  [79/42/?] (pass)
+* [82/67/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=24 phase=DeclareAttackers sims=120 time=6129
+* [83/71/?] (Glen Elendra Archmage)
+  [79/49/?] (Glen Elendra Archmage)
+LOG (C): Pay {1}{U}. Tap <Island~1000107>. Tap <Island~1000109>. Play activated ability of <Thassa, God of the Sea~1000089>.
+LOG (C): Target creature Player2 control (<Glen Elendra Archmage~1000077>) can't be blocked this turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=24 phase=DeclareAttackers sims=128 time=6004
+* [84/92/?] (pass)
+  [78/36/?] (Thassa, God of the Sea)
+LOG (P): {c}Player1 loses 2 life.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=24 phase=SecondMain sims=164 time=6052
+  [55/7/?] (pass)
+* [85/157/?] (Guard Gomazoa)
+LOG (C): Pay {2}{U}. Tap <Island~1000111>. Tap <Island~1000119>. Tap <Island~1000110>. Play <Guard Gomazoa~1000079>.
+LOG (C): Put <Guard Gomazoa~1000079> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=14 turn=25 phase=FirstMain sims=208 time=6029
+  [8/99/?] (pass)
+* [8/109/?] (Grim Lavamancer)
+MCTS cached=0
+MCTS cheat=false index=0 life=14 turn=25 phase=FirstMain sims=218 time=6029
+  [9/75/?] (Young Pyromancer)
+  [6/45/?] (Vapor Snag)
+* [10/98/?] (Mana Leak)
+MCTS cached=98
+MCTS cheat=false index=0 life=14 turn=25 phase=FirstMain sims=205 time=6014
+* [10/185/?] (Young Pyromancer)
+  [8/117/?] (Vapor Snag)
+MCTS cached=0
+MCTS cheat=false index=0 life=14 turn=25 phase=FirstMain sims=223 time=6064
+  [8/38/?] (Player1)
+  [8/41/?] (Player2)
+  [6/33/?] (Grim Lavamancer)
+  [7/37/?] (Glen Elendra Archmage)
+* [8/42/?] (Glen Elendra Archmage)
+  [6/32/?] (Guard Gomazoa)
+LOG (P): Tap <Grim Lavamancer~1000007>. Pay {R}. Tap <Steam Vents~1000055>. Exile a card from your graveyard (<Mana Leak~1000024>). Exile a card from your graveyard (<Young Pyromancer~1000013>). Play activated ability of <Grim Lavamancer~1000007>.
+LOG (P): <Grim Lavamancer~1000007> deals 2 damage to target creature or player (<Glen Elendra Archmage~1000075>).
+LOG (C): <Glen Elendra Archmage~1000075> is destroyed.
+LOG (C): Return <Glen Elendra Archmage~1000075> to play under its owner's control with a -1/-1 counter on it. Put <Glen Elendra Archmage~1000075> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=26 phase=FirstMain sims=161 time=6033
+  [82/64/?] (yes)
+* [84/97/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and puts it back on top.
+MCTS cached=64
+MCTS cheat=false index=1 life=10 turn=26 phase=FirstMain sims=163 time=6040
+  [82/47/?] (pass)
+* [88/118/?] (Mulldrifter)
+  [78/32/?] (Opportunity)
+  [79/29/?] (Mulldrifter)
+LOG (C): Pay {4}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Tap <Island~1000107>. Play <Mulldrifter~1000085>.
+LOG (C): Put <Mulldrifter~1000085> onto the battlefield.
+LOG (C): Player2 draws two cards.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=26 phase=DeclareAttackers sims=212 time=6019
+  [6/1/?] ([Glen Elendra Archmage, Glen Elendra Archmage, Thassa, God of the Sea])
+* [92/42/?] ([Glen Elendra Archmage, Glen Elendra Archmage])
+  [90/41/?] ([Glen Elendra Archmage, Thassa, God of the Sea])
+  [90/32/?] ([Glen Elendra Archmage])
+  [84/24/?] ([Glen Elendra Archmage, Thassa, God of the Sea])
+  [91/35/?] ([Glen Elendra Archmage])
+  [91/36/?] ([Thassa, God of the Sea])
+  [9/1/?] ([])
+LOG (C): Player2 attacks with <Glen Elendra Archmage~1000075> and <Glen Elendra Archmage~1000077>.
+MCTS cached=42
+MCTS cheat=false index=1 life=10 turn=26 phase=DeclareAttackers sims=189 time=6092
+* [92/154/?] (pass)
+  [89/76/?] (Thassa, God of the Sea)
+LOG (P): {c}Player1 loses 2 life.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=26 phase=SecondMain sims=260 time=6032
+  [83/44/?] (pass)
+* [92/216/?] (Guard Gomazoa)
+LOG (C): Pay {2}{U}. Tap <Island~1000109>. Tap <Island~1000111>. Tap <Island~1000119>. Play <Guard Gomazoa~1000081>.
+LOG (C): Put <Guard Gomazoa~1000081> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=12 turn=27 phase=DeclareAttackers sims=407 time=6015
+  [3/191/?] ([Grim Lavamancer])
+* [3/216/?] ([])
+MCTS cached=124
+MCTS cheat=false index=1 life=10 turn=27 phase=DeclareAttackers sims=241 time=6014
+  [87/103/?] (pass)
+* [91/261/?] (Thassa, God of the Sea)
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=27 phase=DeclareAttackers sims=239 time=6033
+  [89/35/?] (Glen Elendra Archmage)
+* [92/57/?] (Glen Elendra Archmage)
+  [90/44/?] (Guard Gomazoa)
+  [89/39/?] (Guard Gomazoa)
+  [88/34/?] (Mulldrifter)
+  [88/30/?] (Thassa, God of the Sea)
+LOG (C): Pay {1}{U}. Tap <Island~1000110>. Tap <Island~1000104>. Play activated ability of <Thassa, God of the Sea~1000089>.
+LOG (C): Target creature Player2 control (<Glen Elendra Archmage~1000075>) can't be blocked this turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=28 phase=FirstMain sims=239 time=6027
+* [92/128/?] (yes)
+  [91/111/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and moves it to the bottom.
+MCTS cached=111
+MCTS cheat=false index=1 life=10 turn=28 phase=FirstMain sims=255 time=6053
+  [89/87/?] (pass)
+  [89/96/?] (Thassa, God of the Sea)
+* [92/182/?] (Opportunity)
+LOG (C): Pay {4}{U}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Tap <Island~1000107>. Tap <Island~1000109>. Play <Opportunity~1000096>.
+LOG (C): Target player (Player2) draws four cards.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=28 phase=FirstMain sims=260 time=6078
+  [83/41/?] (pass)
+  [89/90/?] (Thassa, God of the Sea)
+* [90/129/?] (Island)
+LOG (C): Play <Island~1000115>. Put <Island~1000115> onto the battlefield.
+MCTS cached=129
+MCTS cheat=false index=1 life=10 turn=28 phase=FirstMain sims=225 time=6047
+  [90/149/?] (pass)
+* [91/204/?] (Thassa, God of the Sea)
+LOG (C): Pay {2}{U}. Tap <Island~1000111>. Tap <Island~1000119>. Tap <Island~1000110>. Play <Thassa, God of the Sea~1000086>.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=28 phase=FirstMain sims=261 time=6081
+  [90/122/?] (Thassa, God of the Sea)
+* [91/139/?] (Thassa, God of the Sea)
+LOG (C): Put <Thassa, God of the Sea~1000086> onto the battlefield. Choose one (<Thassa, God of the Sea~1000086>). Put the rest into their owner's graveyard. Put <Thassa, God of the Sea~1000089> into its owner's graveyard (Uniqueness rule).
+MCTS cached=139
+MCTS cheat=false index=1 life=10 turn=28 phase=DeclareAttackers sims=240 time=6029
+  [91/52/?] ([Glen Elendra Archmage, Glen Elendra Archmage, Mulldrifter])
+  [87/41/?] ([Glen Elendra Archmage, Glen Elendra Archmage])
+  [79/18/?] ([Glen Elendra Archmage, Mulldrifter])
+  [92/60/?] ([Glen Elendra Archmage])
+  [89/40/?] ([Glen Elendra Archmage, Mulldrifter])
+  [91/59/?] ([Glen Elendra Archmage])
+* [93/73/?] ([Mulldrifter])
+  [88/35/?] ([])
+LOG (C): Player2 attacks with <Mulldrifter~1000085>.
+MCTS cached=73
+MCTS cheat=false index=1 life=10 turn=28 phase=DeclareAttackers sims=234 time=6020
+* [93/157/?] (pass)
+  [92/149/?] (Thassa, God of the Sea)
+LOG (P): {c}Player1 loses 2 life.
+MCTS cached=0
+MCTS cheat=false index=0 life=10 turn=29 phase=DeclareAttackers sims=421 time=6070
+* [3/213/?] ([Grim Lavamancer])
+  [3/208/?] ([])
+LOG (P): Player1 attacks with <Grim Lavamancer~1000007>.
+MCTS cached=66
+MCTS cheat=false index=1 life=10 turn=29 phase=DeclareAttackers sims=311 time=6017
+* [94/199/?] (pass)
+  [93/177/?] (Thassa, God of the Sea)
+MCTS cached=199
+MCTS cheat=false index=1 life=10 turn=29 phase=DeclareBlockers sims=295 time=6019
+  [94/87/?] (S992 Grim Lavamancer=Thassa, God of the Sea)
+  [95/90/?] (S992 Grim Lavamancer=Guard Gomazoa)
+* [95/110/?] (S992 Grim Lavamancer=Guard Gomazoa)
+  [92/71/?] (S-31 Grim Lavamancer=Glen Elendra Archmage)
+  [95/95/?] (S-31 Grim Lavamancer=Glen Elendra Archmage)
+  [89/40/?] (S-499)
+LOG (C): Player2 blocks with <Guard Gomazoa~1000081>.
+LOG (P): <Grim Lavamancer~1000007> is destroyed.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=30 phase=FirstMain sims=366 time=6001
+* [94/204/?] (yes)
+  [94/162/?] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and moves it to the bottom.
+MCTS cached=204
+MCTS cheat=false index=1 life=10 turn=30 phase=FirstMain sims=406 time=6025
+  [96/135/?] (pass)
+* [96/152/?] (Mulldrifter)
+  [94/118/?] (Thassa, God of the Sea)
+  [94/99/?] (Opportunity)
+  [94/105/?] (Mulldrifter)
+LOG (C): Pay {4}{U}. Tap <Island~1000103>. Tap <Island~1000105>. Tap <Island~1000100>. Tap <Island~1000108>. Tap <Island~1000107>. Play <Mulldrifter~1000082>.
+LOG (C): Put <Mulldrifter~1000082> onto the battlefield.
+LOG (C): Player2 draws two cards.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=30 phase=FirstMain sims=483 time=6009
+  [95/89/?] (pass)
+* [98/118/?] (Mulldrifter)
+  [95/90/?] (Thassa, God of the Sea)
+  [96/92/?] (Archaeomancer)
+  [97/94/?] (Mulldrifter)
+LOG (C): Pay {4}{U}. Tap <Island~1000109>. Tap <Island~1000111>. Tap <Island~1000119>. Tap <Island~1000110>. Tap <Island~1000104>. Play <Mulldrifter~1000083>.
+LOG (C): Put <Mulldrifter~1000083> onto the battlefield.
+LOG (C): Player2 draws two cards.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=30 phase=DeclareAttackers sims=664 time=6003
+  [99/46/?] ([Glen Elendra Archmage, Glen Elendra Archmage, Mulldrifter, Thassa, God of the Sea])
+  [98/41/?] ([Glen Elendra Archmage, Glen Elendra Archmage, Mulldrifter])
+  [98/45/?] ([Glen Elendra Archmage, Glen Elendra Archmage, Thassa, God of the Sea])
+  [97/38/?] ([Glen Elendra Archmage, Glen Elendra Archmage])
+* [99/47/?] ([Glen Elendra Archmage, Mulldrifter, Thassa, God of the Sea])
+  [95/41/?] ([Glen Elendra Archmage, Mulldrifter])
+  [98/44/?] ([Glen Elendra Archmage, Thassa, God of the Sea])
+  [97/39/?] ([Glen Elendra Archmage])
+  [96/46/?] ([Glen Elendra Archmage, Mulldrifter, Thassa, God of the Sea])
+  [98/41/?] ([Glen Elendra Archmage, Mulldrifter])
+  [98/45/?] ([Glen Elendra Archmage, Thassa, God of the Sea])
+  [97/38/?] ([Glen Elendra Archmage])
+  [98/44/?] ([Mulldrifter, Thassa, God of the Sea])
+  [98/41/?] ([Mulldrifter])
+  [98/44/?] ([Thassa, God of the Sea])
+  [93/24/?] ([])
+LOG (C): Player2 attacks with <Glen Elendra Archmage~1000077>, <Mulldrifter~1000085> and <Thassa, God of the Sea~1000086>.
+LOG (P): {c}Player1 loses 8 life.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=30 phase=SecondMain sims=844 time=6006
+* [99/434/?] (pass)
+  [99/410/?] (Island)
+MCTS cached=0
+MCTS cheat=false index=0 life=2 turn=31 phase=FirstMain sims=1464 time=6004
+  [0/728/lose:5] (pass)
+* [0/736/lose:5] (Island)
+LOG (P): Play <Island~1000042>. Put <Island~1000042> onto the battlefield.
+MCTS cached=736
+MCTS cheat=false index=0 life=2 turn=31 phase=FirstMain sims=1587 time=6001
+* [0/1183/lose:4] (pass)
+  [0/1139/lose:3] (Delver of Secrets)
+MCTS cached=1183
+MCTS cheat=false index=0 life=2 turn=31 phase=SecondMain sims=2135 time=6002
+  [0/1655/lose:3] (pass)
+* [0/1662/lose:3] (Delver of Secrets)
+LOG (P): Pay {U}. Tap <Island~1000042>. Play <Delver of Secrets~1000001>.
+LOG (P): Put <Delver of Secrets~1000001> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=10 turn=32 phase=FirstMain sims=1326 time=5312
+  [99/664/?] (yes)
+* [99/662/win:3] (no)
+LOG (C): Scry 1. Player2 looks at the top card of his or her library and puts it back on top.
+MCTS cached=664
+MCTS cheat=false index=1 life=10 turn=32 phase=FirstMain sims=34 time=164
+* [98/117/win:2] (pass)
+  [99/115/?] (Thassa, God of the Sea)
+  [99/116/?] (Æther Adept)
+  [99/119/?] (Opportunity)
+  [99/117/?] (Archaeomancer)
+  [99/113/?] (Island)
+MCTS cached=117
+MCTS cheat=false index=1 life=10 turn=32 phase=DeclareAttackers sims=1 time=6
+  [99/4/?] ([Glen Elendra Archmage, Glen Elendra Archmage, Mulldrifter, Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/4/?] ([Glen Elendra Archmage, Mulldrifter, Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/3/?] ([Glen Elendra Archmage, Mulldrifter, Mulldrifter, Mulldrifter])
+  [99/3/?] ([Glen Elendra Archmage, Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/3/?] ([Glen Elendra Archmage, Mulldrifter, Mulldrifter])
+  [99/3/?] ([Glen Elendra Archmage, Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/4/?] ([Glen Elendra Archmage, Mulldrifter, Mulldrifter])
+  [99/3/?] ([Glen Elendra Archmage, Mulldrifter, Thassa, God of the Sea])
+  [99/3/?] ([Glen Elendra Archmage, Mulldrifter])
+  [99/4/?] ([Glen Elendra Archmage, Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/4/?] ([Glen Elendra Archmage, Mulldrifter, Mulldrifter])
+  [99/3/?] ([Glen Elendra Archmage, Mulldrifter, Thassa, God of the Sea])
+  [99/4/?] ([Glen Elendra Archmage, Mulldrifter])
+  [99/3/?] ([Glen Elendra Archmage, Mulldrifter, Thassa, God of the Sea])
+  [99/4/?] ([Glen Elendra Archmage, Mulldrifter])
+  [98/3/?] ([Glen Elendra Archmage, Thassa, God of the Sea])
+  [97/3/?] ([Glen Elendra Archmage])
+  [99/4/?] ([Mulldrifter, Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/4/?] ([Mulldrifter, Mulldrifter, Mulldrifter])
+  [99/4/?] ([Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/3/?] ([Mulldrifter, Mulldrifter])
+  [99/4/?] ([Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/4/?] ([Mulldrifter, Mulldrifter])
+  [99/4/?] ([Mulldrifter, Thassa, God of the Sea])
+  [99/3/?] ([Mulldrifter])
+  [99/4/?] ([Mulldrifter, Mulldrifter, Thassa, God of the Sea])
+  [99/3/?] ([Mulldrifter, Mulldrifter])
+  [99/3/?] ([Mulldrifter, Thassa, God of the Sea])
+* [59/5/win:1] ([Mulldrifter])
+  [99/4/?] ([Mulldrifter, Thassa, God of the Sea])
+  [99/4/?] ([Mulldrifter])
+  [98/3/?] ([Thassa, God of the Sea])
+  [97/3/?] ([])
+LOG (C): Player2 attacks with <Mulldrifter~1000082>.
+MCTS cached=5
+MCTS cheat=false index=1 life=10 turn=32 phase=DeclareAttackers sims=1 time=5
+* [24/4/win:0] (pass)
+  [99/1/?] (Thassa, God of the Sea)
+LOG (P): {c}Player1 loses 2 life.
+LOG (P): {L} Player1 lost the game.

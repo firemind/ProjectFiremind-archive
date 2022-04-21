@@ -1,0 +1,7 @@
+.row
+  - @deck_list.deck_entries.each do |de|
+    .large-4.columns.show-card-col
+      a href= card_path(de.card)
+        = render 'cards/card_image', card: de.card, grayscale: !de.card.enabled, height: 500
+        .card-count
+          p= de.amount

@@ -1,0 +1,52 @@
+.row
+  .large-8.columns
+    h1= @format
+    - if @format.description
+      p
+        = @format.description.html_safe
+    = render 'matchup_breakdown'
+
+  .large-4.columns
+    table.table 
+      tr
+        th(colspan=2) Stats
+      tr
+        th = @format.decks.legal.active.count
+        td = link_to "Decks", decks_format_path(id: @format.name.downcase)
+      tr
+        th = @format.ratings.count
+        td Ratings
+      tr
+        th= @format.duels.sum(:games_to_play)
+        td Games
+      tr
+        th = @format.editions.count
+        td = link_to "Sets", editions_format_path(id: @format.name.downcase)
+      tr
+        th = @format.restricted_cards.count
+        td = link_to "Banned & Restricted", restricted_cards_format_path(id: @format.name.downcase)
+      tr
+        th = @format.archetypes.count
+        td = link_to "Archetypes", format_archetypes_path(format_id: @format.name.downcase)
+      tr
+        th
+          = t=@format.legal_card_count
+        td = link_to "Legal Cards", cards_format_path(id: @format.name.downcase)
+      tr
+        td colspan=2
+          .tprogress title="Cards implemented in Magarena"
+            - e=@format.enabled_legal_card_count
+            - u=@format.upcoming_card_count
+            div style="width: #{( e.to_f / t * 100).round}%"
+            div.upcoming style="width: #{( u.to_f / t * 100).round}%"
+            span
+              = "#{e} / #{t}"
+    = link_to "Highest Rated Cards", top_cards_format_path(format_id: @format.name.downcase), class: "button expanded"
+    = render 'archetype_pie_chart', decks: @top_decks
+
+.row
+  .large-12.columns
+    h2 Top 10 Decks
+  - @top_decks.each do |deck_list|
+    .large-6.small-12.columns
+      = render partial: 'deck_lists/deck_list', locals: {deck_list: deck_list, format: @format}

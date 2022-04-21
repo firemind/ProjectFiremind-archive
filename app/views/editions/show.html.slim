@@ -1,0 +1,17 @@
+h1= @edition
+
+= link_to "Visual", visual_edition_path(@edition), class: 'button'
+
+table
+  - @cards.each do |cp|
+    tr
+      td width=100
+        =image_tag thumb_print_url(cp) if cp.has_thumb
+      td= cp.nr_in_set
+      td= card_link(cp.card)
+      td= cp.card.card_type
+      td
+        - if cp.card.enabled
+          = link_to "Scripts", scripts_card_path(cp.card), class: 'button small'
+        -else
+          = link_to "request it!", request_card_path(cp.card), method: :post, target: '_blank', class: 'button small secondary'

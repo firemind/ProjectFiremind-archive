@@ -1,0 +1,23 @@
+- duels.each do |duel|
+  - winner = duel.winner
+  - loser = duel.loser
+  - if winner && loser
+    - ratio = duel.win_loss_ratio(winner)
+    .duel-box
+      .row.panel
+        .large-2.small-2.columns
+          = deck_list_avatar_tag(winner)
+        .large-4.small-4.columns
+          .duel-deck-title
+            = link_to "#{winner} (#{ratio[0]})", winner, class: "button small", style: 'text-align: left'
+            .left
+              = color_tag winner.colors
+          = link_to "#{duel.games.count} Games", duel_games_path(duel), class: 'button small secondary minor'
+        .large-4.small-4.columns.right-align
+          .duel-deck-title
+            = link_to "#{loser} (#{ratio[1]})", loser, class: "button small right-align"
+            .right
+              = color_tag loser.colors
+          = link_to "#{time_ago_in_words(duel.created_at)} ago", duel, class: 'button small secondary minor'
+        .large-2.small-2.columns
+          = deck_list_avatar_tag(loser, grayscale: true )

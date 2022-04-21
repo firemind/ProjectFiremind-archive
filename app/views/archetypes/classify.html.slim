@@ -1,0 +1,45 @@
+h1 Classify a deck list
+
+- if @at
+  .callout.success
+    | Successfully classified as
+    =< link_to @at, @at
+
+= form_for(@deck,  url: {controller: 'archetypes', action: "classify_deck"}, method: :post, html:{class: 'custom'}) do |f|
+  - if @deck.errors.any?
+    #error_explanation
+      .alert-box.secondary
+        h3
+          => pluralize(@deck.errors.count, "error")
+          | prohibited this deck from being saved:
+        ul.no-bullet
+          - @deck.errors.full_messages.each do |msg|
+            li= msg.html_safe
+
+  .row
+    .small-12.columns
+      .callout.primary 
+        | This can also be used through the 
+        =< link_to "Firemind API", "https://www.firemind.ch/api/docs#api-v1-archetypes-classify-a-known-tournament-deck" 
+
+  .row
+    .small-3.columns
+      = f.label :format_id
+    .small-9.columns
+      = f.select :format_id, options_for_select(@formats.map { |format| [format.name, format.id] }, @deck.format_id)
+  .row
+    .small-3.columns
+      = f.label :decklist_file, class: 'has-tip', title: t('decks.decklist_file.tooltip')
+    .small-9.columns
+      = f.file_field :decklist_file
+  .row
+    .small-3.columns
+      OR
+      = f.label :decklist
+    .small-9.columns
+      = f.text_area :decklist, rows: 20, style: 'height:auto'
+
+  .row
+    .small-9.small-offset-3.columns
+      .actions
+        = f.submit "Find Archetype", class: 'button'

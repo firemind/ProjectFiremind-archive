@@ -1,0 +1,18 @@
+h1
+  |Deck Lists in
+  =< @format
+
+table
+  thead
+    tr
+      th Archetype
+      th Human Archetype
+      th Enabled
+  - @deck_lists.each do |dl|
+    tr
+      td.archetype-warning= dl.archetype
+      td= dl.human_archetype
+      td= dl.enabled? ? "+" : "-"
+      td= link_to 'show', dl
+      td= link_to "Card View", '#', class: 'card_view_link', data: {decklist_id: dl.id}
+

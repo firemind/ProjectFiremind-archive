@@ -1,0 +1,21 @@
+- if @decks.size > 0
+  = form_for(@challenge_entry) do |f|
+    = f.hidden_field :deck_list_id
+    = f.hidden_field :deck_challenge_id
+    .row.collapse
+      .small-2.columns
+        = f.submit 'Accept and start duel', class: 'button', style: 'margin-bottom: 2px'
+    .row.collapse
+      .small-12.columns
+        h3 Choose challenger deck
+        .input
+          = f.select :deck_list_id, deck_select_options(@decks, @challenge_entry.deck_list_id), {}, {id: "deck_list_id"}
+        #deck_list_id_picker
+
+- elsif current_user
+  |You need to add a deck first.
+  =< link_to "New Deck", new_deck_path
+- else
+  |You are not currently signed in. Please
+  =<> link_to "sign in or sign up", new_user_session_path
+  |to start challenging decks.

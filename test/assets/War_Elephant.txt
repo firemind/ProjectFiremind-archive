@@ -1,0 +1,11 @@
+name=War Elephant
+image=http://mtgimage.com/card/war%20elephant.jpg
+value=2.500
+rarity=C
+type=Creature
+subtype=Elephant
+cost={3}{W}
+pt=2/2
+ability=Trample; banding
+timing=main
+oracle=Trample; banding

@@ -1,0 +1,85 @@
+hr
+= render partial: 'shared/breadcrumbs', locals: {links: [[@archetype.format.to_s, @archetype.format], [@archetype.to_s,@archetype, {title: "#{(@deck_list.archetype_score.to_f).round}% confidence"}]], current: @title} if @archetype
+
+.row
+  .large-8.columns
+    table
+      thead
+        tr
+          th
+          th Won Games
+          th Lost Games
+      tbody
+        tr
+          td Decision Counts
+          td
+            => @win_metrics.avg_winner_decisions&.round
+            | /
+            =< @win_metrics.avg_loser_decisions&.round
+          td
+            => @loss_metrics.avg_loser_decisions&.round
+            | /
+            =< @loss_metrics.avg_winner_decisions&.round
+        tr
+          td Action Counts
+          td
+            => @win_metrics.avg_winner_actions&.round
+            | /
+            =< @win_metrics.avg_loser_actions&.round
+          td
+            => @loss_metrics.avg_loser_actions&.round
+            | /
+            =< @loss_metrics.avg_winner_actions&.round
+        tr
+          td Number of Turns
+          td=@win_metrics.avg_turn
+          td=@loss_metrics.avg_turn
+        tr
+          td % on Play
+          td=@win_metrics.on_play_perc
+          td=@loss_metrics.on_play_perc
+        tr
+          td Game Length
+          td=Time.at(@win_metrics.avg_play_time.to_i).utc.strftime("%H:%M:%S")
+          td=Time.at(@loss_metrics.avg_play_time.to_i).utc.strftime("%H:%M:%S")
+  .large-4.columns
+    - if @sum == 0
+      .alert.callout No games played against this archetype.
+    - else
+      table.table
+        tr
+          th Total Games:
+          td=@sum
+        tr
+          th Win Rate:
+          td=@win_rate.round(3)
+        tr
+          th Variance:
+          td= @variance.round(3)
+        tr
+          th binomial(#{@sum},#{@win_count},0.5):
+          td="#{binomial(@sum,@win_count,0.5)}"
+        tr
+          - v = cumulative_prob(@sum,@win_count,0.5)
+          th= "cumulative_prob(#{@sum},#{@win_count},0.5):"
+          td
+            span.label class=(v <= 0.05 ? 'success' : 'alert') =v
+        tr
+          th confidence interval (clt):
+          - clt_int = clt_confidence(@sum.to_f, @win_count.to_f)
+          td= "#{clt_int[0].round(3)} - #{clt_int[1].round(3)}"
+.row
+  .large-12-columns
+    table.infinite-table
+      thead
+        th Winner
+        th
+        th Loser
+        th Time
+        th
+        th
+        th
+      tbody
+        = render partial: 'matchup_game', collection: @games, as: :game
+    p.pagination
+      = link_to_next_page(@games, 'Next Page', :remote => true)

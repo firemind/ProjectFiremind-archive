@@ -1,0 +1,21 @@
+#!/bin/bash
+cd $(dirname $0)
+for i in $(seq 1 4); do
+  if [ $(ps faux | grep "magic.FiremindQueueWorker $i"  | grep -v grep | wc -l) -eq 0 ] ; then
+    mdir=/var/local/magarena$i/
+    if [ -d $mdir ] ; then
+      cd $mdir
+    else
+      echo "No magarena directory $1 checked out at $mdir"
+    fi
+    cd $mdir
+    git checkout -f
+    git clean -f | grep -v "Removing"
+    nohup java -noverify -cp Magarena.jar magic.FiremindQueueWorker $i > /var/log/aiworker/worker$i.log 2> /var/log/aiworker/worker$i.err &
+  else
+    thepid=$(ps faux | grep "magic.FiremindQueueWorker $i"  | grep -v grep |  tr -s ' ' |cut -d" " -f 2)
+    pidtime=$(stat -c '%Y' /proc/$thepid)
+    now=$(date +%s)
+    ((now - pidtime >= 86400)) && { echo "Killing ai worker older than 1 day"; kill $thepid; sleep 10; kill &>/dev/null -9 $thepid; }
+  fi
+done

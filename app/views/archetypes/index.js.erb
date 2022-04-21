@@ -1,0 +1,10 @@
+$("<%=j render(:partial => 'archetype_grid', locals: {archetypes: @archetypes}) %>")
+.appendTo($(".infinite-table .archetypes"));
+
+// Update pagination link
+<% if @archetypes.last_page? %>
+  $('.pagination').html("No more archetypes to load!");
+<% else %>
+  $('.pagination')
+  .html("<%=j link_to_next_page(@archetypes, 'Next Page', :remote => true, params: {search: @search}) %>");
+<% end %>

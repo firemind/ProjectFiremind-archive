@@ -1,0 +1,7 @@
+h1= @tournament
+
+table
+  - @tournament.tournament_results.each do |tr|
+    tr
+      td= tr.ranking
+      td= link_to tr.deck.archetype, tr.deck if tr.deck

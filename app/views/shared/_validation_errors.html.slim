@@ -1,0 +1,13 @@
+- if object.errors.any?
+  #error_explanation
+    .callout.alert
+      h5
+        => pluralize(object.errors.count, "error")
+        | prohibited this 
+        =<> object.model_name.human
+        | from being saved:
+      ul.no-bullet
+        - object.errors.full_messages.each do |msg|
+          li= msg.html_safe
+
+

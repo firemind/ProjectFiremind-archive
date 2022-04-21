@@ -1,0 +1,10 @@
+$("<%=j render(:partial => 'table', locals: {duels: @duels}) %>")
+.appendTo($(".infinite-table tbody"));
+
+// Update pagination link
+<% if @duels.last_page? %>
+  $('.pagination').html("No more decks to load!");
+<% else %>
+  $('.pagination')
+  .html("<%=j link_to_next_page(@duels, 'Next Page', :remote => true) %>");
+<% end %>

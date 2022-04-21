@@ -1,0 +1,22 @@
+h2
+  => @name
+  = @idf
+
+table
+  thead
+    tr
+      td
+        - wins = @results.map{|d, r| r.map{|c| c}.sum}.sum
+        - total = @opponents.map{|op, airms| airms.map{|r| r.duels.map(&:games_to_play).sum}.sum }.sum
+        = "#{rate_in_percent(wins, total)}%"
+      - @opponents.each_with_index do |(op,airms), index|
+        td
+          - wins = @results.map{|d, r| r[index]}.sum
+          - total = airms.map{|airm| airm.duels.map(&:games_to_play).sum}.sum
+          => "#{op}"
+          = "#{rate_in_percent(wins, total)}%"
+  - @results.each do |deck, row|
+    tr
+      td= deck
+      - row.each do |cell|
+        td= cell

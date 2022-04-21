@@ -1,0 +1,33 @@
+- if @decks.size > 0
+  = form_for(@duel) do |f|
+    = f.hidden_field :duel_queue_id
+    = f.hidden_field :deck_list1_id
+    .row.collapse
+      .small-2.columns
+        = f.label :format_id
+      .small-2.columns
+        = f.select :format_id, options_for_select(@formats.map { |format| [format.name, format.id] }, @duel.format_id)
+        = f.check_box :public, checked: true, hidden: true
+      .small-2.columns
+        = f.submit 'Run Duel', class: 'button', style: 'margin-bottom: 2px'
+    .row.collapse
+      .small-2.columns
+        = f.label :games_to_play
+      .small-2.columns.last
+        = f.number_field :games_to_play
+      .small-8.columns
+    .row.collapse
+      .small-12.columns
+        h3 Choose your deck
+        .input
+          = f.select :deck_list2_id, deck_select_options(@decks, @duel.deck_list2_id)
+        #duel_deck_list2_id_picker
+
+
+- elsif current_user
+  |You need to add a deck first.
+  =< link_to "New Deck", new_deck_path
+- else
+  |You are not currently signed in. Please
+  =<> link_to "sign in or sign up", new_user_session_path
+  |to start challenging decks.

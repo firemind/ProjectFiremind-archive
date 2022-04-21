@@ -1,0 +1,28 @@
+= form_for [@deck, @maybe_entry], remote: true do |f|
+  = render partial: 'shared/validation_errors', locals: {object: @maybe_entry}
+  = f.hidden_field :deck_id
+  .row
+    .small-2.columns
+      = f.label :card_id
+    .small-4.columns
+      = f.text_field :card_name, data: {autocomplete_source: enabled_cards_path}
+    .small-2.columns
+      = f.label :deck_entry_cluster_id
+    .small-4.columns
+      = f.select :deck_entry_cluster_id, options_for_select(@deck_entry_clusters.map { |format| [format.name, format.id] }, f.object.deck_entry_cluster_id)
+  .row
+    .small-2.columns
+      = f.label :min_amount
+    .small-4.columns
+      = f.number_field :min_amount
+    .small-2.columns
+      = f.label :max_amount
+    .small-4.columns
+      = f.number_field :max_amount
+  .row
+    .small-9.small-offset-2.columns
+      = f.submit class: 'button', value: "Save"
+  coffee:
+    jQuery ->
+      $('#maybe_entry_card_name').autocomplete
+        source: $('#maybe_entry_card_name').data('autocomplete-source')

@@ -1,0 +1,30 @@
+.row
+  .large-9.columns
+    h1 Edit your profile
+    = form_for(@user, url: user_path(@user)) do |f|
+      - if @user.errors.any?
+        #error_explanation
+          .alert-box.secondary
+            h3
+              => pluralize(@user.errors.count, "error")
+              | prohibited this user from being saved:
+            ul.no-bullet
+              - @user.errors.full_messages.each do |msg|
+                li= msg.html_safe
+      .row
+        .small-3.columns
+          = f.label :name
+        .small-9.columns
+          = f.text_field :name
+      .row
+        .small-3.columns
+          = f.label "Send me weekly report emails", for: :receive_weekly_report
+        .small-9.columns
+          = f.check_box :receive_weekly_report
+
+      .actions
+        = f.submit "Update", class: 'button'
+  .large-3.columns
+    h3 Meta
+    - Format.enabled.each do |f|
+      = link_to f, my_meta_index_path(format_id: f.id), class: 'button expand'

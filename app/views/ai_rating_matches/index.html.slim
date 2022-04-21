@@ -1,0 +1,43 @@
+h1 AI Rating Matches
+
+table
+  thead
+    tr
+      th AI1
+      th AI2
+      th str
+      th state
+      th w / l
+      th % done
+      th time spent
+  - @ai_rating_matches.each do |ai_rating_match|
+    -state = ai_rating_match.state
+    - cache ['airm_row', ai_rating_match.id, ['failed', 'finished'].include?(state)? 'done' : state + Time.now.strftime("%Y%m%d%h%M")] do
+      tr
+        td
+          b
+            = ai_rating_match.ai1_name
+            = ai_rating_match.ai1_identifier
+        td
+          = ai_rating_match.ai2_name
+          = ai_rating_match.ai2_identifier
+        td
+          = ai_rating_match.ai_strength
+        td
+          = format_state(ai_rating_match.state)
+        td
+          = "#{ai_rating_match.wins} / #{ai_rating_match.losses}"
+        td
+          = "#{ai_rating_match.percentage_done.round}%"
+        td
+          = to_dot_time(ai_rating_match.time_spent)
+        td
+          = link_to 'Queue', ai_rating_match.duel_queue
+        td
+          = link_to 'Show', ai_rating_match
+        td
+          = link_to 'Compare', compare_ai_rating_matches_path(ai_name: ai_rating_match.ai1_name)
+
+br
+
+= link_to 'new', new_ai_rating_match_path

@@ -1,0 +1,76 @@
+
+.row
+  - if @deck_challenge.deck_list.archetype&.has_banner
+    .large-12.columns
+      = image_tag banner_url(@deck_challenge.deck_list.archetype)
+  .large-12.columns
+    h1= "Challenge ##{@deck_challenge.id}"
+  .small-8.columns
+
+    - if winner = @deck_challenge.winner
+      .panel.callout.success
+        p Challenge is closed.
+        p
+          b
+            | The winner is
+            =<> link_to winner.user, winner.user
+            | with
+            =< link_to winner.deck_list, winner.deck_list
+
+    = render 'deck_lists/decklist', deck: @deck_challenge.deck_list
+
+    - if @deck_challenge.challenge_entries.any?
+      h2 Best Challengers
+      table
+        tr
+          td Game Count
+          td Win Percentage
+          td Deck
+          td User
+
+        - @deck_challenge.challenge_entries.includes(:user, deck_list: :archetype).sort_by(&:win_ratio).reverse.each do |entry|
+          tr
+            td= entry.games.count
+            td= "#{(entry.win_ratio*100).round(1)} %"
+            td= link_to entry.deck_list, entry.deck_list
+            td= link_to entry.user, entry.user
+    - else
+      p No Entries yet.
+
+    h2 Challenge Duels
+    = render partial: 'duel_queues/live_list', locals: {duel_queue: @deck_challenge.duel_queue, duels: @deck_challenge.duel_queue.duels.includes(:format, :user, :deck_list1, :deck_list2).order("created_at desc")}
+
+  .small-4.columns
+    ul.pricing-table#deck-stats
+      li.bullet-item
+        b= "By #{@deck_challenge.user}"
+      - unless @deck_challenge.description.blank?
+        li.bullet-item
+          = @deck_challenge.description
+
+      li.bullet-item
+        b Format:
+        =<> link_to @deck_challenge.format, @deck_challenge.format
+      - if current_user && @own_entry.nil?
+        li.cta-button
+          a#challenge_link title="Accept Challenge with one of my decks." class= 'button' Accept Challenge!
+      - if current_user == @deck_challenge.user
+        - if @deck_challenge.draw?
+          li.cta-button
+            small Challenge is currently in a draw.
+            = link_to "Run additional duels", run_more_deck_challenge_path(@deck_challenge), title: "Run additional duels to find a winner", class: 'button', method: :post
+        - elsif @deck_challenge.closable?
+          li.cta-button
+            = link_to "Close Challenge!", close_deck_challenge_path(@deck_challenge), title: "Closes the challenge for further participation and decides the winner", class: 'button', method: :patch
+
+
+-content_for :custom_js do
+  javascript:
+    $('#challenge_link').on("click", function(){
+      var modal = $('#genericModal');
+      $.ajax('#{challenger_select_deck_challenge_path(@deck_challenge)}').done(function(resp){
+        modal.html(resp).foundation('open');
+        $("#deck_list_id").imagepicker({show_label: true});
+        populateTooltips();
+      });
+    });

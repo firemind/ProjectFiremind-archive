@@ -1,0 +1,4 @@
+var suggestionsContainer = $("#suggestions-against<%= @archetype.id %>");
+suggestionsContainer.append("<%= escape_javascript(render partial: 'sideboarding_suggestions') %>");
+$("#load-suggestions<%= @archetype.id %>").remove();
+populateTooltipOn(suggestionsContainer);

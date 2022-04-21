@@ -1,0 +1,3 @@
+ul.deck_entry_list
+  - deck_list.deck_entries.includes(:card).where.not(group_type: 'lands').order("amount desc").first(4).each do |de|
+    li=card_link(de.card)

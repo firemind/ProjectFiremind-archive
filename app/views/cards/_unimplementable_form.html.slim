@@ -1,0 +1,8 @@
+= form_for(@card, url: add_unimplementable_reasons_card_path(@card)) do |f|
+  ul.no-bullet
+    - NotImplementableReason.all.each do |reason| 
+      li
+        = check_box_tag "card[not_implementable_reason_ids][]", reason.id, @card.not_implementable_reason_ids.include?(reason.id), id: dom_id(reason) 
+        = label_tag dom_id(reason), reason.name
+
+  = f.submit class: 'button', value: "Update"

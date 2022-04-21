@@ -1,0 +1,47 @@
+.duel-box data-duel-id=duel.id
+  - cache [duel, current_user] do
+    - user_deck1 = user_deck_for(duel.deck_list1)
+    - user_deck2 = user_deck_for(duel.deck_list2)
+    - wins1 = duel.wins_deck1.to_i
+    - wins2 = duel.games_played.to_i - wins1
+    .row.panel
+      .large-2.small-2.columns
+        .avatar style= "background: url(#{user_deck1&.thumb_print ? thumb_print_url(user_deck1&.thumb_print) : deck_list_image_url(duel.deck_list1)});background-size:cover"
+          span class=class_for_game_score(wins1, wins2)
+            = wins1
+      .large-4.small-4.columns
+        .duel-deck-title
+          a.button.small.dark href=url_for(duel)
+            - if user_deck1
+              => fa_icon "star"
+            =  "#{user_deck1&.title || duel.deck1_tag}".truncate(34)
+        .hide-for-small-only
+          = render partial: "duels/deck_quick_stats", locals: {deck_list: duel.deck_list1}
+
+      .large-4.small-4.columns
+        .duel-deck-title.right-align
+          a.button.small.dark href=url_for(duel)
+            - if user_deck2
+              => fa_icon "star"
+            =  "#{user_deck2&.title || duel.deck2_tag}".truncate(34)
+        .hide-for-small-only
+          = render partial: "duels/deck_quick_stats", locals: {deck_list: duel.deck_list2}
+      .large-2.small-2.columns
+        .avatar style= "background: url(#{user_deck2&.thumb_print ? thumb_print_url(user_deck2&.thumb_print) : deck_list_image_url(duel.deck_list2)});background-size:cover"
+          span class=class_for_game_score(wins2, wins1)
+            = wins2
+
+  .row
+    .large-12.columns
+      - text = duel.waiting? ? 'Waiting on worker' : "#{duel.games_played.to_i} out of #{duel.games_to_play} Games played"
+      .tprogress class= class_for_duel_state(duel)
+        div style="width: #{( duel.games_played.to_i / duel.games_to_play.to_f * 100).round 50}%"
+        span
+          =text
+  .row.duel-secondary-stats
+    .large-10.large-offset-1
+      - button_classes = 'button tiny secondary'
+      .button-group.expanded
+        = link_to "#{time_ago_in_words(duel.created_at)} ago", duel, class: button_classes
+        = link_to "in #{duel.format}", duel, class: button_classes
+        = link_to "by #{duel.user}", duel, class: button_classes

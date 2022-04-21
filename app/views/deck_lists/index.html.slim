@@ -1,0 +1,13 @@
+h1
+  | Deck lists in
+  =< link_to @archetype, @archetype
+table
+  tr
+    th Deck List
+    th Games
+    th Rating
+  - @deck_lists.each do |dl|
+    tr
+      td= link_to dl, dl
+      td.right-align= dl.games_count
+      td.right-align= dl.rating_in(@archetype.format)

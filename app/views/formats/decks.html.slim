@@ -1,0 +1,9 @@
+hr
+= render partial: 'shared/breadcrumbs', locals: {links: [[@format.to_s, @format]], current: "Decks"}
+.row.infinite-table
+  .large-12.columns
+    .row.deck-list
+      = render partial: 'decks/decks_by_formats', locals: {decks: @decks}
+  .large-12.columns
+    p.pagination
+      = link_to_next_page(@decks, 'Next Page', :remote => true, params: {deck_format: @format.name.downcase})

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Not Implementable Reasons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Card Count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @not_implementable_reasons.each do |not_implementable_reason| %>
+      <tr>
+        <td><%= not_implementable_reason.name %></td>
+        <td><%= not_implementable_reason.description %></td>
+        <td><%= not_implementable_reason.cards.count %></td>
+        <td><%= link_to 'Show', not_implementable_reason %></td>
+        <td><%= link_to 'Edit', edit_not_implementable_reason_path(not_implementable_reason) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Not implementable reason', new_not_implementable_reason_path, class: 'button' %>

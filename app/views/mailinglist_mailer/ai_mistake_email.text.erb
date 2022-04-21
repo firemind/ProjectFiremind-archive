@@ -1,0 +1,21 @@
+AI Mistake submitted via firemind.ch <%= "by #{@ai_mistake.user.email}" if @ai_mistake.user %>
+
+Internal Game ID <%= @ai_mistake.game_id %>
+
+Log Line Number  <%= @ai_mistake.log_line_number %>
+
+== Decision in Question ==
+
+<%= @ai_mistake.decision %>
+
+== Correct decision ==
+
+<%= @ai_mistake.correct_choice %>
+
+== Options not considered ==
+
+<%= @ai_mistake.options_not_considered %>
+
+== Full Game Log ==
+
+<%= File.open(@ai_mistake.game.logfile).read if @ai_mistake.game.logfile %>

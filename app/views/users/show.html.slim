@@ -1,0 +1,49 @@
+.row
+  .large-2.columns
+    hr
+    a.th href= (current_user && current_user == @user ? "http://gravatar.com" : user_path(@user))
+      = image_tag @user.gravatar_url
+  .large-7.columns
+    h1= @user
+    - if current_user && current_user == @user
+      a.button href= edit_user_path(@user) Edit
+      .panel
+        | Access Token:
+        -if @user.access_token
+          b=<@user.access_token
+        -else
+          =< link_to "generate!", generate_access_token_users_path, method: :post
+    - else
+      - if current_user
+        - if current_user.following? @user
+          = link_to "Unfollow", unfollow_user_path(@user), method: "post", class: 'button radius success unfollow_button'
+        - else
+          = link_to "Follow".html_safe, follow_user_path(@user), method: "post", class: 'button radius follow_button'
+  .large-3.columns.right style= 'padding-top: 20px'
+    table
+      - cache [@user, :highest_ranked_deck], expires_in: 1.hour do
+        tr
+          td Highest Deck Rating
+          td.right= (( r = @user.ratings.order("whr_rating desc").first) && r.whr_rating)
+      - if @user.card_script_submissions.count > 0
+        tr
+          td Card Scripts Submitted
+          td.right= @user.card_script_submissions.count
+      - if @user.card_requests.count > 0
+        tr
+          td Card Requests
+          td.right= @user.card_requests.count
+      - if @user.card_script_claims.count > 0
+        tr
+          td= link_to "Card Script Claims", card_script_claims_path(@user)
+          td.right= @user.card_script_claims.count
+
+  .large-12.columns
+    h3
+      => @user.decks.visible_to(current_user).active.count
+      | Decks
+    .infinite-table
+      .row.deck-list
+        = render partial: 'decks/decks_by_formats', locals: {decks: @decks}
+      p.pagination
+        = link_to_next_page(@decks, 'Next Page', :remote => true)

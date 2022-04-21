@@ -1,0 +1,59 @@
+= form_for(@ai_rating_match) do |f|
+  - if @ai_rating_match.errors.any?
+    #error_explanation
+      .alert-box.secondary
+        h3
+          = pluralize(@ai_rating_match.errors.count, "error")
+          | prohibited this AIRM from being saved:
+        ul.no-bullet
+          - @ai_rating_match.errors.full_messages.each do |msg|
+            li= msg.html_safe
+
+  .row
+    .small-3.columns
+      = f.label :ai1_name
+    .small-9.columns
+      = f.text_field :ai1_name
+
+  .row
+    .small-3.columns
+      = f.label :ai1_identifier
+    .small-9.columns
+      = f.text_field :ai1_identifier
+
+  .row
+    .small-3.columns
+      = f.label :ai2_name
+    .small-9.columns
+      = f.text_field :ai2_name
+
+  .row
+    .small-3.columns
+      = f.label :ai2_identifier
+    .small-9.columns
+      = f.text_field :ai2_identifier
+  .row
+    .small-3.columns
+      = f.label :ai_strength
+    .small-9.columns
+      = f.number_field :ai_strength
+
+  .row
+    .small-3.columns
+      = f.label :git_repo
+    .small-9.columns
+      = f.text_field :git_repo
+
+  .row
+    .small-3.columns
+      = f.label :git_branch
+    .small-9.columns
+      = f.text_field :git_branch
+
+  .row
+    .small-3.columns
+      = f.label :iterations
+    .small-9.columns
+      = f.text_field :iterations
+  .actions
+    = f.submit

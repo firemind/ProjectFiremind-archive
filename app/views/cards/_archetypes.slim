@@ -1,0 +1,17 @@
+h5
+  |Archetypes containing
+  =< @card
+
+table.table
+  thead
+    tr
+      th Archetype
+      th Total #
+      th # Per Deck
+      th % of Decks
+  - @archetypes.each do |archetype, stats|
+    tr
+      td= link_to "#{archetype} in #{archetype.format}", archetype, class: "button tiny expand"
+      td.right-align= stats[:number_of_copies]
+      td.right-align= stats[:number_of_copies_per_deck].round(2)
+      td.right-align= link_to stats[:percent_of_decks].ceil, deck_lists_by_card_archetype_path(archetype, @card.id)

@@ -1,0 +1,23 @@
+h1= title @card.name
+.row
+  .large-7.columns
+    - if @card.enabled
+      = link_to "Scripts", scripts_card_path(@card), class: 'button small'
+    - elsif current_user && current_user.may_add_unimplementable_reasons
+      .panel.radius
+        h3 Not implementable tags
+        = render 'unimplementable_form'
+    - cache @top_ratings do
+      = render 'top_ratings', ratings: @top_ratings
+    - cache [@card, @archetypes, 'archetypes_containing'] do
+      = render 'archetypes', archetypes: @archetypes
+  .large-5.columns
+    - if admin_user?
+      = link_to "Edit", edit_admin_card_path(@card), class: "button", data: { turbolinks: false}
+    = render 'card_image', card: @card
+
+h3 Printings
+ul
+  - @card.card_prints.each do |cp|
+    li title=cp.id
+      = link_to cp.edition, cp.edition

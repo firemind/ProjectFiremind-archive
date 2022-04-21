@@ -1,0 +1,9 @@
+h1
+  Compare Results for
+  = @name
+
+= line_chart airm_chart_data(@name), library: {curveType: 'function'}, discrete: true
+
+ul
+  - @identifiers.each do |idf|
+    li= link_to idf, compare_by_idf_ai_rating_matches_path(@name, idf)

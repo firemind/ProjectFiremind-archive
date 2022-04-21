@@ -1,0 +1,44 @@
+th.avatar style= "background-image: url(#{image_url(archetype_avatar_path(archetype))})"
+  = link_to archetype, archetype
+td.entry-list
+  ul.sideboard-outs
+    - if sp = data[:plan]
+      - sp.sideboard_outs.each do |si|
+        li
+          => si.amount
+          => card_link(si.card)
+
+          => link_to fa_icon("plus", text: 1),update_sideboard_plan_deck_path(@deck, operation_id: si.id, operation: 'out', amount: si.amount + 1),remote:true, method: :patch
+          => link_to fa_icon("trash"), remove_sideboard_plan_deck_path(@deck, operation_id: si.id, operation: 'out'), method: :delete, class: 'del-link', remote: true
+          - if si.amount > 1
+            => link_to fa_icon("minus", text: 1),update_sideboard_plan_deck_path(@deck, operation_id: si.id, operation: 'out', amount: si.amount - 1),remote:true, method: :patch
+    - if sugs = data[:suggested_outs]
+      - sugs.each do |sug|
+        li.suggestion
+          => card_link(sug)
+          = form_tag add_sideboard_plan_deck_path(@deck), remote: true, class:"add-suggestion-form", method: :post do |f|
+            = hidden_field_tag :archetype_id, archetype.id
+            = hidden_field_tag :operation, "out"
+            = hidden_field_tag :amount, 1
+            = hidden_field_tag :card_name, sug.name
+            a.add-suggestion-link
+              = fa_icon "check"
+  = link_to fa_icon("plus"), '#', class: 'button tiny add-sideboard-out', data: {archetypeid: archetype.id}, remote: true
+td.entry-list
+  a name="archetype-#{archetype.id}"
+  ul.sideboard-ins id="suggestions-against#{archetype.id}"
+    - if sp = data[:plan]
+      - sp.sideboard_ins.each do |si|
+        li
+          => si.amount
+          => card_link(si.card)
+          => link_to fa_icon("plus", text: 1),update_sideboard_plan_deck_path(@deck, operation_id: si.id, operation: 'in', amount: si.amount + 1),remote:true, method: :patch
+          => link_to fa_icon("trash"), remove_sideboard_plan_deck_path(@deck, operation_id: si.id, operation: 'in'), method: :delete, class: 'del-link', remote: true
+          - if si.amount > 1
+            => link_to fa_icon("minus", text: 1),update_sideboard_plan_deck_path(@deck, operation_id: si.id, operation: 'in', amount: si.amount - 1),remote:true, method: :patch
+    = link_to "show suggestions", sideboarding_suggestions_deck_path(@deck, archetype_id: archetype.id), remote: true, id: "load-suggestions#{archetype.id}"
+
+  = link_to fa_icon("plus"), '#', class: 'button tiny add-sideboard-in', data: {archetypeid: archetype.id}, remote: true
+td.actions
+  = link_to fa_icon("clipboard"), copy_sideboard_plans_path(deck_id: @deck.id, archetype_id: archetype.id), class: "button small", method: :post, title: "copy to clipboard", remote: true
+  = link_to fa_icon("arrow-down"), paste_sideboard_plans_path(archetype_id: archetype.id), class: "button small success", method: :post, title: "paste plan", remote: true

@@ -1,0 +1,25 @@
+= form_for(@meta) do |f|
+  = f.hidden_field :format_id
+  = f.hidden_field :name
+  - if @meta.errors.any?
+    #error_explanation
+      .alert-box.secondary
+        h3
+          => pluralize(@meta.errors.count, "error")
+          |prohibited this deck from being saved:
+        ul.no-bullet
+          - @meta.errors.full_messages.each do |msg|
+            li= msg.html_safe
+  .row
+    = f.fields_for :meta_fragments, @meta.meta_fragments.sort_by(&:occurances).reverse do |builder|
+      .large-3.columns
+        .row.collapse
+          .large-9.columns
+            span.prefix
+              = link_to builder.object.archetype.to_s, builder.object.archetype
+            = builder.hidden_field :archetype_id
+            = builder.hidden_field :id
+          .large-3.columns
+            = builder.number_field :occurances
+
+  = f.submit class: 'button large', value: "Save Meta"

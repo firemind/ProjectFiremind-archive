@@ -1,0 +1,135 @@
+// Place all the styles related to the duels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-tooltip {
+  max-width: 480px;
+  background-color: #ddd;
+  border-color: black;
+}
+
+.gamelog {
+  p {
+    margin-bottom: 0;
+    line-height: 1.6em;
+  }
+}
+
+table .button-group .button {
+  margin-bottom: 0px;
+}
+
+@media only screen {
+  .duel-box {
+    .avatar {
+      width: 60px;
+      height: 60px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  .duel-box {
+    .avatar {
+      width: 128px;
+      height: 128px;
+    }
+  }
+}
+.duel-box {
+  .avatar {
+    padding: 0;
+    background: no-repeat;
+    vertical-align:bottom;
+    display: table-cell;
+    span {
+      width: 100%;
+      color: white;
+      background: black;
+      display: block;
+      opacity: 0.8;
+      padding: 2px 5px;
+      text-align: center;
+      font-weight: bold;
+      &.winning {
+        background-color: #3adb76;
+        color: black;
+      }
+      &.losing {
+        background-color: #ff412d;
+        color: black;
+      }
+    }
+  }
+  ul.deck_entry_list {
+    list-style-type: none;
+    padding-right: 20px;
+  }
+  .duel-deck-title{
+    height:42px;
+  }
+  .panel {
+    padding: 0;
+    background-color: white;
+  }
+  .colorbox{
+    margin-bottom: 6px;
+    height: 23px;
+  }
+  .columns {
+    padding: 0;
+  }
+  .button {
+    width: 95%;
+    margin-bottom: 0;
+  }
+  margin-bottom: 15px;
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .progress {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .duel-secondary-stats {
+    margin-bottom: 10px;
+  }
+
+}
+
+.colorbox {
+  height: 27px;
+  padding: 2px;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.deck-links {
+  padding-right: 11px;
+  text-align: right;
+  .button {
+    display: block;
+    padding: 4px 2px;
+    margin-bottom: 0;
+  }
+}
+.duel-state {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bold
+}
+
+.duel-table {
+  td {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1em;
+  }
+}
+
+
+

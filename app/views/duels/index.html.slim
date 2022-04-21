@@ -1,0 +1,9 @@
+h1
+  |Duels for
+  = @deck
+.infinite-table
+  table
+    tbody
+      = render 'duels/table', duels: @duels
+  p.pagination
+    = link_to_next_page(@duels, 'Next Page', :remote => true)

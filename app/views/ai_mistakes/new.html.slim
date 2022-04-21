@@ -1,0 +1,39 @@
+h2 Report an AI Mistake
+
+p Do you think the AI acted stupid on this move? Please tell us more.
+
+= form_for(@ai_mistake, html: { class: 'custom'}) do |f|
+  - if @ai_mistake.errors.any?
+    #error_explanation
+      h2
+        => pluralize(@ai_mistake.errors.count, "error")
+        |prohibited this duel from being saved:
+      ul
+        - @ai_mistake.errors.full_messages.each do |msg|
+          li= msg
+
+  = f.number_field :game_id, type: :hidden
+  = f.number_field :log_line_number, type: :hidden
+
+  .row.collapse
+    .small-3.columns
+      = f.label :decision
+    .small-9.columns
+      = f.text_area :decision
+
+  .row.collapse
+    .small-3.columns
+      = f.label :correct_choice
+    .small-9.columns
+      = f.text_area :correct_choice
+
+  .row.collapse
+    .small-3.columns
+      = f.label :options_not_considered
+    .small-9.columns
+      = f.text_area :options_not_considered
+
+
+  .row.collapse
+    .small-9.small-offset-3.columns
+      = f.submit class: 'button', value: "Report AI Mistake"

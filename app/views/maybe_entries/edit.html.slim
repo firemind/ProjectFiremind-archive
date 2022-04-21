@@ -1,0 +1,10 @@
+h3
+  Edit Maybe Entry for
+  =< @maybe_entry.card_name
+
+- if @deck_entry_clusters.any?
+  = render 'form'
+  = link_to "Destroy", [@deck, @maybe_entry], method: :delete, class: 'button radius small alert'
+- else
+  p
+    b Your deck does not have any clusters defined yet. Please add some first to define what group of cards should be replaced by the maybe entry.

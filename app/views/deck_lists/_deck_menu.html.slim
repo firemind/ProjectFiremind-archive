@@ -1,0 +1,34 @@
+button class="dropdown button expanded" type="button" data-toggle="deck-actions-dropdown" Actions
+div.stacked.button-group class="dropdown-pane" id="deck-actions-dropdown" data-dropdown=true data-auto-focus="true" data-alignment="right"
+  - if current_user
+    - if @deck
+      = link_to 'Edit', edit_deck_path(@deck), class: 'button small'
+      = link_to "Create Deck Challenge", new_deck_challenge_path(deck_list_id: @deck.deck_list_id), class: 'button small'
+      = link_to "Sideboarding", sideboarding_deck_path(@deck), class: 'button small'
+      - text = "Mulligans"
+      = link_to text, mulligans_deck_path(@deck), class: 'button small'
+      = link_to 'Delete Deck', deck_path(@deck), class: 'button alert small', confirmation: true, method: :delete, data: {confirm: "Are you sure?"}
+      - if @deck.legal_in_format?
+        = link_to "Challenge Top 10 in #{@deck.format}", challenge_top_duels_path(@deck.format, @deck), class: 'button small', method: :post
+        = link_to 'Show Duels', deck_duels_path(@deck), class: 'button small'
+        = link_to 'Run a Duel!', new_duel_path(deck1_id: @deck), class: 'button small'
+    - else
+      a#challenge_link title="Challenge with one of my decks." class= 'button small' Challenge!
+      -content_for :custom_js do
+        javascript:
+          $('#challenge_link').on("click", function(){
+            var modal = $('#genericModal');
+            $.ajax('#{challenge_with_deck_list_path(@deck_list)}').done(function(resp){
+              modal.html(resp).foundation('open');
+              $("#duel_deck_list2_id").imagepicker({show_label: true});
+            });
+          });
+      - if current_user.following? @deck_list
+        = link_to "Unfollow", unfollow_deck_list_path(@deck_list), method: "post", class: 'button small success unfollow_button'
+      - else
+        = link_to "Follow", follow_deck_list_path(@deck_list), method: "post", class: 'button small follow_button'
+    = link_to 'Fork', fork_deck_list_path(@deck_list), class: 'button small', method: :post
+    = link_to "Change Archetype", change_archetype_deck_list_path(@deck_list), class: 'button small'
+  = link_to '.dec', deck_list_path(@deck_list, format: 'dec'), class: 'button small'
+  = link_to "Card View", '#', class: 'card_view_link button smal', data: {decklist_id: @deck_list.id}
+

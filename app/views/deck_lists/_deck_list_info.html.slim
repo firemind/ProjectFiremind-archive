@@ -1,0 +1,30 @@
+li.title Stats
+li.bullet-item
+  table
+    tr
+      th Cards
+      td => deck_list.card_count
+    - if deck_list.games.any?
+      tr
+        th Average Game Length
+        td=< Time.at(deck_list.games.average(:play_time_sec)).utc.strftime("%H:%M:%S")
+      tr
+        th # Decisions when Winning
+        td=(deck_list.won_games.average(:winner_decision_count)||0).round
+      tr
+        th # Decisions when Losing
+        td=(deck_list.won_games.average(:loser_decision_count)||0).round
+      tr
+        th Actions when Winning
+        td=(deck_list.won_games.average(:winner_action_count)||0).round
+      tr
+        th Actions when Losing
+        td=(deck_list.won_games.average(:loser_action_count)||0).round
+
+    - deck_list.mulligan_decisions.any?
+      tr
+        th Mulligans
+        td= " #{(deck_list.mulligan_percentage*100).round}% of the time"
+li.title Mana Curve
+li.bullet-item
+  = render partial: 'deck_lists/manacurve', locals: {deck_list: deck_list}

@@ -1,0 +1,42 @@
+= form_for(@card_script_submission) do |f|
+  = f.number_field :card_id, type: :hidden
+  - if @card_script_submission.errors.any?
+    #error_explanation
+      .alert-box.secondary
+        h3
+          => pluralize(@card_script_submission.errors.count, "error")
+          |prohibited this deck from being saved:
+        ul.no-bullet
+          - @card_script_submission.errors.full_messages.each do |msg|
+            li= msg.html_safe
+  - unless @card_script_submission.card
+    .row
+      .small-3.columns
+        = f.label :card_name
+      .small-9.columns
+        = f.text_field :card_name, data: {autocomplete_source: disabled_cards_path}
+    .row
+      .small-3.columns
+        = f.label :is_token
+      .small-9.columns
+        = f.check_box :is_token
+
+  .row
+    .small-3.columns
+      = f.label :config, class: 'has-tip', title: t('card_script_submission.config.tooltip')
+    .small-9.columns
+      = f.text_area :config, rows: 12, style: 'height:auto'
+  .row
+    .small-3.columns
+      = f.label :script, class: 'has-tip', title: t('card_script_submission.script.tooltip')
+    .small-9.columns
+      = f.text_area :script, rows: 20, style: 'height:auto'
+  .row
+    .small-3.columns
+      = f.label :comment
+    .small-9.columns
+      = f.text_area :comment, rows: 10, style: 'height:auto'
+
+  .row
+    .small-9.small-offset-3.columns
+      = f.submit class: 'button', value: "Submit the Script"

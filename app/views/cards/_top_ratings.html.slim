@@ -1,0 +1,15 @@
+h5
+  |Top Rated Decks containing
+  =< @card
+table
+  tr
+    th Rating
+    th Deck
+    th Format
+  - ratings.each do |r|
+    tr
+      td
+        span.label class= alert_class_for_rating(r.whr_rating)
+          b= r.whr_rating
+      td= link_to r.deck_list, r.deck_list
+      td= r.format

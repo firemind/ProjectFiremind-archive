@@ -1,0 +1,24 @@
+.row
+  .columns.large-6
+    h1 Workspace
+  .columns.large-6
+    .button-group.radius style="margin-top: 10px"
+      = link_to "Card Scripts", my_card_script_submissions_path, class: 'button small'
+      - if current_user.may_add_unimplementable_reasons
+        = link_to "Not Implementable Tags", not_implementable_reasons_path, class: 'button small'
+
+- if @claims.empty?
+  .panel.radius You are currently not working on any card scripts.
+- else
+  table style='width:100%'
+    - @claims.each do |claim|
+      tr
+        td=card_link( claim.card )
+        td=add_search_links_to_ability(claim.card.ability)
+        td width=260
+          .button-group.radius
+            = link_to "submit script", new_card_script_submission_path(card_id: claim.card.id), class: 'button small'
+            = link_to 'release', workspace_path(claim), method: :delete, data: { confirm: "Are you sure you want to stop working on #{claim.card}?" }, class: 'button small alert', title: "Show others you are no longer working on this"
+
+
+= link_to "Find card to work on", missing_cards_path, class: 'button'

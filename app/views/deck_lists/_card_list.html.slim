@@ -1,0 +1,14 @@
+- lines = []
+- ['creatures', 'spells', 'lands'].each do |type|
+  - recs = deck_list.deck_entries.where(group_type: type).joins(:card).order('cards.name ASC').preload(:card)
+  -   if recs.size > 0
+    dl
+      dt= "# #{recs.sum(:amount)} #{type}"
+      - recs.each do |de|
+        dd
+          = de.amount
+          =< card_link(de.card)
+  br
+  - deck_list.deck_entries.where(group_type: nil).joins(:card).order('cards.name ASC').each do |de|
+    = de.amount
+    =< card_link(de.card)

@@ -1,0 +1,16 @@
+h1
+  | Hands for
+  =< link_to @deck_list, @deck_list
+
+table
+  tr
+    th
+    th Mulligan %
+    th # Votes
+    th # Cards
+  - @dealt_hands.each do |dh|
+    tr
+      td= link_to "show", dh, class: 'button tiny'
+      td.right-align= (dh.mean_mulligan_value*100).round
+      td.right-align= dh.mulligan_decisions.size
+      td.right-align= dh.dealt_cards.size

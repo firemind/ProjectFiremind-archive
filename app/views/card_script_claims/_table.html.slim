@@ -1,0 +1,6 @@
+table style='width:100%'
+  - claims.each do |claim|
+    tr
+      td=link_to claim.user, claim.user
+      td=card_link( claim.card )
+      td=add_search_links_to_ability(claim.card.ability)

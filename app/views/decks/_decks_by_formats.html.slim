@@ -1,0 +1,3 @@
+- decks.each do |deck|
+  .large-6.small-12.columns
+    = render partial: "deck_lists/deck_list", locals: {deck_list: deck.deck_list, user_deck: deck}

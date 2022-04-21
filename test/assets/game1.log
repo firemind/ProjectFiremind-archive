@@ -1,0 +1,445 @@
+MAGARENA GAME LOG
+CREATED ON 2016/02/22 17:58:59
+MAGARENA VERSION 1.70, JRE 1.8.0_60, OS Linux_3.13.0-77-generic amd64
+
+
+LOG (P): Player1 may (no) take a mulligan.
+LOG (C): Player2 may (no) take a mulligan.
+MCTS cached=0
+MCTS cheat=false index=1 life=20 turn=1 phase=FirstMain sims=30 time=6043
+* [73/25/?] (pass)
+  [41/5/?] (Plains)
+MCTS cached=25
+MCTS cheat=false index=1 life=20 turn=1 phase=SecondMain sims=46 time=6262
+* [68/37/?] (pass)
+  [68/33/?] (Plains)
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=2 phase=FirstMain sims=48 time=6322
+  [50/13/?] (pass)
+* [59/35/?] (Shivan Reef)
+LOG (P): Play <Shivan Reef~1000051>. Put <Shivan Reef~1000051> onto the battlefield.
+MCTS cached=35
+MCTS cheat=false index=0 life=20 turn=2 phase=FirstMain sims=65 time=6470
+* [55/52/?] (pass)
+  [55/47/?] (Endless One)
+MCTS cached=52
+MCTS cheat=false index=0 life=20 turn=2 phase=SecondMain sims=77 time=6211
+* [56/119/?] (pass)
+  [34/9/?] (Endless One)
+MCTS cached=0
+MCTS cheat=false index=1 life=20 turn=3 phase=FirstMain sims=75 time=6081
+  [41/10/?] (pass)
+* [61/65/?] (Plains)
+LOG (C): Play <Plains~1000102>. Put <Plains~1000102> onto the battlefield.
+MCTS cached=65
+MCTS cheat=false index=1 life=20 turn=3 phase=FirstMain sims=72 time=6046
+  [59/27/?] (pass)
+* [70/109/?] (Soul's Attendant)
+LOG (C): Pay {W}. Tap <Plains~1000102>. Play <Soul's Attendant~1000086>.
+LOG (C): Put <Soul's Attendant~1000086> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=20 turn=3 phase=FirstMain sims=83 time=6032
+  [24/10/?] (pass)
+* [43/73/?] (Dismember)
+LOG (P): Pay 4 life. Pay {1}. Tap <Shivan Reef~1000051>. Play <Dismember~1000031>.
+LOG (P): Target creature (<Soul's Attendant~1000086>) gets -5/-5 until end of turn.
+LOG (C): <Soul's Attendant~1000086> is put into its owner's graveyard.
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=4 phase=FirstMain sims=74 time=6059
+  [9/3/?] (pass)
+  [38/8/?] (Scalding Tarn)
+  [44/30/?] (Shivan Reef)
+* [45/33/?] (Endless One)
+LOG (P): Pay {X} (X is 1). Tap <Shivan Reef~1000051>. Play <Endless One~1000012>.
+LOG (P): Put <Endless One~1000012> onto the battlefield.
+MCTS cached=33
+MCTS cheat=false index=0 life=16 turn=4 phase=SecondMain sims=84 time=6055
+  [47/47/?] (pass)
+  [35/12/?] (Scalding Tarn)
+* [55/57/?] (Shivan Reef)
+LOG (P): Play <Shivan Reef~1000053>. Put <Shivan Reef~1000053> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=20 turn=5 phase=FirstMain sims=60 time=6235
+* [62/56/?] (pass)
+  [28/4/?] (Plains)
+MCTS cached=56
+MCTS cheat=false index=1 life=20 turn=5 phase=SecondMain sims=74 time=6065
+  [27/4/?] (pass)
+* [72/125/?] (Plains)
+LOG (C): Play <Plains~1000107>. Put <Plains~1000107> onto the battlefield.
+MCTS cached=125
+MCTS cheat=false index=1 life=20 turn=5 phase=SecondMain sims=87 time=6086
+  [56/14/?] (pass)
+  [68/40/?] (Auriok Champion)
+* [75/157/?] (Honor of the Pure)
+LOG (C): Pay {1}{W}. Tap <Plains~1000102>. Tap <Plains~1000107>. Play <Honor of the Pure~1000093>.
+LOG (C): Put <Honor of the Pure~1000093> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=6 phase=FirstMain sims=96 time=6004
+  [32/36/?] (pass)
+* [32/39/?] (Spellskite)
+  [6/5/?] (Scalding Tarn)
+  [23/16/?] (Endless One)
+LOG (P): Pay {2}. Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Play <Spellskite~1000020>.
+LOG (P): Put <Spellskite~1000020> onto the battlefield.
+MCTS cached=39
+MCTS cheat=false index=0 life=16 turn=6 phase=DeclareAttackers sims=110 time=6082
+  [27/62/?] ([Endless One])
+* [29/86/?] ([])
+MCTS cached=86
+MCTS cheat=false index=0 life=16 turn=6 phase=SecondMain sims=127 time=6113
+* [24/161/?] (pass)
+  [18/51/?] (Scalding Tarn)
+MCTS cached=0
+MCTS cheat=false index=1 life=20 turn=7 phase=FirstMain sims=99 time=6208
+  [60/8/?] (pass)
+* [80/76/?] (Plains)
+  [57/7/?] (Auriok Champion)
+  [60/8/?] (Ajani's Pridemate)
+LOG (C): Play <Plains~1000101>. Put <Plains~1000101> onto the battlefield.
+MCTS cached=76
+MCTS cheat=false index=1 life=20 turn=7 phase=FirstMain sims=97 time=6040
+  [71/30/?] (pass)
+* [78/82/?] (Auriok Champion)
+  [74/41/?] (Ajani, Caller of the Pride)
+  [65/19/?] (Ajani's Pridemate)
+LOG (C): Pay {W}{W}. Tap <Plains~1000102>. Tap <Plains~1000107>. Play <Auriok Champion~1000068>.
+LOG (C): Put <Auriok Champion~1000068> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=8 phase=FirstMain sims=147 time=6299
+  [6/13/?] (pass)
+  [19/63/?] (Scalding Tarn)
+* [20/71/?] (Endless One)
+MCTS cached=71
+MCTS cheat=false index=0 life=16 turn=8 phase=FirstMain sims=129 time=6039
+* [24/115/?] (X is 2)
+  [20/84/?] (X is 1)
+LOG (P): Pay {X} (X is 2). Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Play <Endless One~1000011>.
+LOG (P): Put <Endless One~1000011> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=20 turn=8 phase=FirstMain sims=111 time=6141
+  [69/30/?] (yes)
+* [75/81/?] (no)
+LOG (C): Player2 may (no) gain 1 life.
+MCTS cached=50
+MCTS cheat=false index=0 life=16 turn=8 phase=DeclareAttackers sims=142 time=6138
+  [18/86/?] ([Endless One])
+* [19/105/?] ([])
+MCTS cached=105
+MCTS cheat=false index=0 life=16 turn=8 phase=SecondMain sims=132 time=6022
+* [20/170/?] (pass)
+  [16/66/?] (Scalding Tarn)
+MCTS cached=0
+MCTS cheat=false index=1 life=20 turn=9 phase=FirstMain sims=103 time=6139
+  [59/8/?] (pass)
+  [39/3/?] (Plains)
+* [80/82/?] (Soul Warden)
+  [40/3/?] (Ajani, Caller of the Pride)
+  [56/7/?] (Ajani's Pridemate)
+LOG (C): Pay {W}. Tap <Plains~1000102>. Play <Soul Warden~1000081>.
+LOG (C): Put <Soul Warden~1000081> onto the battlefield.
+MCTS cached=82
+MCTS cheat=false index=1 life=20 turn=9 phase=FirstMain sims=108 time=6143
+  [81/84/?] (yes)
+* [83/105/?] (no)
+LOG (C): Player2 may (no) gain 1 life.
+MCTS cached=105
+MCTS cheat=false index=1 life=20 turn=9 phase=FirstMain sims=133 time=6026
+  [66/19/?] (pass)
+* [83/218/?] (Ajani's Pridemate)
+LOG (C): Pay {1}{W}. Tap <Plains~1000107>. Tap <Plains~1000101>. Play <Ajani's Pridemate~1000063>.
+LOG (C): Put <Ajani's Pridemate~1000063> onto the battlefield.
+MCTS cached=218
+MCTS cheat=false index=1 life=20 turn=9 phase=FirstMain sims=133 time=6054
+* [85/223/?] (yes)
+  [84/127/?] (no)
+LOG (C): Player2 gains 1 life.
+MCTS cached=0
+MCTS cheat=false index=1 life=21 turn=9 phase=FirstMain sims=116 time=6074
+  [80/44/?] (yes)
+* [83/72/?] (no)
+LOG (C): Player2 may (no) put a +1/+1 counter on <Ajani's Pridemate~1000063>.
+LOG (C): Player2 may (yes) gain 1 life.
+MCTS cached=72
+MCTS cheat=false index=1 life=22 turn=9 phase=FirstMain sims=118 time=6148
+* [85/171/?] (yes)
+  [69/18/?] (no)
+LOG (C): Player2 may (yes) put a +1/+1 counter on <Ajani's Pridemate~1000063>.
+MCTS cached=171
+MCTS cheat=false index=1 life=22 turn=9 phase=DeclareAttackers sims=117 time=6041
+  [80/78/?] ([Auriok Champion])
+* [85/209/?] ([])
+MCTS cached=209
+MCTS cheat=false index=1 life=22 turn=9 phase=SecondMain sims=127 time=6040
+* [84/195/?] (pass)
+  [83/140/?] (Plains)
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=10 phase=FirstMain sims=246 time=6068
+  [6/80/?] (pass)
+  [5/75/?] (Scalding Tarn)
+* [6/91/?] (Ratchet Bomb)
+LOG (P): Pay {2}. Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Play <Ratchet Bomb~1000033>.
+LOG (P): Put <Ratchet Bomb~1000033> onto the battlefield.
+MCTS cached=91
+MCTS cheat=false index=0 life=16 turn=10 phase=FirstMain sims=190 time=6043
+  [7/79/?] (pass)
+* [11/201/?] (Ratchet Bomb)
+LOG (P): Tap <Ratchet Bomb~1000033>. Play activated ability of <Ratchet Bomb~1000033>.
+LOG (P): Player1 puts a charge counter on <Ratchet Bomb~1000033>.
+MCTS cached=201
+MCTS cheat=false index=0 life=16 turn=10 phase=DeclareAttackers sims=163 time=6067
+  [7/37/?] ([Endless One, Endless One])
+  [15/94/?] ([Endless One])
+  [10/61/?] ([Endless One])
+* [15/171/?] ([])
+MCTS cached=171
+MCTS cheat=false index=0 life=16 turn=10 phase=SecondMain sims=182 time=6011
+* [16/202/?] (pass)
+  [14/150/?] (Scalding Tarn)
+MCTS cached=0
+MCTS cheat=false index=1 life=22 turn=11 phase=FirstMain sims=170 time=6051
+  [83/40/?] (pass)
+  [82/37/?] (Plains)
+  [83/45/?] (Mirran Crusader)
+* [85/48/?] (Ajani, Caller of the Pride)
+LOG (C): Pay {1}{W}{W}. Tap <Plains~1000102>. Tap <Plains~1000107>. Tap <Plains~1000101>. Play <Ajani, Caller of the Pride~1000090>.
+LOG (C): Put <Ajani, Caller of the Pride~1000090> onto the battlefield.
+MCTS cached=48
+MCTS cheat=false index=1 life=22 turn=11 phase=DeclareAttackers sims=143 time=6182
+  [87/29/?] ([Soul Warden, Auriok Champion, Ajani's Pridemate])
+  [90/34/?] ([Soul Warden, Auriok Champion])
+  [88/32/?] ([Soul Warden, Ajani's Pridemate])
+  [87/29/?] ([Soul Warden])
+* [89/35/?] ([Auriok Champion, Ajani's Pridemate])
+  [82/15/?] ([Auriok Champion])
+  [76/15/?] ([Ajani's Pridemate])
+  [6/1/?] ([])
+LOG (C): Player2 attacks with <Ajani's Pridemate~1000063> and <Auriok Champion~1000068>.
+MCTS cached=0
+MCTS cheat=false index=0 life=16 turn=11 phase=DeclareBlockers sims=200 time=6067
+  [11/17/?] (S642 Auriok Champion=Spellskite+1 Ajani's Pridemate=Endless One)
+* [15/25/?] (S52 Auriok Champion=Spellskite+2)
+  [12/21/?] (S52 Auriok Champion=Spellskite+1)
+  [10/16/?] (S-683 Auriok Champion=Endless One+1 Ajani's Pridemate=Spellskite)
+  [5/12/?] (S-728 Auriok Champion=Endless One Ajani's Pridemate=Endless One)
+  [4/11/?] (S-758 Auriok Champion=Endless One+1)
+  [6/12/?] (S-808 Auriok Champion=Spellskite Ajani's Pridemate=Endless One)
+  [12/21/?] (S-1243 Auriok Champion=Endless One Ajani's Pridemate=Spellskite)
+  [10/16/?] (S-1318 Auriok Champion=Endless One)
+  [15/22/?] (S-1368 Auriok Champion=Spellskite Ajani's Pridemate=Endless One)
+  [5/11/?] (S-1398 Auriok Champion=Spellskite)
+  [9/16/?] (S-1408 Ajani's Pridemate=Endless One)
+LOG (P): Player1 blocks with <Endless One~1000011>, <Endless One~1000012> and <Spellskite~1000020>.
+LOG (P): {c}Player1 loses 4 life.
+LOG (C): <Auriok Champion~1000068> is destroyed.
+MCTS cached=0
+MCTS cheat=false index=1 life=22 turn=11 phase=SecondMain sims=182 time=6010
+  [86/42/?] (pass)
+* [88/51/?] (Plains)
+  [88/50/?] (Ajani, Caller of the Pride)
+  [85/39/?] (Ajani, Caller of the Pride)
+LOG (C): Play <Plains~1000108>. Put <Plains~1000108> onto the battlefield.
+MCTS cached=51
+MCTS cheat=false index=1 life=22 turn=11 phase=SecondMain sims=150 time=6026
+  [82/41/?] (pass)
+* [88/101/?] (Ajani, Caller of the Pride)
+  [85/58/?] (Ajani, Caller of the Pride)
+MCTS cached=101
+MCTS cheat=false index=1 life=22 turn=11 phase=SecondMain sims=166 time=6069
+  [64/8/?] (yes,Ajani's Pridemate)
+* [90/198/?] (yes,Soul Warden)
+  [85/60/?] (no,null)
+LOG (C): Player2 puts 1 loyalty counters on <Ajani, Caller of the Pride~1000090>. Play activated ability of <Ajani, Caller of the Pride~1000090>.
+LOG (C): Player2 may (yes) put a +1/+1 counter on target creature (<Soul Warden~1000081>).
+MCTS cached=0
+MCTS cheat=false index=0 life=12 turn=12 phase=FirstMain sims=163 time=6032
+  [10/19/?] (pass)
+  [13/28/?] (Eye of Ugin)
+* [20/64/?] (Ratchet Bomb)
+  [11/23/?] (Scalding Tarn)
+  [13/29/?] (Ratchet Bomb)
+LOG (P): Tap <Ratchet Bomb~1000033>. Sacrifice <Ratchet Bomb~1000033>. Play activated ability of <Ratchet Bomb~1000033>.
+LOG (P): Destroy each nonland permanent with converted mana cost equal to the number of charge counters on <Ratchet Bomb~1000033>.
+LOG (C): <Soul Warden~1000081> is destroyed.
+MCTS cached=64
+MCTS cheat=false index=0 life=12 turn=12 phase=DeclareAttackers sims=186 time=6050
+  [18/81/?] ([Endless One, Endless One])
+  [12/31/?] ([Endless One])
+  [20/54/?] ([Endless One])
+* [18/83/?] ([])
+MCTS cached=83
+MCTS cheat=false index=0 life=12 turn=12 phase=SecondMain sims=177 time=6017
+  [15/74/?] (pass)
+  [15/81/?] (Eye of Ugin)
+* [16/104/?] (Scalding Tarn)
+LOG (P): Play <Scalding Tarn~1000049>. Put <Scalding Tarn~1000049> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=22 turn=13 phase=FirstMain sims=224 time=6041
+  [92/39/?] (pass)
+  [87/30/?] (Plains)
+  [94/50/?] (Serra Ascendant)
+  [94/49/?] (Ajani, Caller of the Pride)
+* [93/55/?] (Ajani, Caller of the Pride)
+  [7/1/?] (Mirran Crusader)
+LOG (C): Remove 3 loyalty counters from Ajani, Caller of the Pride. Play activated ability of <Ajani, Caller of the Pride~1000090>.
+MCTS cached=46
+MCTS cheat=false index=0 life=12 turn=13 phase=FirstMain sims=252 time=6012
+  [8/146/?] (pass)
+* [8/151/?] (Scalding Tarn)
+LOG (P): Tap <Scalding Tarn~1000049>. Pay 1 life. Sacrifice <Scalding Tarn~1000049>. Play activated ability of <Scalding Tarn~1000049>.
+MCTS cached=0
+MCTS cheat=false index=0 life=11 turn=13 phase=FirstMain sims=253 time=6091
+* [9/101/?] (Unknown)
+  [5/53/?] (Unknown)
+  [8/99/?] (Unknown)
+MCTS cached=0
+MCTS cheat=false index=0 life=11 turn=13 phase=FirstMain sims=254 time=6048
+  [9/114/?] (yes)
+* [10/140/?] (no)
+LOG (P): Player1 searches his or her library for an Island or Mountain card and Player1 puts it onto the battlefield. Then Player1 shuffles his or her library. Found (<Steam Vents~1000055>). Put <Steam Vents~1000055> onto the battlefield. Player1 may (no) pay 2 life. If Player1 doesn't, <Steam Vents~1000055> enters the battlefield tapped.
+LOG (C): Target creature (<Ajani's Pridemate~1000063>) gains flying and double strike until end of turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=22 turn=13 phase=FirstMain sims=305 time=6172
+  [79/16/?] (pass)
+  [88/37/?] (Plains)
+  [95/112/?] (Serra Ascendant)
+* [96/140/?] (Mirran Crusader)
+LOG (C): Pay {1}{W}{W}. Tap <Plains~1000102>. Tap <Plains~1000107>. Tap <Plains~1000101>. Play <Mirran Crusader~1000075>.
+LOG (C): Put <Mirran Crusader~1000075> onto the battlefield.
+MCTS cached=140
+MCTS cheat=false index=1 life=22 turn=13 phase=DeclareAttackers sims=463 time=6016
+* [97/557/?] ([Ajani's Pridemate])
+  [86/45/?] ([])
+LOG (C): Player2 attacks with <Ajani's Pridemate~1000063>.
+LOG (P): {c}Player1 loses 4 life.
+LOG (P): {c}Player1 loses 4 life.
+MCTS cached=0
+MCTS cheat=false index=1 life=22 turn=13 phase=SecondMain sims=539 time=6016
+  [97/176/?] (pass)
+  [98/179/?] (Plains)
+* [98/184/?] (Serra Ascendant)
+LOG (C): Pay {W}. Tap <Plains~1000108>. Play <Serra Ascendant~1000076>.
+LOG (C): Put <Serra Ascendant~1000076> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=0 life=3 turn=14 phase=FirstMain sims=545 time=6006
+  [2/176/?] (pass)
+  [2/181/?] (Eye of Ugin)
+* [2/188/?] (Ruination Guide)
+LOG (P): Pay {2}{U}. Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Tap <Steam Vents~1000055>. Play <Ruination Guide~1000015>.
+LOG (P): Put <Ruination Guide~1000015> onto the battlefield.
+MCTS cached=188
+MCTS cheat=false index=0 life=3 turn=14 phase=DeclareAttackers sims=417 time=6011
+  [1/69/?] ([Endless One, Spellskite, Endless One])
+  [1/73/?] ([Endless One, Spellskite])
+  [1/70/?] ([Endless One, Endless One])
+  [1/72/?] ([Endless One])
+  [1/72/?] ([Spellskite, Endless One])
+  [2/85/?] ([Spellskite])
+  [2/72/?] ([Endless One])
+* [3/91/?] ([])
+MCTS cached=91
+MCTS cheat=false index=0 life=3 turn=14 phase=SecondMain sims=312 time=6025
+  [2/153/?] (pass)
+* [4/249/?] (Eye of Ugin)
+LOG (P): Play <Eye of Ugin~1000041>. Put <Eye of Ugin~1000041> onto the battlefield.
+MCTS cached=0
+MCTS cheat=false index=1 life=22 turn=15 phase=FirstMain sims=298 time=6006
+  [85/30/?] (pass)
+* [95/102/?] (Plains)
+  [94/76/?] (Goldenglow Moth)
+  [96/90/?] (Ajani, Caller of the Pride)
+LOG (C): Play <Plains~1000109>. Put <Plains~1000109> onto the battlefield.
+MCTS cached=102
+MCTS cheat=false index=1 life=22 turn=15 phase=FirstMain sims=235 time=6015
+  [93/111/?] (pass)
+  [92/98/?] (Goldenglow Moth)
+* [94/127/?] (Ajani, Caller of the Pride)
+MCTS cached=127
+MCTS cheat=false index=1 life=22 turn=15 phase=FirstMain sims=228 time=6053
+* [95/121/?] (yes,Ajani's Pridemate)
+  [93/77/?] (yes,Mirran Crusader)
+  [94/101/?] (yes,Serra Ascendant)
+  [92/55/?] (no,null)
+LOG (C): Player2 puts 1 loyalty counters on <Ajani, Caller of the Pride~1000090>. Play activated ability of <Ajani, Caller of the Pride~1000090>.
+LOG (C): Player2 may (yes) put a +1/+1 counter on target creature (<Ajani's Pridemate~1000063>).
+MCTS cached=121
+MCTS cheat=false index=1 life=22 turn=15 phase=DeclareAttackers sims=271 time=6036
+  [93/45/?] ([Serra Ascendant, Ajani's Pridemate, Mirran Crusader])
+  [89/23/?] ([Serra Ascendant, Ajani's Pridemate])
+  [95/46/?] ([Serra Ascendant, Mirran Crusader])
+  [95/61/?] ([Serra Ascendant])
+* [97/62/?] ([Ajani's Pridemate, Mirran Crusader])
+  [92/35/?] ([Ajani's Pridemate])
+  [96/58/?] ([Mirran Crusader])
+  [97/61/?] ([])
+LOG (C): Player2 attacks with <Ajani's Pridemate~1000063> and <Mirran Crusader~1000075>.
+MCTS cached=0
+MCTS cheat=false index=0 life=3 turn=15 phase=DeclareBlockers sims=551 time=6005
+  [1/42/?] (S783 Ajani's Pridemate=Endless One+1 Mirran Crusader=Endless One)
+  [2/51/?] (S783 Ajani's Pridemate=Endless One+1 Mirran Crusader=Ruination Guide)
+  [2/52/?] (S-523 Ajani's Pridemate=Endless One Mirran Crusader=Ruination Guide)
+  [1/41/?] (S-623 Ajani's Pridemate=Endless One Mirran Crusader=Endless One)
+  [2/50/?] (S-842 Ajani's Pridemate=Ruination Guide+1 Mirran Crusader=Endless One+1)
+  [1/42/?] (S-1038 Ajani's Pridemate=Spellskite Mirran Crusader=Ruination Guide)
+  [1/42/?] (S-1083 Ajani's Pridemate=Ruination Guide Mirran Crusader=Endless One)
+  [1/43/?] (S-1083 Ajani's Pridemate=Endless One Mirran Crusader=Ruination Guide)
+  [1/44/?] (S-1138 Ajani's Pridemate=Spellskite Mirran Crusader=Endless One)
+  [1/45/?] (S-1327 Ajani's Pridemate=Endless One+1 Mirran Crusader=Spellskite)
+  [1/42/?] (S-1372 Ajani's Pridemate=Ruination Guide+1 Mirran Crusader=Endless One)
+* [3/57/?] (S-1427 Ajani's Pridemate=Endless One+1 Mirran Crusader=Spellskite)
+LOG (P): Player1 blocks with <Endless One~1000011>, <Endless One~1000012> and <Spellskite~1000020>.
+LOG (C): <Ajani's Pridemate~1000063> is destroyed.
+LOG (P): <Endless One~1000012> is destroyed. <Endless One~1000011> is destroyed. <Spellskite~1000020> is destroyed.
+MCTS cached=5
+MCTS cheat=false index=1 life=22 turn=15 phase=SecondMain sims=185 time=2613
+* [97/98/win:4] (pass)
+  [97/91/?] (Goldenglow Moth)
+MCTS cached=0
+MCTS cheat=false index=0 life=3 turn=16 phase=FirstMain sims=381 time=6221
+  [5/119/?] (pass)
+  [5/123/?] (Eye of Ugin)
+* [6/139/?] (Endless One)
+MCTS cached=139
+MCTS cheat=false index=0 life=3 turn=16 phase=FirstMain sims=313 time=6249
+  [6/94/?] (X is 5)
+* [7/132/?] (X is 4)
+  [7/120/?] (X is 4)
+  [1/48/?] (X is 3)
+  [3/57/?] (X is 3)
+LOG (P): Pay {X} (X is 4). Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Play <Endless One~1000013>.
+LOG (P): Put <Endless One~1000013> onto the battlefield.
+MCTS cached=132
+MCTS cheat=false index=0 life=3 turn=16 phase=DeclareAttackers sims=423 time=6003
+  [1/144/lose:5] ([Ruination Guide])
+* [5/410/lose:5] ([])
+MCTS cached=410
+MCTS cheat=false index=0 life=3 turn=16 phase=SecondMain sims=1826 time=6001
+  [0/753/lose:3] (pass)
+* [1/1482/lose:4] (Eye of Ugin)
+MCTS cached=0
+MCTS cheat=false index=0 life=3 turn=16 phase=SecondMain sims=1104 time=6003
+  [0/477/lose:3] (Eye of Ugin)
+* [1/627/lose:3] (Eye of Ugin)
+LOG (P): Play <Eye of Ugin~1000043>. Put <Eye of Ugin~1000043> onto the battlefield. Choose one (<Eye of Ugin~1000043>). Put the rest into their owner's graveyard. Put <Eye of Ugin~1000041> into its owner's graveyard (Uniqueness rule).
+MCTS cached=0
+MCTS cheat=false index=1 life=22 turn=17 phase=FirstMain sims=66 time=790
+  [87/9/?] (pass)
+  [90/12/?] (Auriok Champion)
+  [98/15/?] (Goldenglow Moth)
+  [97/14/?] (Ajani, Caller of the Pride)
+* [92/16/win:2] (Ajani, Caller of the Pride)
+MCTS cached=16
+MCTS cheat=false index=1 life=22 turn=17 phase=FirstMain sims=1 time=2
+* [77/9/win:1] (Mirran Crusader)
+  [99/7/?] (Serra Ascendant)
+LOG (C): Remove 3 loyalty counters from Ajani, Caller of the Pride. Play activated ability of <Ajani, Caller of the Pride~1000090>. <Ajani, Caller of the Pride~1000090> is put into its owner's graveyard.
+LOG (C): Target creature (<Mirran Crusader~1000075>) gains flying and double strike until end of turn.
+MCTS cached=0
+MCTS cheat=false index=1 life=22 turn=17 phase=DeclareAttackers sims=7 time=176
+  [99/2/?] ([Serra Ascendant, Mirran Crusader])
+  [96/1/?] ([Serra Ascendant])
+* [66/3/win:0] ([Mirran Crusader])
+  [0/1/?] ([])
+LOG (C): Player2 attacks with <Mirran Crusader~1000075>.
+LOG (P): {c}Player1 loses 3 life.
+LOG (P): {L} Player1 lost the game.

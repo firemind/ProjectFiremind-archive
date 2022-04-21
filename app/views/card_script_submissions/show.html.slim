@@ -1,0 +1,32 @@
+h2= title "Submission for #{@card_script_submission.card || @card_script_submission.token_name}"
+.row
+  .large-3.columns
+    = render 'cards/card_image', card: @card_script_submission.card if @card_script_submission.card
+  .large-9.columns
+    - if @card_script_submission.comment && !@card_script_submission.comment.empty?
+      h4 Comment
+      .panel.callout.radius
+        = @card_script_submission.comment
+    h4 Config
+    .panel.radius
+      pre= @card_script_submission.config
+    - if @card_script_submission.script
+      h4 Script
+      .panel.radius
+        pre= @card_script_submission.script
+.row
+  .large-7.columns
+    = render 'shared/disqus'
+  .large-5.columns
+    - if @card_script_submission.pushed
+      span.label Pushed
+    - else
+      span.label Not yet pushed
+    - if current_user == @card_script_submission.user && @card_script_submission.check_duel_failed? 
+      p
+        |Your submission fails to load in version
+        =<> CURRENT_MAGARENA_VERSION
+        |, this may happen if you are using features from the development version. Do you want to submit anyway?
+        =< link_to "Force Submit", force_submit_card_script_submission_path(@card_script_submission), method: "post"
+    - @card_script_submission.duels.each do |d|
+      p= link_to "Duel #{d.updated_at} (#{d.state})", d

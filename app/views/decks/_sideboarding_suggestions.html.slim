@@ -1,0 +1,13 @@
+- if (sugs = @suggestions).any?
+  - sugs.each do |sug|
+    li.suggestion
+      => card_link(sug)
+      = form_tag add_sideboard_plan_deck_path(@deck), class:"add-suggestion-form", remote: true, method: :post do |f|
+        = hidden_field_tag :archetype_id, @archetype.id
+        = hidden_field_tag :operation, "in"
+        = hidden_field_tag :amount, 1
+        = hidden_field_tag :card_name, sug.name
+        a.add-suggestion-link
+          = fa_icon "check"
+- else
+  li No suggestions available

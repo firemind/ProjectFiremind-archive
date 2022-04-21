@@ -1,0 +1,9 @@
+= form_for([@deck_entry_cluster.deck, @deck_entry_cluster]) do |f|
+  = f.hidden_field :deck_id
+  .row
+    .small-3.columns
+      = f.label :name
+    .small-9.columns
+      = f.text_field :name
+  .actions
+    = f.submit class: 'button'

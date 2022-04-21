@@ -1,0 +1,54 @@
+.row
+  .large-4.columns
+    h2=link_to @left, @left
+    table
+      thead
+        tr
+          th Card
+          th #
+          th %
+          th
+      - @left_only_cards.each do |card, stats|
+        tr
+          td= link_to card, card, class: "card-with-tooltip button tiny expand #{card.enabled ? 'info': 'secondary' }", data: {url: tooltip_card_path(card)}
+          td.right-align= stats[:number_of_copies_per_deck].round(2)
+          td.right-align= stats[:percent_of_decks].round
+          td= link_to "&#x2192;".html_safe, reassign_archetypes_path(from_id: @left.id, to_id: @right.id, containing_id: card.id), class: "button tiny", method: :patch
+
+  .large-4.columns
+    h2 Both
+    .expanded.button-group
+      =link_to "< Merge", merge_archetypes_path(from_id: @right.id, to_id: @left.id), method: :patch, class: "button"
+      =link_to "Merge >", merge_archetypes_path(from_id: @left.id, to_id: @right.id), method: :patch, class: "button"
+    table
+      thead
+        tr
+          th
+          th Card
+          th # Per Deck
+          th
+      - @both_cards.each do |card, stats|
+        tr
+          td= link_to "&#x2190;".html_safe, reassign_archetypes_path(from_id: @right.id, to_id: @left.id, containing_id: card.id), class: "button tiny", method: :patch
+          td= link_to card, card, class: "card-with-tooltip button tiny expand #{card.enabled ? 'info': 'secondary' }", data: {url: tooltip_card_path(card)}
+          td.right-align= stats[:number_of_copies_per_deck].round(2)
+          td= link_to "&#x2192;".html_safe, reassign_archetypes_path(from_id: @left.id, to_id: @right.id, containing_id: card.id), class: "button tiny", method: :patch
+
+
+  .large-4.columns
+    h2=link_to @right, @right
+    table
+      thead
+        tr
+          th
+          th Card
+          th #
+          th %
+      - @right_only_cards.each do |card, stats|
+        tr
+          td= link_to "&#x2190;".html_safe, reassign_archetypes_path(from_id: @right.id, to_id: @left.id, containing_id: card.id), class: "button tiny", method: :patch
+          td= link_to card, card, class: "card-with-tooltip button tiny expand #{card.enabled ? 'info': 'secondary' }", data: {url: tooltip_card_path(card)}
+          td.right-align= stats[:number_of_copies_per_deck].round(2)
+          td.right-align= stats[:percent_of_decks].round
+
+

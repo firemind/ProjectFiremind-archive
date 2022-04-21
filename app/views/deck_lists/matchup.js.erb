@@ -1,0 +1,11 @@
+$("<%=j render(:partial => 'matchup_game', collection: @games, as: :game) %>")
+.appendTo($(".infinite-table tbody"));
+
+populateTooltipOn($(".infinite-table tbody"))
+// Update pagination link
+<% if @games.last_page? %>
+  $('.pagination').html("No more games to load!");
+<% else %>
+  $('.pagination')
+  .html("<%=j link_to_next_page(@games, 'Next Page', :remote => true) %>");
+<% end %>

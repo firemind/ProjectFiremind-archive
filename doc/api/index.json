@@ -1,0 +1,52 @@
+{
+  "resources": [
+    {
+      "name": "Api::V1::Archetypes",
+      "examples": [
+        {
+          "description": "Classify a known tournament deck",
+          "link": "api::v1::archetypes/classify_a_known_tournament_deck.json",
+          "groups": "all",
+          "route": "/api/v1/archetypes/classify.json",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Api::V1::Decks",
+      "examples": [
+        {
+          "description": "Create a deck",
+          "link": "api::v1::decks/create_a_deck.json",
+          "groups": "all",
+          "route": "/api/v1/decks.json",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Api::V1::Duels",
+      "examples": [
+        {
+          "description": "Create a duel in custom queue",
+          "link": "api::v1::duels/create_a_duel_in_custom_queue.json",
+          "groups": "all",
+          "route": "/api/v1/duels.json",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Api::V1::Status",
+      "examples": [
+        {
+          "description": "Client Info",
+          "link": "api::v1::status/client_info.json",
+          "groups": "all",
+          "route": "/api/v1/status/client_info",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

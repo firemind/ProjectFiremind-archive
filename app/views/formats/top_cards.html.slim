@@ -1,0 +1,23 @@
+hr
+= render partial: 'shared/breadcrumbs', locals: {links: [[@format.to_s, @format]], current: "Top Cards"}
+table
+  - @cards.each do |c|
+    tr
+      td width=100
+        =image_tag thumb_print_url(c.primary_print) if c.primary_print.has_thumb
+      td width=250
+        =card_link( c )
+      td
+        .button-group.small
+          - c.archetypes.where(format_id: @format.id).uniq.each do |a|
+            - if rating_in = c.ratings.where(deck_lists: {archetype_id: a.id}).average(:whr_rating)
+              - cls = alert_class_for_rating(rating_in)
+              = link_to a, deck_lists_by_card_archetype_path(a, c.id), class: "button small #{cls}", style: "margin-bottom: 2px", title: "Average Rating over #{a} is #{rating_in}"
+      td
+        - if c.magarena_rating
+          span.label class= alert_class_for_rating(c.magarena_rating) title="Average Rating of decks containing this" =c.magarena_rating.round(2)
+      td width= 100
+        - if c.enabled
+          = link_to "Scripts", scripts_card_path(c), class: 'button small'
+        -else
+          = link_to "request it!", request_card_path(c), method: :post, target: '_blank', class: 'button small secondary'

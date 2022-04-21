@@ -1,0 +1,8 @@
+- rating = deck.current_rating
+.rating-stats
+  -if rating
+    a.button.small href= deck_duels_path(deck) class= alert_class_for_rating(rating.whr_rating)
+      |Rating
+      =< rating
+  -else
+    a.button.small href= deck_duels_path(deck)  no rating

@@ -1,0 +1,29 @@
+DAEMON=<%= AIWORKER_SCRIPT %>
+PIDFILE=/var/run/aiworker.pid
+
+case $1 in
+        start)
+                start-stop-daemon --start -n aiworker --quiet --oknodo --exec $DAEMON --
+                status=$?
+                ;;
+        stop)
+                start-stop-daemon --stop --quiet --oknodo -n aiworker -x $DAEMON
+                ;;
+        restart|force-reload)
+                $0 stop && sleep 2 && $0 start
+                ;;
+        try-restart)
+                if $0 status >/dev/null; then
+                        $0 restart
+                else
+                        exit 0
+                fi
+                ;;
+        reload)
+                exit 3
+                ;;
+        *)
+                echo "Usage: $0 {start|stop|restart|try-restart|force-reload|status}"
+                exit 2
+                ;;
+esac

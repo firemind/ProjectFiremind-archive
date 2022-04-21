@@ -1,0 +1,37 @@
+p#notice
+  = notice
+
+h1
+  => @ai_rating_match.ai1_name
+  => @ai_rating_match.ai1_identifier
+  => @ai_rating_match.ai_strength
+  vs
+  =< @ai_rating_match.ai2_name
+  =< @ai_rating_match.ai2_identifier
+  =< @ai_rating_match.ai_strength
+
+p
+  strong Git repo:
+  = @ai_rating_match.git_repo
+  b= @ai_rating_match.git_branch
+
+= link_to 'Diff', diff_ai_rating_match_path(@ai_rating_match), class: "button"
+
+table
+  thead
+    tr
+      th= @ai_rating_match.wins
+      th
+      th= @ai_rating_match.losses
+  - @ai_rating_match.duels.each do |duel|
+    tr
+      td
+        = duel_stats_for_ai(duel, @ai_rating_match.ai1_name)
+      td vs
+      td
+        = duel_stats_for_ai(duel, @ai_rating_match.ai2_name)
+      td= format_state(duel.state)
+      td= duel.format
+      td
+        .button-group.radius
+          = link_to 'Show', duel, class: 'button tiny'

@@ -1,0 +1,7 @@
+- games = Game.includes(duel: {deck_list1: :archetype, deck_list2: :archetype}).joins(:duel).where(duels:{format_id: @format.id}).last(100) #.where("created_at > ?", 1.hour.ago)
+- decks = games.collect {|g| [g.duel.deck_list1, g.duel.deck_list2] }.flatten
+- archetypes = decks.map(&:archetype).compact.group_by(&:to_s).map{|k,v| [k, v.size]}
+- archetypes.sort_by!{|r| r[1]}
+- cutoff = [10, archetypes.size].min
+- output = [["Other", archetypes[0..-(cutoff+1)].compact.sum{|r| r[1]}]] + archetypes[-cutoff..-1].compact
+= pie_chart output, height: "300px", library: {legend: {position: "bottom"}, title:"Archetypes of latest Games"}

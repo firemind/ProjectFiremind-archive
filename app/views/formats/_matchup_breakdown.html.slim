@@ -1,0 +1,19 @@
+table.archetype-matchups
+  thead
+    tr
+      - @archetypes.each do |at, results|
+        th.rotate
+          div
+            span=at
+      th
+  tbody
+    - @archetype_matchups.each do |at, results|
+      tr
+        - results.each do |other, res|
+          td title="#{res[:loss_count]}/#{res[:win_count]}"
+            - if res[:win_perc] && (wp = 1.0-res[:win_perc])
+              span.label class=(wp > 0.55 ? 'success' : (wp < 0.45 ? 'alert' : 'secondary'))
+                =(wp*100).round
+            - else
+              |-
+        th=link_to at, at

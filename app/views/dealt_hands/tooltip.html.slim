@@ -1,0 +1,4 @@
+.row
+  - @dealt_hand.dealt_cards.each do |dc|
+    .large-3.columns 
+      = render 'cards/card_image', card: dc.card

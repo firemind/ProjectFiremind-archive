@@ -1,0 +1,2 @@
+- output = @archetype.deck_entries.group("group_type").select("sum(deck_entries.amount) as total, group_type").map{|r| [r.group_type, r.total]}
+= pie_chart output, height: "300px"

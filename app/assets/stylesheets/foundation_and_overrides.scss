@@ -1,0 +1,91 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+// If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
+//
+// @import 'motion-ui/motion-ui';
+
+// We include everything by default.  To slim your CSS, remove components you don't use.
+$buttongroup-spacing: 2px;
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+//@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+//@include foundation-responsive-embed;
+@include foundation-label;
+//@include foundation-media-object;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-off-canvas;
+//@include foundation-orbit;
+//@include foundation-pagination;
+//@include foundation-progress-bar;
+//@include foundation-progress-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+
+// If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
+//
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+
+.pricing-table {
+  @extend .no-bullet, .text-center;
+	border: solid 1px #DDDDDD;
+	li {
+		border-bottom: dotted 1px #DDDDDD;
+		font-size: 0.75rem;
+		padding: 0.875rem 1.125rem;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	.title {
+		background-color: #333333;
+		color: #EEEEEE;
+		font-size: 0.875rem;
+		border-bottom: 0;
+	}
+	.price {
+		background-color: #F6F6F6;
+		color: #333333;
+		font-size: 1.75rem;
+		border-bottom: 0;
+	}
+	.description {
+		color: #777777;
+		font-size: 0.625rem;
+	}
+	.button {
+		margin: 0;
+	}
+}
+
+.button.dark {
+  background-color: #333;
+}

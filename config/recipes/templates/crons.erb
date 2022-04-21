@@ -1,0 +1,5 @@
+0 * * * *  cd /var/www/rails_apps/prod/firemind/current && export RAILS_ENV=production && /usr/local/rvm/bin/rvm 2.1.3 do bundle exec bin/rake firemind:list_hanging_duels
+*/5 * * * *  cd /var/www/rails_apps/prod/firemind/current && export RAILS_ENV=production && /usr/local/rvm/bin/rvm 2.1.3 do bundle exec bin/rake firemind:feed_queue | grep -v 'Sidekiq client using'
+42 * * * *  cd /var/www/rails_apps/prod/firemind/current && export RAILS_ENV=production && /usr/local/rvm/bin/rvm 2.1.3 do bundle exec bin/rake firemind:calc_whr | grep -v 'Sidekiq client using'
+0 12 * * 2  cd /var/www/rails_apps/prod/firemind/current && export RAILS_ENV=production && /usr/local/rvm/bin/rvm 2.1.3 do bundle exec bin/rake firemind:deliver_weekly_report
+*/20 * * * *  cd /var/www/rails_apps/prod/firemind/current && export RAILS_ENV=production && /usr/local/rvm/bin/rvm 2.1.3 do bundle exec bin/rake firemind:create_deck_variations | grep -v 'Sidekiq client using'

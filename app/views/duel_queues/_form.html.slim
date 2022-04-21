@@ -1,0 +1,65 @@
+= form_for(duel_queue) do |f| 
+  - if duel_queue.errors.any? 
+    #error_explanation
+      h2
+        = pluralize(duel_queue.errors.count, "error") 
+        | prohibited this duel_queue from being saved:
+
+      ul
+        - duel_queue.errors.full_messages.each do |message|
+          li= message
+  .row
+    .small-3.columns
+      = f.label :name
+    .small-9.columns
+      = f.text_field :name
+
+  .row
+    .small-3.columns
+      = f.label :magarena_version_major
+    .small-9.columns
+      = f.text_field :magarena_version_major
+  .row
+    .small-3.columns
+      = f.label :magarena_version_minor
+    .small-9.columns
+      = f.text_field :magarena_version_minor
+
+  .row
+    .small-3.columns
+      = f.label :life
+    .small-9.columns
+      = f.text_field :life
+  .row
+    .small-6.columns
+      h2 AI1
+      .row
+        .small-4.columns
+          = f.label :ai1
+        .small-8.columns
+          = f.text_field :ai1
+        .small-4.columns
+          = f.label :ai1_strength
+        .small-8.columns
+          = f.text_field :ai1_strength
+    .small-6.columns
+      h2 AI2
+      .row
+        .small-4.columns
+          = f.label :ai2
+        .small-8.columns
+          = f.text_field :ai2
+        .small-4.columns
+          = f.label :ai2_strength
+        .small-8.columns
+          = f.text_field :ai2_strength
+
+  .row
+    .small-3.columns
+      = f.label :custom_params
+    .small-9.columns
+      = f.text_area :custom_params
+
+
+  .actions
+    = f.submit

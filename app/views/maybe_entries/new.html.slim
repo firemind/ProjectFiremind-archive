@@ -1,0 +1,9 @@
+h3 Add a Maybe Entry
+
+p Add a card that might work well in this deck. We will periodically generate new decks by replacing cards from the chosen cluster with this entry.
+
+- if @deck_entry_clusters.any?
+  = render 'form'
+- else
+  p
+    b Your deck does not have any clusters defined yet. Please add some first to define what group of cards should be replaced by the maybe entry.

@@ -1,0 +1,24 @@
+table
+  thead
+    tr
+      th Card
+      th User
+      th Date
+      th push state
+      th
+  tbody
+    - card_script_submissions.each do |subm|
+      tr
+        td= subm.card ? card_link(subm.card) : subm.token_name
+        td= subm.user
+        td= l subm.created_at
+        td
+          - if subm.pushed
+            span class=('success label') pushed
+          - elsif subm.check_duel_failed?
+            span class=('alert label') duel failed
+          - elsif subm.can_be_tested?
+            span class=('label') waiting for check duel
+          - else
+            span class=('label') waiting for push
+        td= link_to 'Show', subm

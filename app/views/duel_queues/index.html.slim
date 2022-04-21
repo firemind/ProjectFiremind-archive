@@ -1,0 +1,31 @@
+h1 Duel Queues
+
+p Here you can create custom queues to use with your own workers.
+
+table
+  thead
+    tr
+      th Name
+      th Access token
+      th waiting Duels
+      th started Duels
+      th finished Duels
+      th failed Duels
+      th colspan="3"
+
+  tbody
+    - @duel_queues.each do |duel_queue| 
+      tr
+        td= duel_queue.name
+        td= duel_queue.access_token
+        td= duel_queue.duels.waiting.size
+        td= duel_queue.duels.started.size
+        td= duel_queue.duels.finished.size
+        td= duel_queue.duels.failed.size
+        td= link_to 'Show', duel_queue 
+        td= link_to 'Edit', edit_duel_queue_path(duel_queue) 
+        td= link_to 'Destroy', duel_queue, method: :delete, data: { confirm: 'Are you sure?' }
+
+br
+
+= link_to 'Create New Duel Queue', new_duel_queue_path, class: "button"

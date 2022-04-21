@@ -1,0 +1,20 @@
+h4
+  Card Scripts for
+  =< @card
+.row
+  .large-9.columns
+    h4 Config
+    == CodeRay.scan(@card.config_script, :text).div(:wrap => :page)
+  .large-3.columns
+    = render 'card_image', card: @card
+    ul
+      li= link_to "Config On GitHub", "https://github.com/magarena/magarena/blob/master/release/Magarena/scripts/#{@card.magarena_script}"
+      - if @card.groovy_script
+        li= link_to "Script On GitHub", "https://github.com/magarena/magarena/blob/master/release/Magarena/scripts/#{@card.groovy_script_name}"
+.row
+  .large-12.columns
+  - if @card.groovy_script
+    .large-12.columns
+      h4 Script
+      == CodeRay.scan(@card.groovy_script, "groovy").div(:wrap => :page, tab_width: 2)
+  

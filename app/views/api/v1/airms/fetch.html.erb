@@ -1,0 +1,7 @@
+<% unless @airm.git_repo.blank? %>
+git clone <%= @airm.git_repo %> repo
+cd repo
+git checkout <%= @airm.git_branch %>
+ant -f build.xml
+ant clean
+<% end %>

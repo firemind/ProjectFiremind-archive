@@ -1,0 +1,10 @@
+- duels = local_assigns[:duels] || duel_queue.duels
+- add_new = local_assigns[:add_new].nil? ? true : local_assigns[:add_new]
+.duel-live-view data-dq-id=duel_queue.id data-dq-add-new=add_new
+  .status
+    span.label.secondary Waiting to connect
+  .duels
+    - if duels.any?
+      = render 'duels/list', duels: duels
+    - else
+      p No duels in the queue

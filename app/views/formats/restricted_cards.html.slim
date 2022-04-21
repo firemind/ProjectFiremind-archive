@@ -1,0 +1,8 @@
+hr
+= render partial: 'shared/breadcrumbs', locals: {links: [[@format.to_s, @format]], current: "Banned & Restricted Cards"}
+table
+  - @restricted_cards.each do |rc|
+    tr
+      td width=150
+        =card_link( rc.card )
+      td=rc.card.ability

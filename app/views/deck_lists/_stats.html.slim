@@ -1,0 +1,6 @@
+- if rating = deck_list.rating_in(format)
+  .rating-stats
+    a.button.small href= deck_list_path(deck_list)
+      => rating.to_s
+      | in
+      =< format

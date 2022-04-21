@@ -1,0 +1,71 @@
+{
+  "resource": "Api::V1::Decks",
+  "http_method": "POST",
+  "route": "/api/v1/decks.json",
+  "description": "Create a deck",
+  "explanation": "Note that the returned deck_list_id does not match the id. The reason for this is that deck_lists are not duplicated on the server and the deck is basically just a reference to the deck_list with a custom name, description and avatar. For creating duels use the deck_list_id.",
+  "parameters": [
+    {
+      "name": "deck",
+      "description": " deck"
+    },
+    {
+      "scope": "deck",
+      "name": "title",
+      "description": "Name under which the deck is visible to the user"
+    },
+    {
+      "scope": "deck",
+      "name": "description",
+      "description": "Optional description for the deck"
+    },
+    {
+      "scope": "deck",
+      "name": "decklist",
+      "description": "Decklist as text with each line starting with the number of cards followed by the card name. Lines starting with # and blank lines are ignored."
+    },
+    {
+      "scope": "deck",
+      "name": "format_name",
+      "description": "Format in which the deck is listed for the user (Standard, Modern, Legacy, Vintage or Pauper)"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/decks.json",
+      "request_body": "{\"deck\":{\"title\":\"my test deck\",\"description\":\"some description of the deck\",\"decklist\":\"# 16 creatures\\n4 Delver of Secrets\\n4 Grim Lavamancer\\n4 Snapcaster Mage\\n4 Young Pyromancer\\n\\n# 25 spells\\n1 Blood Moon\\n2 Burst Lightning\\n4 Lightning Bolt\\n3 Mana Leak\\n3 Pillar of Flame\\n3 Remand\\n1 Spell Pierce\\n2 Spell Snare\\n1 Sword of Fire and Ice\\n1 Twisted Image\\n4 Vapor Snag\\n\\n# 19 lands\\n6 Island\\n1 Mountain\\n4 Scalding Tarn\\n3 Steam Vents\\n4 Sulfur Falls\\n1 Tectonic Edge\\n\",\"format_name\":\"Modern\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "www.firemind.ch",
+        "Authorization": "Token token=f2e703c122c896a02f2da16c32b22688",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"deck\": {\n    \"id\": 30,\n    \"deck_list_id\": 480\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://www.firemind.ch/decks/30",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"44d6ff3b9e52d432d2f545391ce7acee\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "request_method=POST; path=/",
+        "X-Request-Id": "926633bc-bbeb-4576-ac46-4c4a64f13843",
+        "X-Runtime": "0.395944",
+        "Content-Length": "37"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"https://www.firemind.ch/api/v1/decks.json\" -d '{\"deck\":{\"title\":\"my test deck\",\"description\":\"some description of the deck\",\"decklist\":\"# 16 creatures\\n4 Delver of Secrets\\n4 Grim Lavamancer\\n4 Snapcaster Mage\\n4 Young Pyromancer\\n\\n# 25 spells\\n1 Blood Moon\\n2 Burst Lightning\\n4 Lightning Bolt\\n3 Mana Leak\\n3 Pillar of Flame\\n3 Remand\\n1 Spell Pierce\\n2 Spell Snare\\n1 Sword of Fire and Ice\\n1 Twisted Image\\n4 Vapor Snag\\n\\n# 19 lands\\n6 Island\\n1 Mountain\\n4 Scalding Tarn\\n3 Steam Vents\\n4 Sulfur Falls\\n1 Tectonic Edge\\n\",\"format_name\":\"Modern\"}}' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: www.firemind.ch\" \\\n\t-H \"Authorization: Token token=f2e703c122c896a02f2da16c32b22688\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

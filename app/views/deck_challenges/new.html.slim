@@ -1,0 +1,36 @@
+h1 Create new Deck Challenge
+
+= form_for(@deck_challenge, html:{class: 'custom'}) do |f|
+  - if @deck_challenge.errors.any?
+    #error_explanation
+      .alert-box.secondary
+        h3
+          => pluralize(@deck_challenge.errors.count, "error")
+          |prohibited this deck from being saved:
+        ul.no-bullet
+          - @deck_challenge.errors.full_messages.each do |msg|
+            li= msg.html_safe
+
+  = f.hidden_field :deck_list_id
+  .row
+    .small-12.columns
+      = render 'deck_lists/decklist', deck: @deck_challenge.deck_list
+
+  .row
+    .small-3.columns
+      = f.label :format_id
+    .small-9.columns
+      = f.select :format_id, options_for_select(@formats.map { |format| [format.name, format.id] }, @deck_challenge.format_id)
+
+  .row
+    .small-3.columns
+      = f.label :description
+    .small-9.columns
+      = f.text_area :description
+
+  .row style= 'padding-top: 10px'
+    .small-9.small-offset-3.columns
+      .actions
+        = f.submit class: 'button'
+
+

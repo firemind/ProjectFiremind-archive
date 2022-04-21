@@ -1,0 +1,43 @@
+p#notice
+  = notice
+
+h1
+  => @ai_rating_match.ai1_name
+  => @ai_rating_match.ai1_identifier
+  => @ai_rating_match.ai_strength
+  vs
+  =< @ai_rating_match.ai2_name
+  =< @ai_rating_match.ai2_identifier
+  =< @ai_rating_match.ai_strength
+
+p
+  strong Git repo:
+  =< @ai_rating_match.git_repo
+  b=< @ai_rating_match.git_branch
+
+- @ai_rating_match.duels.missmatching_results.order("deck_list1_id, deck_list2_id").each do |duel|
+  h3
+    => duel.deck_list1
+    vs
+    =< duel.deck_list2
+  table
+    thead
+      tr
+        th rec
+        th ai1
+        th ai2
+        th seed
+        th d1
+        th d2
+    - @ai_rating_match.duels.where(deck_list1_id: duel.deck_list1_id, deck_list2_id: duel.deck_list2_id).each do |d|
+      tr
+        td
+          = d.wins_deck1
+          = "-"
+          = d.wins_deck2
+        td= d.ai1
+        td= d.ai2
+        td= d.starting_seed
+        td= d.deck_list1
+        td= d.deck_list2
+        td= link_to "show", d,class: "button tiny"

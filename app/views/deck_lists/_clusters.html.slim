@@ -1,0 +1,19 @@
+ul.pricing-table
+  li.title Clusters
+  - @deck.deck_entry_clusters.each do |clu|
+    li.bullet-item
+      = link_to clu.to_s, deck_deck_entry_cluster_path(@deck, clu), data: { 'reveal-ajax' => "true"}
+  li.bullet-item
+    = link_to "Add", new_deck_deck_entry_cluster_path(@deck), class: 'button radius small', data: { 'reveal-ajax' => "true"}
+    = link_to "Assign", assign_deck_deck_entry_clusters_path(@deck), class: 'button radius small', data: { 'reveal-ajax' => "true"}
+    = link_to "Playable Hand", playable_hand_deck_deck_entry_clusters_path(@deck), class: 'button radius small', data: { 'reveal-ajax' => "true"}
+  - if @deck.playable_hand_entries.any?
+    li.bullet-item
+      b Playable Hand Stats
+      table.full
+        tr
+          th On the play
+          th On the draw
+        tr
+          td= hand_entry_probability(@deck, 7).round(3)
+          td= hand_entry_probability(@deck, 8).round(3)

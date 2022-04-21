@@ -1,0 +1,3 @@
+- cp = card.primary_print
+- if cp
+  = render partial: 'card_prints/card_image', locals: {card_print: cp, grayscale: local_assigns[:grayscale], height: local_assigns[:height]}

@@ -1,0 +1,60 @@
+- cache 'mull_progress', expires_in: 20.seconds do
+  .row
+    .large-12.columns
+
+      .tprogress.mull-progress 
+        - mul_count = MulliganDecision.count
+        - hand_count = DealtHand.count
+        div style="width: #{( (mul_count % hand_count).to_f / hand_count.to_f * 100).round}%"
+        span
+          = "Level #{(mul_count.to_f / hand_count.to_f).floor}"
+
+.row data= {equalizer:true}
+  .large-5.columns
+    .panel.callout data={equalizer: {watch: true}}
+      p Tell us if this hand is a mulligan or a keep. It will help us generate statistics on decks and the AI will be able to learn from you!
+  .large-2.columns.centered
+    p= link_to "Full Deck List", @dealt_hand.deck_list
+    p
+      | On the
+      b=< @draw ? "draw" : "play"
+  .large-5.columns
+    .panel.callout data= {equalizer: {watch: true}}
+      p
+        | Left Arrow = Keep
+        br
+        | Right Arrow = Mulligan
+        br
+        | Bottom Arrow = Skip
+.row
+  .large-4.columns.right-align
+    = link_to "Keep", keep_dealt_hand_path(@dealt_hand, draw: @draw, starting_time: @current_time), class: "button large", id: "keep"
+  .large-4.columns.centered
+    p= link_to "Skip", sample_dealt_hands_path, class: "button large secondary", id: "skip"
+  .large-4.columns
+    = link_to "Mulligan", mulligan_dealt_hand_path(@dealt_hand, draw: @draw, starting_time: @current_time), class: "button large", id: "mulligan"
+
+- cache ['mull_dec_hand',@dealt_hand] do
+  .row
+    - @dealt_hand.dealt_cards.each do |dc|
+      .large-3.columns.dealt-hands-col
+        a href= card_path(dc.card)
+          = image_tag card_image_url(dc.card.primary_print)
+
+-content_for :custom_js do
+  javascript:
+    $(document).keydown(function(e) {
+        switch(e.which) {
+            case 37: // left
+            $('#keep')[0].click();
+            break;
+            case 39: // right
+            $('#mulligan')[0].click();
+            break;
+            case 40: // right
+            $('#skip')[0].click();
+            break;
+            default: return; // exit this handler for other keys
+        }
+        e.preventDefault(); // prevent the default action (scroll / move caret)
+    });

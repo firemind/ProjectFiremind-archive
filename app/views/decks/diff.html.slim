@@ -1,0 +1,7 @@
+h2
+  | Diffing
+  =<> link_to @deck, @deck
+  |with
+  =<> link_to @other_deck, @other_deck
+
+= Diffy::Diff.new(@other_deck.as_text, @deck.decklist).to_s(:html).html_safe

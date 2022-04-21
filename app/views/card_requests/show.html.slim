@@ -1,0 +1,14 @@
+h2= title "Request for #{@card_request.card}"
+.row
+  .large-7.columns
+    .panel.secondary.radius
+      = @card_request.state_comment
+  .large-5.columns
+    = render 'cards/card_image', card: @card_request.card
+    hr
+    = link_to "<span>#{pluralize @card_request.get_upvotes.size, "vote"}</span>".html_safe, vote_card_request_path(@card_request), method: "post", class: 'button radius success vote_button'
+    = link_to "Submit Card Script", new_card_script_submission_path(card_id: @card_request.card), class: 'button radius'
+.row
+  .large-7.columns
+    = render 'shared/disqus'
+  .large-5.columns

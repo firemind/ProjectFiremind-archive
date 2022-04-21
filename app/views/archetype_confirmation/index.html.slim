@@ -1,0 +1,28 @@
+.large-12.columns
+  - if @archetype.has_banner
+    = image_tag banner_url(@archetype)
+  h1
+    => @archetype.name
+    |in
+    =< @archetype.format
+.row
+  .large-6.columns
+    .panel.callout.radius
+      = add_card_tooltips(@deck_list.as_text).join('<br/>').html_safe
+  .large-6.columns
+    .button-group.radius.expanded
+      = link_to "confirm", confirm_archetype_confirmation_path(@deck_list), method: :patch, class: "button success"
+      = link_to "next", archetype_confirmation_index_path, class: "button"
+    = form_for(@deck_list, html:{class: 'custom'}) do |f|
+      .row
+        .small-3.columns
+          = f.label :human_archetype
+        .small-9.columns
+          = f.select :human_archetype_id, options_for_select(@archetype.format.archetypes.first(10).map { |archetype| [archetype.name, archetype.id] }, @deck_list.human_archetype_id || @deck_list.archetype_id), {}, class: "select2"
+      .row
+        .small-9.small-offset-3.columns
+          .actions
+            = f.submit class: 'button'
+    .button-group.radius.expanded
+      = link_to "Deck List", @deck_list, class: 'button'
+      = link_to "Archetype", @archetype, class: 'button'

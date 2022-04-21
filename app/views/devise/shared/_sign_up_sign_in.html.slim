@@ -1,0 +1,65 @@
+.row.sign-in-links
+  .large-7.columns
+    h3 Sign in
+    .panel.radius
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        .row
+          .large-3.small-3.columns
+            = f.label :email, class: 'right inline'
+          .large-9.small-9.large-uncentered.columns
+            = f.email_field :email, autofocus: true
+        .row
+          .large-3.small-3.columns
+            = f.label :password, class: 'right inline'
+          .large-9.small-9.large-uncentered.columns
+            = f.password_field :password
+        - if devise_mapping.rememberable?
+          .row
+            .large-3.small-3.columns
+              = f.check_box :remember_me, class: 'right inline'
+            .large-9.small-9.large-uncentered.columns
+              = f.label :remember_me
+        .row
+          .large-9.small-9.columns.large-offset-3.small-offset-3
+            = f.submit "Sign in", class: 'button'
+    - if resource_name == :user
+      h3 Sign up
+      .panel.radius
+        = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .row
+            .large-4.small-4.columns
+              = f.label :name, class: 'right inline'
+            .large-8.small-8.large-uncentered.columns
+              = f.text_field :name, autofocus: true
+          .row
+            .large-4.small-4.columns
+              = f.label :email, class: 'right inline'
+            .large-8.small-8.columns
+              = f.email_field :email
+          .row
+            .large-4.small-4.columns
+              = f.label :password, class: 'right inline'
+            .large-8.small-8.large-uncentered.columns
+              = f.password_field :password
+          .row
+            .large-4.small-4.columns
+              = f.label :password_confirmation, "Confirm Password", class: 'right inline'
+            .large-8.small-8.large-uncentered.columns
+              = f.password_field :password_confirmation
+          .row
+            .large-8.small-8.columns.large-offset-4.small-offset-4
+              = f.submit "Sign up", class: 'button'
+  .large-4.large-offset-1.columns
+    h3 You can also ...
+    a.with-icon.button.radius href= user_google_oauth2_omniauth_authorize_path
+      =>fa_icon 'google'
+      | Sign in with Google
+    hr
+    a.with-icon.button.radius href= user_facebook_omniauth_authorize_path
+      =>fa_icon 'facebook'
+      | Sign in with Facebook
+    hr
+    a.with-icon.button.radius href= user_github_omniauth_authorize_path
+      =>fa_icon 'github'
+      | Sign in with GitHub

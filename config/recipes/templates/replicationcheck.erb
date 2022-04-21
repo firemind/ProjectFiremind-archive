@@ -1,0 +1,9 @@
+#!/usr/local/rvm/rubies/ruby-2.0.0-p247/bin/ruby
+require 'mysql2'
+conn=Mysql2::Client.new(host:'<%= fetch(:replhost, {})[:id] %>',username:'root')
+h=conn.query("show slave status").to_a[0]
+unless h.nil?
+  if h["Slave_IO_Running"] == "Yes" and h["Slave_SQL_Running"] == "Yes" and h["Seconds_Behind_Master"].to_i < 3
+    system("touch /var/run/monit/replicationwatch")
+  end
+end

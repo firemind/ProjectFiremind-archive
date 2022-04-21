@@ -1,0 +1,81 @@
+{
+  "resource": "Api::V1::Duels",
+  "http_method": "POST",
+  "route": "/api/v1/duels.json",
+  "description": "Create a duel in custom queue",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "duel",
+      "description": " duel"
+    },
+    {
+      "scope": "duel",
+      "name": "format_name",
+      "description": "Format (standard, modern, etc) in which decks have to be legal"
+    },
+    {
+      "scope": "duel",
+      "name": "freeform",
+      "description": "If set to true a format is not required and decks will not be checked for legality"
+    },
+    {
+      "scope": "duel",
+      "name": "deck_list1_id",
+      "description": "ID of first deck list"
+    },
+    {
+      "scope": "duel",
+      "name": "deck_list2_id",
+      "description": "ID of second deck list"
+    },
+    {
+      "scope": "duel",
+      "name": "games_to_play",
+      "description": "Number of games the client will play for this duel"
+    },
+    {
+      "scope": "duel",
+      "name": "public",
+      "description": "List duel publically"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/duels.json",
+      "request_body": "{\"duel\":{\"freeform\":true,\"games_to_play\":5,\"deck_list1_id\":481,\"deck_list2_id\":482,\"public\":true}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "www.firemind.ch",
+        "Authorization": "Token token=ceec2dba81dbc6c12dbf587eced6aeb3",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"duel\": {\n    \"id\": 13\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://www.firemind.ch/duels/13",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"be6d2c64fe826345f606ad976c59984a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "Set-Cookie": "request_method=POST; path=/",
+        "X-Request-Id": "107786c6-5b41-40dd-be02-042141ded836",
+        "X-Runtime": "0.034665",
+        "Content-Length": "18"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"https://www.firemind.ch/api/v1/duels.json\" -d '{\"duel\":{\"freeform\":true,\"games_to_play\":5,\"deck_list1_id\":481,\"deck_list2_id\":482,\"public\":true}}' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: www.firemind.ch\" \\\n\t-H \"Authorization: Token token=ceec2dba81dbc6c12dbf587eced6aeb3\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

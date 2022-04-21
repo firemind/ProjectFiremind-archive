@@ -1,0 +1,1304 @@
+{
+  "turns": [
+    {
+      "active_player": "C",
+      "number": 1,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [73/25/?] (pass)",
+              "  [41/5/?] (Plains)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [68/37/?] (pass)",
+              "  [68/33/?] (Plains)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 2,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [50/13/?] (pass)",
+              "* [59/35/?] (Shivan Reef)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play <Shivan Reef~1000051>. Put <Shivan Reef~1000051> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "* [55/52/?] (pass)",
+              "  [55/47/?] (Endless One)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "* [56/119/?] (pass)",
+              "  [34/9/?] (Endless One)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 3,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [41/10/?] (pass)",
+              "* [61/65/?] (Plains)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play <Plains~1000102>. Put <Plains~1000102> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [59/27/?] (pass)",
+              "* [70/109/?] (Soul's Attendant)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {W}. Tap <Plains~1000102>. Play <Soul's Attendant~1000086>."
+              },
+              {
+                "active_player": "C",
+                "text": "Put <Soul's Attendant~1000086> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "P",
+            "options": [
+              "  [24/10/?] (pass)",
+              "* [43/73/?] (Dismember)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay 4 life. Pay {1}. Tap <Shivan Reef~1000051>. Play <Dismember~1000031>."
+              },
+              {
+                "active_player": "P",
+                "text": "Target creature (<Soul's Attendant~1000086>) gets -5/-5 until end of turn."
+              },
+              {
+                "active_player": "C",
+                "text": "<Soul's Attendant~1000086> is put into its owner's graveyard."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 4,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [9/3/?] (pass)",
+              "  [38/8/?] (Scalding Tarn)",
+              "  [44/30/?] (Shivan Reef)",
+              "* [45/33/?] (Endless One)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {X} (X is 1). Tap <Shivan Reef~1000051>. Play <Endless One~1000012>."
+              },
+              {
+                "active_player": "P",
+                "text": "Put <Endless One~1000012> onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [47/47/?] (pass)",
+              "  [35/12/?] (Scalding Tarn)",
+              "* [55/57/?] (Shivan Reef)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play <Shivan Reef~1000053>. Put <Shivan Reef~1000053> onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 5,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [62/56/?] (pass)",
+              "  [28/4/?] (Plains)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [27/4/?] (pass)",
+              "* [72/125/?] (Plains)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play <Plains~1000107>. Put <Plains~1000107> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [56/14/?] (pass)",
+              "  [68/40/?] (Auriok Champion)",
+              "* [75/157/?] (Honor of the Pure)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {1}{W}. Tap <Plains~1000102>. Tap <Plains~1000107>. Play <Honor of the Pure~1000093>."
+              },
+              {
+                "active_player": "C",
+                "text": "Put <Honor of the Pure~1000093> onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 6,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [32/36/?] (pass)",
+              "* [32/39/?] (Spellskite)",
+              "  [6/5/?] (Scalding Tarn)",
+              "  [23/16/?] (Endless One)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {2}. Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Play <Spellskite~1000020>."
+              },
+              {
+                "active_player": "P",
+                "text": "Put <Spellskite~1000020> onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [27/62/?] ([Endless One])",
+              "* [29/86/?] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "* [24/161/?] (pass)",
+              "  [18/51/?] (Scalding Tarn)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 7,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [60/8/?] (pass)",
+              "* [80/76/?] (Plains)",
+              "  [57/7/?] (Auriok Champion)",
+              "  [60/8/?] (Ajani's Pridemate)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play <Plains~1000101>. Put <Plains~1000101> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [71/30/?] (pass)",
+              "* [78/82/?] (Auriok Champion)",
+              "  [74/41/?] (Ajani, Caller of the Pride)",
+              "  [65/19/?] (Ajani's Pridemate)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {W}{W}. Tap <Plains~1000102>. Tap <Plains~1000107>. Play <Auriok Champion~1000068>."
+              },
+              {
+                "active_player": "C",
+                "text": "Put <Auriok Champion~1000068> onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 8,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [6/13/?] (pass)",
+              "  [19/63/?] (Scalding Tarn)",
+              "* [20/71/?] (Endless One)"
+            ],
+            "actions": [
+
+            ]
+          },
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "* [24/115/?] (X is 2)",
+              "  [20/84/?] (X is 1)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {X} (X is 2). Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Play <Endless One~1000011>."
+              },
+              {
+                "active_player": "P",
+                "text": "Put <Endless One~1000011> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [69/30/?] (yes)",
+              "* [75/81/?] (no)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 may (no) gain 1 life."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [18/86/?] ([Endless One])",
+              "* [19/105/?] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "* [20/170/?] (pass)",
+              "  [16/66/?] (Scalding Tarn)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 9,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [59/8/?] (pass)",
+              "  [39/3/?] (Plains)",
+              "* [80/82/?] (Soul Warden)",
+              "  [40/3/?] (Ajani, Caller of the Pride)",
+              "  [56/7/?] (Ajani's Pridemate)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {W}. Tap <Plains~1000102>. Play <Soul Warden~1000081>."
+              },
+              {
+                "active_player": "C",
+                "text": "Put <Soul Warden~1000081> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [81/84/?] (yes)",
+              "* [83/105/?] (no)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 may (no) gain 1 life."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "  [66/19/?] (pass)",
+              "* [83/218/?] (Ajani's Pridemate)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {1}{W}. Tap <Plains~1000107>. Tap <Plains~1000101>. Play <Ajani's Pridemate~1000063>."
+              },
+              {
+                "active_player": "C",
+                "text": "Put <Ajani's Pridemate~1000063> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 20,
+            "active_player": "C",
+            "options": [
+              "* [85/223/?] (yes)",
+              "  [84/127/?] (no)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 gains 1 life."
+              }
+            ]
+          },
+          {
+            "life_active_player": 21,
+            "active_player": "C",
+            "options": [
+              "  [80/44/?] (yes)",
+              "* [83/72/?] (no)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 may (no) put a +1/+1 counter on <Ajani's Pridemate~1000063>."
+              },
+              {
+                "active_player": "C",
+                "text": "Player2 may (yes) gain 1 life."
+              }
+            ]
+          },
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "* [85/171/?] (yes)",
+              "  [69/18/?] (no)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 may (yes) put a +1/+1 counter on <Ajani's Pridemate~1000063>."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [80/78/?] ([Auriok Champion])",
+              "* [85/209/?] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "* [84/195/?] (pass)",
+              "  [83/140/?] (Plains)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 10,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [6/80/?] (pass)",
+              "  [5/75/?] (Scalding Tarn)",
+              "* [6/91/?] (Ratchet Bomb)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {2}. Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Play <Ratchet Bomb~1000033>."
+              },
+              {
+                "active_player": "P",
+                "text": "Put <Ratchet Bomb~1000033> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [7/79/?] (pass)",
+              "* [11/201/?] (Ratchet Bomb)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Tap <Ratchet Bomb~1000033>. Play activated ability of <Ratchet Bomb~1000033>."
+              },
+              {
+                "active_player": "P",
+                "text": "Player1 puts a charge counter on <Ratchet Bomb~1000033>."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [7/37/?] ([Endless One, Endless One])",
+              "  [15/94/?] ([Endless One])",
+              "  [10/61/?] ([Endless One])",
+              "* [15/171/?] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "* [16/202/?] (pass)",
+              "  [14/150/?] (Scalding Tarn)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 11,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [83/40/?] (pass)",
+              "  [82/37/?] (Plains)",
+              "  [83/45/?] (Mirran Crusader)",
+              "* [85/48/?] (Ajani, Caller of the Pride)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {1}{W}{W}. Tap <Plains~1000102>. Tap <Plains~1000107>. Tap <Plains~1000101>. Play <Ajani, Caller of the Pride~1000090>."
+              },
+              {
+                "active_player": "C",
+                "text": "Put <Ajani, Caller of the Pride~1000090> onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [87/29/?] ([Soul Warden, Auriok Champion, Ajani's Pridemate])",
+              "  [90/34/?] ([Soul Warden, Auriok Champion])",
+              "  [88/32/?] ([Soul Warden, Ajani's Pridemate])",
+              "  [87/29/?] ([Soul Warden])",
+              "* [89/35/?] ([Auriok Champion, Ajani's Pridemate])",
+              "  [82/15/?] ([Auriok Champion])",
+              "  [76/15/?] ([Ajani's Pridemate])",
+              "  [6/1/?] ([])"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 attacks with <Ajani's Pridemate~1000063> and <Auriok Champion~1000068>."
+              }
+            ]
+          }
+        ],
+        "DeclareBlockers": [
+          {
+            "life_active_player": 16,
+            "active_player": "P",
+            "options": [
+              "  [11/17/?] (S642 Auriok Champion=Spellskite+1 Ajani's Pridemate=Endless One)",
+              "* [15/25/?] (S52 Auriok Champion=Spellskite+2)",
+              "  [12/21/?] (S52 Auriok Champion=Spellskite+1)",
+              "  [10/16/?] (S-683 Auriok Champion=Endless One+1 Ajani's Pridemate=Spellskite)",
+              "  [5/12/?] (S-728 Auriok Champion=Endless One Ajani's Pridemate=Endless One)",
+              "  [4/11/?] (S-758 Auriok Champion=Endless One+1)",
+              "  [6/12/?] (S-808 Auriok Champion=Spellskite Ajani's Pridemate=Endless One)",
+              "  [12/21/?] (S-1243 Auriok Champion=Endless One Ajani's Pridemate=Spellskite)",
+              "  [10/16/?] (S-1318 Auriok Champion=Endless One)",
+              "  [15/22/?] (S-1368 Auriok Champion=Spellskite Ajani's Pridemate=Endless One)",
+              "  [5/11/?] (S-1398 Auriok Champion=Spellskite)",
+              "  [9/16/?] (S-1408 Ajani's Pridemate=Endless One)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Player1 blocks with <Endless One~1000011>, <Endless One~1000012> and <Spellskite~1000020>."
+              },
+              {
+                "active_player": "P",
+                "text": "{c}Player1 loses 4 life."
+              },
+              {
+                "active_player": "C",
+                "text": "<Auriok Champion~1000068> is destroyed."
+              }
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [86/42/?] (pass)",
+              "* [88/51/?] (Plains)",
+              "  [88/50/?] (Ajani, Caller of the Pride)",
+              "  [85/39/?] (Ajani, Caller of the Pride)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play <Plains~1000108>. Put <Plains~1000108> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [82/41/?] (pass)",
+              "* [88/101/?] (Ajani, Caller of the Pride)",
+              "  [85/58/?] (Ajani, Caller of the Pride)"
+            ],
+            "actions": [
+
+            ]
+          },
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [64/8/?] (yes,Ajani's Pridemate)",
+              "* [90/198/?] (yes,Soul Warden)",
+              "  [85/60/?] (no,null)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 puts 1 loyalty counters on <Ajani, Caller of the Pride~1000090>. Play activated ability of <Ajani, Caller of the Pride~1000090>."
+              },
+              {
+                "active_player": "C",
+                "text": "Player2 may (yes) put a +1/+1 counter on target creature (<Soul Warden~1000081>)."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 12,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 12,
+            "active_player": "P",
+            "options": [
+              "  [10/19/?] (pass)",
+              "  [13/28/?] (Eye of Ugin)",
+              "* [20/64/?] (Ratchet Bomb)",
+              "  [11/23/?] (Scalding Tarn)",
+              "  [13/29/?] (Ratchet Bomb)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Tap <Ratchet Bomb~1000033>. Sacrifice <Ratchet Bomb~1000033>. Play activated ability of <Ratchet Bomb~1000033>."
+              },
+              {
+                "active_player": "P",
+                "text": "Destroy each nonland permanent with converted mana cost equal to the number of charge counters on <Ratchet Bomb~1000033>."
+              },
+              {
+                "active_player": "C",
+                "text": "<Soul Warden~1000081> is destroyed."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 12,
+            "active_player": "P",
+            "options": [
+              "  [18/81/?] ([Endless One, Endless One])",
+              "  [12/31/?] ([Endless One])",
+              "  [20/54/?] ([Endless One])",
+              "* [18/83/?] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 12,
+            "active_player": "P",
+            "options": [
+              "  [15/74/?] (pass)",
+              "  [15/81/?] (Eye of Ugin)",
+              "* [16/104/?] (Scalding Tarn)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play <Scalding Tarn~1000049>. Put <Scalding Tarn~1000049> onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 13,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [92/39/?] (pass)",
+              "  [87/30/?] (Plains)",
+              "  [94/50/?] (Serra Ascendant)",
+              "  [94/49/?] (Ajani, Caller of the Pride)",
+              "* [93/55/?] (Ajani, Caller of the Pride)",
+              "  [7/1/?] (Mirran Crusader)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Remove 3 loyalty counters from Ajani, Caller of the Pride. Play activated ability of <Ajani, Caller of the Pride~1000090>."
+              }
+            ]
+          },
+          {
+            "life_active_player": 12,
+            "active_player": "P",
+            "options": [
+              "  [8/146/?] (pass)",
+              "* [8/151/?] (Scalding Tarn)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Tap <Scalding Tarn~1000049>. Pay 1 life. Sacrifice <Scalding Tarn~1000049>. Play activated ability of <Scalding Tarn~1000049>."
+              }
+            ]
+          },
+          {
+            "life_active_player": 11,
+            "active_player": "P",
+            "options": [
+              "* [9/101/?] (Unknown)",
+              "  [5/53/?] (Unknown)",
+              "  [8/99/?] (Unknown)"
+            ],
+            "actions": [
+
+            ]
+          },
+          {
+            "life_active_player": 11,
+            "active_player": "P",
+            "options": [
+              "  [9/114/?] (yes)",
+              "* [10/140/?] (no)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Player1 searches his or her library for an Island or Mountain card and Player1 puts it onto the battlefield. Then Player1 shuffles his or her library. Found (<Steam Vents~1000055>). Put <Steam Vents~1000055> onto the battlefield. Player1 may (no) pay 2 life. If Player1 doesn't, <Steam Vents~1000055> enters the battlefield tapped."
+              },
+              {
+                "active_player": "C",
+                "text": "Target creature (<Ajani's Pridemate~1000063>) gains flying and double strike until end of turn."
+              }
+            ]
+          },
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [79/16/?] (pass)",
+              "  [88/37/?] (Plains)",
+              "  [95/112/?] (Serra Ascendant)",
+              "* [96/140/?] (Mirran Crusader)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {1}{W}{W}. Tap <Plains~1000102>. Tap <Plains~1000107>. Tap <Plains~1000101>. Play <Mirran Crusader~1000075>."
+              },
+              {
+                "active_player": "C",
+                "text": "Put <Mirran Crusader~1000075> onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "* [97/557/?] ([Ajani's Pridemate])",
+              "  [86/45/?] ([])"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 attacks with <Ajani's Pridemate~1000063>."
+              },
+              {
+                "active_player": "P",
+                "text": "{c}Player1 loses 4 life."
+              },
+              {
+                "active_player": "P",
+                "text": "{c}Player1 loses 4 life."
+              }
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [97/176/?] (pass)",
+              "  [98/179/?] (Plains)",
+              "* [98/184/?] (Serra Ascendant)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Pay {W}. Tap <Plains~1000108>. Play <Serra Ascendant~1000076>."
+              },
+              {
+                "active_player": "C",
+                "text": "Put <Serra Ascendant~1000076> onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 14,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [2/176/?] (pass)",
+              "  [2/181/?] (Eye of Ugin)",
+              "* [2/188/?] (Ruination Guide)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {2}{U}. Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Tap <Steam Vents~1000055>. Play <Ruination Guide~1000015>."
+              },
+              {
+                "active_player": "P",
+                "text": "Put <Ruination Guide~1000015> onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [1/69/?] ([Endless One, Spellskite, Endless One])",
+              "  [1/73/?] ([Endless One, Spellskite])",
+              "  [1/70/?] ([Endless One, Endless One])",
+              "  [1/72/?] ([Endless One])",
+              "  [1/72/?] ([Spellskite, Endless One])",
+              "  [2/85/?] ([Spellskite])",
+              "  [2/72/?] ([Endless One])",
+              "* [3/91/?] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [2/153/?] (pass)",
+              "* [4/249/?] (Eye of Ugin)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play <Eye of Ugin~1000041>. Put <Eye of Ugin~1000041> onto the battlefield."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 15,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [85/30/?] (pass)",
+              "* [95/102/?] (Plains)",
+              "  [94/76/?] (Goldenglow Moth)",
+              "  [96/90/?] (Ajani, Caller of the Pride)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Play <Plains~1000109>. Put <Plains~1000109> onto the battlefield."
+              }
+            ]
+          },
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [93/111/?] (pass)",
+              "  [92/98/?] (Goldenglow Moth)",
+              "* [94/127/?] (Ajani, Caller of the Pride)"
+            ],
+            "actions": [
+
+            ]
+          },
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "* [95/121/?] (yes,Ajani's Pridemate)",
+              "  [93/77/?] (yes,Mirran Crusader)",
+              "  [94/101/?] (yes,Serra Ascendant)",
+              "  [92/55/?] (no,null)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 puts 1 loyalty counters on <Ajani, Caller of the Pride~1000090>. Play activated ability of <Ajani, Caller of the Pride~1000090>."
+              },
+              {
+                "active_player": "C",
+                "text": "Player2 may (yes) put a +1/+1 counter on target creature (<Ajani's Pridemate~1000063>)."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [93/45/?] ([Serra Ascendant, Ajani's Pridemate, Mirran Crusader])",
+              "  [89/23/?] ([Serra Ascendant, Ajani's Pridemate])",
+              "  [95/46/?] ([Serra Ascendant, Mirran Crusader])",
+              "  [95/61/?] ([Serra Ascendant])",
+              "* [97/62/?] ([Ajani's Pridemate, Mirran Crusader])",
+              "  [92/35/?] ([Ajani's Pridemate])",
+              "  [96/58/?] ([Mirran Crusader])",
+              "  [97/61/?] ([])"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 attacks with <Ajani's Pridemate~1000063> and <Mirran Crusader~1000075>."
+              }
+            ]
+          }
+        ],
+        "DeclareBlockers": [
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [1/42/?] (S783 Ajani's Pridemate=Endless One+1 Mirran Crusader=Endless One)",
+              "  [2/51/?] (S783 Ajani's Pridemate=Endless One+1 Mirran Crusader=Ruination Guide)",
+              "  [2/52/?] (S-523 Ajani's Pridemate=Endless One Mirran Crusader=Ruination Guide)",
+              "  [1/41/?] (S-623 Ajani's Pridemate=Endless One Mirran Crusader=Endless One)",
+              "  [2/50/?] (S-842 Ajani's Pridemate=Ruination Guide+1 Mirran Crusader=Endless One+1)",
+              "  [1/42/?] (S-1038 Ajani's Pridemate=Spellskite Mirran Crusader=Ruination Guide)",
+              "  [1/42/?] (S-1083 Ajani's Pridemate=Ruination Guide Mirran Crusader=Endless One)",
+              "  [1/43/?] (S-1083 Ajani's Pridemate=Endless One Mirran Crusader=Ruination Guide)",
+              "  [1/44/?] (S-1138 Ajani's Pridemate=Spellskite Mirran Crusader=Endless One)",
+              "  [1/45/?] (S-1327 Ajani's Pridemate=Endless One+1 Mirran Crusader=Spellskite)",
+              "  [1/42/?] (S-1372 Ajani's Pridemate=Ruination Guide+1 Mirran Crusader=Endless One)",
+              "* [3/57/?] (S-1427 Ajani's Pridemate=Endless One+1 Mirran Crusader=Spellskite)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Player1 blocks with <Endless One~1000011>, <Endless One~1000012> and <Spellskite~1000020>."
+              },
+              {
+                "active_player": "C",
+                "text": "<Ajani's Pridemate~1000063> is destroyed."
+              },
+              {
+                "active_player": "P",
+                "text": "<Endless One~1000012> is destroyed. <Endless One~1000011> is destroyed. <Spellskite~1000020> is destroyed."
+              }
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "* [97/98/win:4] (pass)",
+              "  [97/91/?] (Goldenglow Moth)"
+            ],
+            "actions": [
+
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "P",
+      "number": 16,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [5/119/?] (pass)",
+              "  [5/123/?] (Eye of Ugin)",
+              "* [6/139/?] (Endless One)"
+            ],
+            "actions": [
+
+            ]
+          },
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [6/94/?] (X is 5)",
+              "* [7/132/?] (X is 4)",
+              "  [7/120/?] (X is 4)",
+              "  [1/48/?] (X is 3)",
+              "  [3/57/?] (X is 3)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Pay {X} (X is 4). Tap <Shivan Reef~1000051>. Tap <Shivan Reef~1000053>. Play <Endless One~1000013>."
+              },
+              {
+                "active_player": "P",
+                "text": "Put <Endless One~1000013> onto the battlefield."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [1/144/lose:5] ([Ruination Guide])",
+              "* [5/410/lose:5] ([])"
+            ],
+            "actions": [
+
+            ]
+          }
+        ],
+        "SecondMain": [
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [0/753/lose:3] (pass)",
+              "* [1/1482/lose:4] (Eye of Ugin)"
+            ],
+            "actions": [
+
+            ]
+          },
+          {
+            "life_active_player": 3,
+            "active_player": "P",
+            "options": [
+              "  [0/477/lose:3] (Eye of Ugin)",
+              "* [1/627/lose:3] (Eye of Ugin)"
+            ],
+            "actions": [
+              {
+                "active_player": "P",
+                "text": "Play <Eye of Ugin~1000043>. Put <Eye of Ugin~1000043> onto the battlefield. Choose one (<Eye of Ugin~1000043>). Put the rest into their owner's graveyard. Put <Eye of Ugin~1000041> into its owner's graveyard (Uniqueness rule)."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "active_player": "C",
+      "number": 17,
+      "phases": {
+        "FirstMain": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [87/9/?] (pass)",
+              "  [90/12/?] (Auriok Champion)",
+              "  [98/15/?] (Goldenglow Moth)",
+              "  [97/14/?] (Ajani, Caller of the Pride)",
+              "* [92/16/win:2] (Ajani, Caller of the Pride)"
+            ],
+            "actions": [
+
+            ]
+          },
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "* [77/9/win:1] (Mirran Crusader)",
+              "  [99/7/?] (Serra Ascendant)"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Remove 3 loyalty counters from Ajani, Caller of the Pride. Play activated ability of <Ajani, Caller of the Pride~1000090>. <Ajani, Caller of the Pride~1000090> is put into its owner's graveyard."
+              },
+              {
+                "active_player": "C",
+                "text": "Target creature (<Mirran Crusader~1000075>) gains flying and double strike until end of turn."
+              }
+            ]
+          }
+        ],
+        "DeclareAttackers": [
+          {
+            "life_active_player": 22,
+            "active_player": "C",
+            "options": [
+              "  [99/2/?] ([Serra Ascendant, Mirran Crusader])",
+              "  [96/1/?] ([Serra Ascendant])",
+              "* [66/3/win:0] ([Mirran Crusader])",
+              "  [0/1/?] ([])"
+            ],
+            "actions": [
+              {
+                "active_player": "C",
+                "text": "Player2 attacks with <Mirran Crusader~1000075>."
+              },
+              {
+                "active_player": "P",
+                "text": "{c}Player1 loses 3 life."
+              },
+              {
+                "active_player": "P",
+                "text": "{L} Player1 lost the game."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "created_on": "2016/02/22 17:58:59",
+  "system": "JRE 1.8.0_60, OS Linux_3.13.0-77-generic amd64",
+  "players": {
+    "P": {
+      "num_mull": 0,
+      "full": "Player1"
+    },
+    "C": {
+      "num_mull": 0,
+      "full": "Player2"
+    }
+  }
+}

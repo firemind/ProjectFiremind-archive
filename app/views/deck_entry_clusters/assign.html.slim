@@ -1,0 +1,66 @@
+.row
+  .small-7.columns
+    - @deck.deck_entry_clusters.each do |clu|
+      div.cluster data= {clusterid: clu.id}
+        h4.ui-widget-header
+          span.entry-count title="Total number of cards in cluster"
+            = clu.deck_entries.sum(:amount)
+          =< clu
+        ul.no-bullet
+          - if clu.deck_entries.count > 0
+            - clu.deck_entries.each do |de|
+              li data= {entryid: de.id}
+                =>de
+                span.remove-icon
+                  = fa_icon 'trash'
+          - else
+            li.placeholder No Entries yet. Drag the Cards here to add them.
+
+  .small-5.columns
+    h4 Deck Entries
+    ul.no-bullet.deck-entries
+      - @deck.deck_entries.each do |de|
+        li data= {entryid: de.id}
+          = de
+javascript:
+  $(function() {
+    $( ".deck-entries li" ).draggable({
+      appendTo: "body",
+      helper: "clone"
+    });
+    $( ".cluster" ).droppable({
+      activeClass: "ui-state-default",
+      hoverClass: "ui-state-hover",
+      accept: ":not(.ui-sortable-helper)",
+      drop: function( event, ui ) {
+        var cont = $(this).children("ul");
+        var header = $(this).children("h4").children("span.entry-count");
+        $.post( "#{addto_deck_entry_clusters_path}", {deck_entry_id: ui.draggable.data("entryid"), deck_entry_cluster_id: this.dataset.clusterid}).success(function( data ) {
+          $( cont).find( ".placeholder" ).remove();
+          e = $( "<li></li>" ).text( ui.draggable.text() ).appendTo( cont );
+          var countBefore  = parseInt(header.text());
+          var countAdded = parseInt(ui.draggable.text().split(" ")[0]);
+          header.text(countBefore+countAdded);
+          e.append("<span class='remove-icon'>#{fa_icon('trash').gsub('"', "'").html_safe}</span>");
+          e.data("entryid", ui.draggable.data("entryid"));
+        });
+      }
+    }).sortable({
+      items: "li:not(.placeholder)",
+      sort: function() {
+        // gets added unintentionally by droppable interacting with sortable
+        // using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
+        $( this ).removeClass( "ui-state-default" );
+      }
+    });
+    $('.cluster ul').on('click','li span.remove-icon',function () {
+        item = $(this);
+        var header = $(this).parents(".cluster").children("h4").children("span.entry-count");
+        $.post( "#{delfrom_deck_entry_clusters_path}", {deck_entry_id: item.parent().data('entryid'), deck_entry_cluster_id: item.parents('.cluster').data('clusterid')}).success(function( data ) {
+          var countBefore  = parseInt(header.text());
+          var countRemoved = parseInt(item.parent().text().split(" ")[0]);
+          header.text(countBefore-countRemoved);
+          item.parent().remove();
+        });
+    });
+  });

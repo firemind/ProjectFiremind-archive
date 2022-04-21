@@ -1,0 +1,20 @@
+- if deck.author
+  li.description
+    | by
+    =< link_to deck.author, deck.author
+- if @deck.forked_from
+  = render 'forked_box', deck: @deck
+- if deck.legal_in_format?
+  li.bullet-item
+    b Format:
+    =<> deck.format
+    - if rating = deck.deck_list.rating_in(deck.format)
+      span.label class= alert_class_for_rating(rating.whr_rating)
+        b title= "WHR uncertainty #{rating.whr_uncertainty}" 
+          = link_to rating.whr_rating, ratings_deck_list_path(@deck.deck_list, rating_id: rating.id)
+- else
+  li.bullet-item
+    span.label.warning
+      b
+        |Not legal in
+        =< link_to deck.format, format_deck_path(deck, deck.format), data: {'reveal-ajax' => "true"}, title: "Show me why!"

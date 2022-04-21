@@ -1,0 +1,8 @@
+<%- if flash[:alert] %>
+  alert("<%= flash[:alert].html_safe %>");
+  <% flash.clear %>
+<%- else%>
+  var el = $("#archetype-row-<%= @archetype.id %>");
+  el.html("<%= escape_javascript(render partial: 'decks/sideboarding_fragment', locals: { archetype: @archetype, data: @data} ) %>"); 
+  populateTooltipOn(el);
+<%end%>

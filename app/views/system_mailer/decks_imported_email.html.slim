@@ -1,0 +1,26 @@
+ul
+  - @changed_archetypes.each do |change|
+    li
+      | Would Change
+      =<> link_to "#{change[:dl].human_archetype} (#{change[:dl].human_archetype.format})", "https://www.firemind.ch/admin/deck_lists/#{change[:dl].id}/edit?deck_list[human_archetype_confirmed]=true"
+      | to
+      =<> link_to "#{change[:new_archetype]} (#{change[:new_archetype].format})", "https://www.firemind.ch/admin/deck_lists/#{change[:dl].id}/edit?deck_list[human_archetype_id]=#{change[:new_archetype].id}&deck_list[human_archetype_confirmed]=true"
+      | from
+      =< link_to "source", change[:url]
+      | or
+      =<> link_to "compare", "https://www.firemind.ch/archetypes/compare?left_id=#{change[:new_archetype].id}&right_id=#{change[:dl].human_archetype.id}"
+
+- @deck_list_groups.each do |title, list|
+  - unless list.empty?
+    h2=title
+    ul
+      - list.each do |at, urls|
+        li
+          a href="https://www.firemind.ch/admin/archetypes/new?archetype[name]=#{at}&archetype[format_id]=#{@format.id}"
+            |Unknown Archetype:
+            =<> at
+            |in
+            =<@format.name
+          ul
+            - urls.each do |url|
+              li= link_to url, url

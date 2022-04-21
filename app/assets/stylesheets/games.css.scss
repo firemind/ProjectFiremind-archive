@@ -1,0 +1,67 @@
+.turn {
+  &.winner {
+    background: #43AC6A;
+  }
+  &.loser {
+    background: #008CBA;
+  }
+  padding: 5px;
+  .accordion-title{
+    background: #ccc;
+  }
+  .accordion .accordion-navigation > a, .accordion dd > a {
+    padding: 5px;
+  }
+  .accordion-title {
+    .label {
+      float: right;
+      &.winner {
+        background: #43AC6A;
+      }
+      &.loser {
+        background: #008CBA;
+      }
+    }
+  }
+
+
+}
+
+.button-group.game-heading {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+  width: 100%;
+
+  &:before {
+    content: attr(data-grouptype);
+    z-index: 99999;
+    color: #333;
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.25em;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 47.5%;
+    top: 0.35rem;
+  }
+  .button {
+    width: 50%;
+    margin: 0 -5px;
+  }
+  .button + .button {
+    margin-left: 5px;
+  }
+}
+
+.card-count {
+  position:absolute;
+  top:140px;
+  left:140px;
+  p {
+    font-size:700%;
+    color:#111;
+    text-shadow: 0 0 27px white;
+  }
+}

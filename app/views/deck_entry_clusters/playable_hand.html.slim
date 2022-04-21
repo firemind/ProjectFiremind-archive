@@ -1,0 +1,7 @@
+h4 Playable Hand
+
+= form_for @deck do |f|
+  = f.fields_for :playable_hand_entries do |builder|
+    = render 'playable_hand_entry_fields', f: builder
+  .actions
+    = f.submit "Save", class: 'button'

@@ -1,0 +1,33 @@
+doctype html
+html lang= "en"
+  head
+    = display_meta_tags :site => 'Project Firemind'
+    meta content= "width=device-width, initial-scale=1.0"  name= "viewport" charset= "utf-8"
+    = action_cable_meta_tag 
+    = stylesheet_link_tag "application"
+    = csrf_meta_tags
+    = javascript_include_tag "application"
+    = render partial: 'shared/tracking'
+  body.default-body
+    #decklistModal.reveal.large data-reveal=true
+    #genericModal.reveal.large data-reveal=true
+    = render partial: 'shared/nav'
+    .row
+      .small-12.columns
+        = render partial: 'shared/flash'
+    .row
+      .small-12.columns
+        = yield
+    .row.footer
+      .small-12.columns
+        hr
+        ul.menu
+          li= link_to "About", about_path
+          li= link_to "Magarena Forum", "http://www.slightlymagic.net/forum/viewforum.php?f=82"
+          li= link_to "Issue Tracker", "https://github.com/firemind/ProjectFiremind-Issues/issues"
+          li= link_to "Blog", "http://blog.firemind.ch/"
+          li= link_to "API", "https://www.firemind.ch/api/docs"
+          li= link_to "Status", "https://www.firemind.ch/status"
+
+    = render partial: 'shared/chartjs'
+    = yield :custom_js
